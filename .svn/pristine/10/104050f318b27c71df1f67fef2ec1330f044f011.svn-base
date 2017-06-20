@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="drawable" name="connect_master_key_tip_window_divider_line">#ff3692db</item>
+    <item type="drawable" name="connect_available_ap_divider_line">#ff0285f0</item>
+    <item type="drawable" name="connect_available_ap_item_divider_line">#ffeeeeee</item>
+    
+    <!-- 360WIFI -->
+     <item type="drawable" name="list_divider">#ffdadada</item>
+    <item type="drawable" name="dialog_btn_pressed_bg">#0d000000</item>
+    <item type="drawable" name="dialog_btn_normal_bg">@android:color/transparent</item>
+    <item type="drawable" name="list_item_pressed_bg">#fff8f8f8</item>
+    <item type="drawable" name="white">#ffffffff</item>
+    <item type="drawable" name="black_333">#ff333333</item>
+    <item type="drawable" name="bind_color">#fffec83f</item>
+    <item type="drawable" name="transparent">#00000000</item>
+    <item type="drawable" name="transparent_half">#c0000000</item>
+    <item type="drawable" name="list_divider_map">#ffdadada</item>
+</resources>

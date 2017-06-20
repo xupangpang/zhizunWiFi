@@ -1,0 +1,174 @@
+[
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\notice_fade_out.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\anim\\notice_fade_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\activity_fade_out.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\anim\\activity_fade_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\qihoo_pay_frame_activity_anim_push_left_out.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\anim\\qihoo_pay_frame_activity_anim_push_left_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\umeng_fb_dialog_enter_anim.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\anim\\umeng_fb_dialog_enter_anim.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\check_access_point_fragment_enter.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\anim\\check_access_point_fragment_enter.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\notify_float_in.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\anim\\notify_float_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\qihoo_pay_frame_activity_anim_push_left_in.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\anim\\qihoo_pay_frame_activity_anim_push_left_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\rorate_left.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\anim\\rorate_left.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\slide_left_out.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\anim\\slide_left_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\actionsheet_dialog_out.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\anim\\actionsheet_dialog_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\slide_right_out.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\anim\\slide_right_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\check_access_point_fragment_exit.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\anim\\check_access_point_fragment_exit.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\loading_animation.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\anim\\loading_animation.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\fade_bottom_out.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\anim\\fade_bottom_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\notify_float_out.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\anim\\notify_float_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\slide_left_in.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\anim\\slide_left_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\umeng_fb_dialog_exit_anim.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\anim\\umeng_fb_dialog_exit_anim.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\portal_fade_in.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\anim\\portal_fade_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\fade_out.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\anim\\fade_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\qihoo_pay_frame_activity_anim_push_right_in.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\anim\\qihoo_pay_frame_activity_anim_push_right_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\wifi_cracking.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\anim\\wifi_cracking.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\wifi_opening.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\anim\\wifi_opening.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\actionsheet_dialog_in.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\anim\\actionsheet_dialog_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\notice_fade_in.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\anim\\notice_fade_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\qihoo_accounts_logining_rotate.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\anim\\qihoo_accounts_logining_rotate.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\fade_bottom_in.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\anim\\fade_bottom_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\toast_exit.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\anim\\toast_exit.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\rotate.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\anim\\rotate.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\qihoo_pay_frame_activity_anim_push_right_out.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\anim\\qihoo_pay_frame_activity_anim_push_right_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\slide_right_in.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\anim\\slide_right_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\rorate_right.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\anim\\rorate_right.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\toast_enter.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\anim\\toast_enter.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\fade_in.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\anim\\fade_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\anim\\abc_slide_in_bottom.xml"
+    }
+]

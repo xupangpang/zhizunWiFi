@@ -1,0 +1,413 @@
+package com.zhizun.zhizunwifi.activity;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import net.duohuo.dhroid.ioc.annotation.InjectView;
+import android.annotation.SuppressLint;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.content.ServiceConnection;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.IBinder;
+import android.os.Message;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.baidu.location.BDLocation;
+import com.baidu.location.BDLocationListener;
+import com.baidu.location.LocationClient;
+import com.baidu.location.LocationClientOption;
+import com.baidu.mapapi.model.LatLng;
+import com.baidu.mapapi.search.core.PoiInfo;
+import com.baidu.mapapi.search.poi.OnGetPoiSearchResultListener;
+import com.baidu.mapapi.search.poi.PoiDetailResult;
+import com.baidu.mapapi.search.poi.PoiNearbySearchOption;
+import com.baidu.mapapi.search.poi.PoiResult;
+import com.baidu.mapapi.search.poi.PoiSearch;
+import com.baidu.mapapi.search.poi.PoiSortType;
+import com.zhizun.zhizunwifi.dialog.CustomStoreAddDialog;
+import com.zhizun.zhizunwifi.R;
+import com.zhizun.zhizunwifi.adapter.SearchNearInfoAdapter;
+import com.zhizun.zhizunwifi.service.ListenNetStateService;
+import com.zhizun.zhizunwifi.service.ListenNetStateService.GetConnectState;
+import com.zhizun.zhizunwifi.service.ListenNetStateService.NetBind;
+import com.zhizun.zhizunwifi.utils.WifiUtils;
+
+/**
+ * @项目名: ZhizunWIFI
+ * @包名: com.zhizun.zhizunwifi.activity
+ * @类名: StoreOpenOneActivity
+ * @创建者: 梁辉
+ * @创建时间: 2016年3月16日 下午5:26:07
+ * @描述: TODO
+ *
+ * @SVN版本: $Rev: 821 $
+ * @更新人: $Author: xunfeng $
+ * @更新时间: $Date: 2016-07-08 17:24:37 +0800 (Fri, 08 Jul 2016) $
+ * @更新描述: TODO
+ */
+public class StoreWifiApply1 extends BaseActivity implements OnClickListener,
+		OnItemClickListener, OnGetPoiSearchResultListener {
+
+	private final int CUSTOM_STORE_INFO = 0;
+
+	@InjectView(id = R.id.tv_currentWifi)
+	TextView tv_currentWifi;
+	@InjectView(id = R.id.et_wifiPsw)
+	EditText et_wifiPsw;
+	private ImageView back;
+	private TextView title;
+	private Button next;
+	private Button customAdd; // 手动添加
+	private ListView listView;
+	// 定位相关
+	private LocationClient mLocClient;
+	private MyLocationListenner myListener = new MyLocationListenner();
+	private boolean isFirstLoc = true; // 是否首次定位
+	private SearchNearInfoAdapter adapter;
+	private int currentSelectPosition;
+	private String currentSelectName;// 店铺名称
+	private String currentSelectSite;// 店铺地址
+	private WifiUtils localWifiUtils;
+	private boolean knowWiFiPsw;
+	private WifiInfo wifiInfo;
+	private String wifi_mac_address;
+	private double latitude;
+	private double longitude;
+	private int wifiItemId;
+	private int netId;
+
+	/** 连接wifi成功消息 **/
+	public static final int ConncetSuccess = 0x113;
+	/** 连接wifi失败消息 **/
+	public static final int ConncetFaild = 0x115;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_storewifiapply);
+
+		back = (ImageView) findViewById(R.id.headerLeft);
+		title = (TextView) findViewById(R.id.headerTitle);
+		next = (Button) findViewById(R.id.btn_next);
+		customAdd = (Button) findViewById(R.id.btn_custom_add);
+		listView = (ListView) findViewById(R.id.listView);
+
+		back.setOnClickListener(this);
+		next.setOnClickListener(this);
+		listView.setOnItemClickListener(this);
+		customAdd.setOnClickListener(this);
+
+		title.setText("申请WiFi到店通");
+
+		// 定位初始化
+		mLocClient = new LocationClient(this);
+		mLocClient.registerLocationListener(myListener);
+		LocationClientOption option = new LocationClientOption();
+		option.setOpenGps(true); // 打开gps
+		option.setCoorType("bd09ll"); // 设置坐标类型
+		option.setScanSpan(1000);
+		mLocClient.setLocOption(option);
+		mLocClient.start();
+
+		localWifiUtils = new WifiUtils(this);
+		WifiManager wifi_service = (WifiManager) getSystemService(WIFI_SERVICE);
+		wifiInfo = wifi_service.getConnectionInfo();
+		String currentWifi = wifiInfo.getSSID().replace("\"", "");
+		tv_currentWifi.setText(currentWifi);
+		// <unknown ssid> 未知的wifi
+		if(currentWifi.equals("NULL") || currentWifi.equals("0x")){
+			tv_currentWifi.setText("");
+		}
+		wifi_mac_address = wifiInfo.getMacAddress();
+
+		Intent NetStateService = new Intent(this, ListenNetStateService.class);
+		boolean isTrue = bindService(NetStateService, conn,
+				Context.BIND_AUTO_CREATE);
+	}
+
+	@Override
+	public void onClick(View v) {
+
+		switch (v.getId()) {
+			case R.id.headerLeft:
+				finish();
+				break;
+			case R.id.btn_custom_add:
+				Intent intent = new Intent(this, CustomStoreAddDialog.class);
+				startActivityForResult(intent, CUSTOM_STORE_INFO);
+
+				break;
+			case R.id.btn_next:
+				if (wifiInfo != null && currentSelectName != null && !knowWiFiPsw
+						&& !et_wifiPsw.getText().toString().isEmpty()) {
+					// 重连接验证wifi
+					// 状态码
+					wifiItemId = localWifiUtils.IsConfiguration(wifiInfo.getSSID());
+					localWifiUtils.disconnectWifi();
+					localWifiUtils.removeNetwork(wifiItemId);
+					netId = localWifiUtils.AddWifiConfig(wifiItemId, tv_currentWifi.getText()
+							.toString(), et_wifiPsw.getText().toString(), null);
+
+					// 密码正确
+					if (netId != -1) {
+						// 得到Wifi配置好的信息
+						if (localWifiUtils.ConnectWifi(netId)) {
+						}
+					} else {
+						Toast.makeText(getApplicationContext(), "WiFi密码不正确！", Toast.LENGTH_SHORT)
+								.show();
+					}
+				} else {
+					Toast.makeText(getApplicationContext(), "请填写完整信息！", Toast.LENGTH_SHORT).show();
+				}
+
+				break;
+
+			default:
+				break;
+		}
+	}
+
+	@SuppressLint("HandlerLeak")
+	private Handler handler = new Handler() {
+		@SuppressLint("HandlerLeak")
+		@Override
+		public void handleMessage(Message msg) {
+			switch (msg.what) {
+
+				case ConncetSuccess:
+					System.out.println("ConncetSuccess-------------------------= ");
+					// 如果参数为null的话，会将所有的Callbacks和Messages全部清除掉。
+					handler.removeCallbacksAndMessages(null);
+
+//				if(wifiInfo != null &&currentSelectName != null && knowWiFiPsw){
+					Intent intent = new Intent(StoreWifiApply1.this, StoreWifiApply2.class);
+					intent.putExtra("currentSelectName", currentSelectName);
+					intent.putExtra("currentSelectSite", currentSelectSite);
+					intent.putExtra("wifi_name", tv_currentWifi.getText().toString());
+					intent.putExtra("wifi_psw", et_wifiPsw.getText().toString());
+					intent.putExtra("wifi_mac_address", wifi_mac_address);
+					intent.putExtra("latitude", latitude);
+					intent.putExtra("longitude", longitude);
+
+					startActivity(intent);
+//				}
+
+					break;
+
+				case ConncetFaild:
+					System.out.println("ConncetFaild-------------------------= ");
+
+					break;
+			}
+		}
+	};
+
+	@Override
+	public void onItemClick(AdapterView<?> parent, View view, int position,
+							long id) {
+		currentSelectName = ((PoiInfo) parent.getItemAtPosition(position)).name;
+		currentSelectSite = ((PoiInfo)parent.getItemAtPosition(position)).address;
+		CheckBox cbx_address = (CheckBox) view.findViewById(R.id.cbx_address);
+		cbx_address.setChecked(!cbx_address.isChecked());
+		int scrollY = listView.getScrollY();
+		adapter.notifyDataSetChanged();
+		listView.setScrollY(scrollY);
+
+		// View view = parent.getChildAt(postion);
+		// if(view != null){
+		// CheckBox cbx_address = (CheckBox)
+		// view.findViewById(R.id.cbx_address);
+		// cbx_address.setChecked(!cbx_address.isChecked());
+		// }
+		currentSelectPosition = position;
+		// updateCheckView(postion,id);
+		adapter.updateCheckView(position);
+	}
+
+	private void updateCheckView(int postion, long id) {
+		int childCount = listView.getChildCount();
+		int count = listView.getCount();
+		int visibleFirstPosi = listView.getFirstVisiblePosition();
+		int visibleLastPosi = listView.getLastVisiblePosition();
+
+		for (int i = visibleFirstPosi; i < visibleLastPosi + 1; i++) {
+			Object itemAtPosition = listView.getItemAtPosition(i);
+			String string = itemAtPosition.toString();
+			View view = listView.getChildAt(i - visibleFirstPosi);
+			// int tId = ((Message) listView.getItemAtPosition(i)).getId();
+			// if (id == tId) {
+			// View view = listView.getChildAt(i - visibleFirstPosi);
+			// // getView(i, view, listView);
+			// }
+			View childAt = listView.getChildAt(i);
+			if (childAt != null) {
+				CheckBox cbx = (CheckBox) childAt
+						.findViewById(R.id.cbx_address);
+				if (cbx != null && i != postion) {
+					cbx.setChecked(false);
+				} else if (cbx != null && i == postion) {
+					cbx.setChecked(true);
+				}
+			}
+		}
+
+	}
+
+	/**
+	 * 定位SDK监听函数
+	 */
+	public class MyLocationListenner implements BDLocationListener {
+
+		@Override
+		public void onReceiveLocation(BDLocation location) {
+			// map view 销毁后不在处理新接收的位置
+			if (location == null) {
+				return;
+			}
+
+			if (isFirstLoc) {
+				searchNeayBy(location);
+				isFirstLoc = false;
+			}
+		}
+
+		public void onReceivePoi(BDLocation poiLocation) {
+		}
+	}
+
+	/**
+	 * 搜索周边地理位置
+	 */
+	private void searchNeayBy(BDLocation location) {
+		PoiSearch mPoiSearch = PoiSearch.newInstance();
+		mPoiSearch.setOnGetPoiSearchResultListener(this);
+		int radius = 1000;
+		PoiNearbySearchOption option = new PoiNearbySearchOption();
+		option.keyword("店铺");
+		// option.keyword("大厦");
+		option.sortType(PoiSortType.distance_from_near_to_far);
+		latitude = location.getLatitude();
+		longitude = location.getLongitude();
+		option.location(new LatLng(location.getLatitude(), location
+				.getLongitude()));
+		if (radius != 0) {
+			option.radius(radius);
+		} else {
+			option.radius(1000);
+		}
+
+		option.pageCapacity(20);
+		mPoiSearch.searchNearby(option);
+
+	}
+
+	@Override
+	public void onGetPoiDetailResult(PoiDetailResult poiResult) {
+
+	}
+
+	private List<PoiInfo> nearList = new ArrayList<PoiInfo>();
+
+	/*
+	 * 接受周边地理位置结果
+	 *
+	 * @param poiResult
+	 */
+	@Override
+	public void onGetPoiResult(PoiResult poiResult) {
+		if (poiResult != null) {
+			if (poiResult.getAllPoi() != null
+					&& poiResult.getAllPoi().size() > 0) {
+				nearList.addAll(poiResult.getAllPoi());
+				if (nearList != null && nearList.size() > 0) {
+					adapter = new SearchNearInfoAdapter(StoreWifiApply1.this,
+							nearList, listView);
+					listView.setAdapter(adapter);
+					// for (int i = 0; i < nearList.size(); i++) {
+					// System.out.println("poi所在城市= " + nearList.get(i).city);
+					// System.out.println("poi名称= " + nearList.get(i).name);
+					// System.out.println("poi地址信息= " +
+					// nearList.get(i).address);
+					// }
+				}
+			}
+
+		}
+	}
+
+	private boolean conncetState = true;
+
+	private ServiceConnection conn = new ServiceConnection() {
+		@Override
+		public void onServiceDisconnected(ComponentName name) {
+		}
+
+		@Override
+		public void onServiceConnected(ComponentName name, IBinder service) {
+
+			NetBind bind = (NetBind) service;
+			ListenNetStateService netService = bind.getNetService();
+			// 此处回调
+			/*netService.setOnGetConnectState(new GetConnectState() {
+
+				@Override
+				public void GetState(String ssid, boolean isConnected) {
+					if (conncetState != isConnected) {
+						conncetState = isConnected;
+					}
+					Message msg = handler.obtainMessage();
+					if (conncetState) {
+						msg.what = ConncetSuccess;
+					} else {
+						msg.what = ConncetFaild;
+					}
+					handler.sendMessage(msg);
+				}
+
+				@Override
+				public void isAvailable(boolean isAvailable) {
+					if (isAvailable) {
+					} else {
+					}
+				}
+			});*/
+
+		}
+	};
+
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+		if (requestCode == CUSTOM_STORE_INFO) {
+			if (resultCode == RESULT_OK) {
+				if (data.getStringExtra("StoreNameResult").length() != 0
+						&& data.getStringExtra("StoreSiteResult").length() != 0) {
+
+					currentSelectName = data.getStringExtra("StoreNameResult");
+					currentSelectSite = data.getStringExtra("StoreSiteResult");
+				} else {
+					Toast.makeText(this, "店铺名或地址不能为空", 0).show();
+
+				}
+
+			}
+		}
+
+	};
+
+}

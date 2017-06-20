@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:id="@+id/lLayout_bg">
+
+    <FrameLayout
+        android:id="@+id/title_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/dialog_title_layout" />
+    </FrameLayout>
+
+    <View
+        android:id="@+id/button_divider_top"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@drawable/list_divider"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/content_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/message"
+            style="@style/Widget.Dialog.Message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="8.0dip"
+            android:paddingBottom="20.0dip"
+            android:paddingLeft="20.0dip"
+            android:paddingRight="20.0dip"
+            android:paddingTop="20.0dip" />
+    </FrameLayout>
+
+    <View
+        android:id="@+id/button_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@drawable/list_divider" />
+
+    <LinearLayout
+        android:id="@+id/button_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/btn_cancel"
+            style="@style/Widget.Button.Dialog"
+            android:layout_width="0.0dip"
+            android:layout_height="50.0dip"
+            android:layout_weight="1.0"
+            android:textSize="15.0dip" />
+
+        <View
+            android:id="@+id/button_divider_split"
+            android:layout_width="1.0px"
+            android:layout_height="fill_parent"
+            android:background="@drawable/list_divider" />
+
+        <Button
+           	android:id="@+id/btn_ok"
+            style="@style/Widget.Button.Dialog.Default"
+            android:layout_width="0.0dip"
+            android:layout_height="50.0dip"
+            android:layout_weight="1.0"
+            android:textSize="15.0dip" />
+    </LinearLayout>
+
+</LinearLayout>

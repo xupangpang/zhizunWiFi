@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff5f5f5"
+    android:orientation="vertical" 
+    android:fitsSystemWindows="true">
+
+    <include
+        android:id="@id/viewHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip"
+        layout="@layout/view_header1" />
+
+     <LinearLayout
+        android:layout_width="match_parent"
+         android:layout_below="@id/viewHeader"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/input_bg"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/Smile.TextView._Black"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:text="昵称:"
+            android:textColor="#333333"
+            android:textSize="14dp" />
+
+        <EditText
+            android:id="@+id/edit_nick"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:singleLine="true"
+            android:maxLength="20"
+            android:textSize="14dp"
+            android:background="@color/transparent"
+            android:gravity="center_vertical"
+            android:hint="请输入昵称···" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp" >
+
+        <net.qiujuer.genius.ui.widget.Button
+            android:id="@+id/button_set_updateinfo"
+            android:background="#0D8CF3"
+            android:textColor="@color/white"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:gTouchColor="@color/black_alpha_48"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            app:gTouchEffect="auto"
+            android:text="确定"
+            android:textSize="17dp" />
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
+

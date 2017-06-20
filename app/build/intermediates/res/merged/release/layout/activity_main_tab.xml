@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <FrameLayout
+        android:id="@+id/tab_content"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0" />
+
+
+    <com.zzad.media.view.BannerView
+        android:id="@+id/bannerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/main_radio"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="1.0dip"
+                android:layout_height="1.0dip"
+                android:layout_weight="1.0" />
+
+            <LinearLayout
+                android:id="@+id/act_home_news_position"
+                android:layout_width="1.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="top|center" >
+
+                <ImageView
+                    android:id="@+id/act_home_news_state_new"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/title_name"
+                    android:src="@drawable/btn_tools_new"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1.0dip"
+                android:layout_height="1.0dip"
+                android:layout_weight="1.0" />
+
+            <LinearLayout
+                android:id="@+id/act_home_tools_position"
+                android:layout_width="1.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="top|center" >
+
+                <ImageView
+                    android:id="@+id/act_home_tools_state_new"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/title_name"
+                    android:src="@drawable/btn_tools_new"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1.0dip"
+                android:layout_height="1.0dip"
+                android:layout_weight="1.0" />
+        </LinearLayout>
+
+
+        <RadioGroup
+            android:id="@+id/main_radio"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@color/main_bg_button_grey"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/tab_wifilist"
+                style="@style/activity_home_tab_group"
+                android:drawablePadding="0.0dip"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:checked="true"
+                android:drawableTop="@drawable/tab_icon_scanresult"
+                android:text="@string/activity_home_label_tabwifilist"
+                android:textColor="@drawable/main_tab_text_color"
+                />
+
+            <RadioButton
+                android:id="@+id/tab_news"
+                style="@style/activity_home_tab_group"
+                android:drawablePadding="0.0dip"
+                android:drawableTop="@drawable/tab_icon_map"
+                android:text="@string/activity_home_label_tabnews"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:textColor="@drawable/main_tab_text_color"
+                />
+            <!-- android:text="@string/activity_home_label_tabtools" -->
+
+            <!-- <RadioButton
+                android:id="@+id/tab_security"
+                style="@style/activity_home_tab_group"
+                android:background="@drawable/bottom_tab_bg"
+                android:drawablePadding="0.0dip"
+                android:drawableTop="@drawable/tab_icon_security"
+                android:text="@string/activity_home_label_security" />
+
+            <RadioButton
+                android:id="@+id/tab_tools"
+                style="@style/activity_home_tab_group"
+                android:background="@drawable/bottom_tab_bg"
+                android:drawablePadding="0.0dip"
+                android:drawableTop="@drawable/tab_icon_tools"
+                android:text="@string/activity_home_label_tabtools" /> -->
+
+            <RadioButton
+                android:id="@+id/tab_more"
+                style="@style/activity_home_tab_group"
+                android:drawablePadding="0.0dip"
+                android:drawableTop="@drawable/tab_icon_more"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:text="@string/activity_home_label_tabmore"
+                android:textColor="@drawable/main_tab_text_color"
+                />
+        </RadioGroup>
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

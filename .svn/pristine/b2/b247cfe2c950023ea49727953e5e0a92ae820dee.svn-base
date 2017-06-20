@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+        android:id="@+id/speedProgressBarlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="103.0dip" >
+		
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/speed_arc" />
+        
+         <!-- <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_alignParentTop="true"
+            android:src="#E2E2E2" /> -->
+         
+       <!--  <ImageView
+            android:id="@+id/img_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/net_speed_clip" /> -->
+
+        <!-- <com.lantern.wifitools.speedtest.SpeedProgressBar
+            android:id="@+id/speedProgressBar"
+            android:layout_width="300.0dip"
+            android:layout_height="300.0dip"
+            android:visibility="visible" /> -->
+		 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/speed_dial" />
+        
+        
+      <!--  <ImageView
+            android:id="@+id/iv_needle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/speed_pointer"
+             /> -->
+       <com.zhizun.zhizunwifi.view.TestCanvasRotateView 
+	    android:id="@+id/rotateView"
+	    android:layout_width="300dp"
+	    android:layout_height="300dp"
+	    android:layout_alignParentTop="true"
+	    />
+
+        <com.zhizun.zhizunwifi.view.SpeedTestPoint
+            android:id="@+id/speedPoint"
+            android:layout_width="300.0dip"
+            android:layout_height="300.0dip"
+            android:layout_alignParentTop="true"
+            android:visibility="gone" /> 
+    </RelativeLayout>
+    
+</RelativeLayout>

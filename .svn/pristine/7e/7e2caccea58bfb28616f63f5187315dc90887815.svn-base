@@ -1,0 +1,353 @@
+package com.zhizun.zhizunwifi.fragment;
+
+import java.util.List;
+
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.Typeface;
+import android.net.Uri;
+import android.os.Build;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.KeyEvent;
+import android.view.LayoutInflater;
+import android.view.View;
+import com.tencent.smtt.sdk.WebChromeClient;
+import com.tencent.smtt.sdk.WebSettings;
+import com.tencent.smtt.sdk.WebViewClient;
+import com.tencent.smtt.sdk.WebSettings.LayoutAlgorithm;
+import com.tencent.smtt.sdk.WebSettings.RenderPriority;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.gson.Gson;
+import com.tencent.smtt.sdk.WebView;
+import com.zhizun.zhizunwifi.R;
+import com.zhizun.zhizunwifi.activity.WebInfoActivity;
+import com.zhizun.zhizunwifi.bean.GetAdvice;
+import com.zhizun.zhizunwifi.bean.JsonWifi;
+import com.zhizun.zhizunwifi.bean.PutAccount;
+import com.zhizun.zhizunwifi.http.BaseResultEntity;
+import com.zhizun.zhizunwifi.http.HttpManager;
+import com.zhizun.zhizunwifi.http.HttpService;
+import com.zhizun.zhizunwifi.utils.BaseUtils;
+import com.zhizun.zhizunwifi.utils.JmTools;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.litepal.crud.DataSupport;
+
+import retrofit2.http.GET;
+import rx.Subscriber;
+import rx.Subscription;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
+import rx.subscriptions.CompositeSubscription;
+
+/**
+ * 百宝箱
+ *
+ * @author Administrator
+ *
+ */
+public class NewsFragment extends BaseFragment {
+
+	private WebView mWebView;
+	private LinearLayout loadingLayout;
+	private TextView tv_app, tv_joke, tv_weather, tv_star, tv_health;
+	private ProgressBar pb;
+
+	private View loadErrorView;
+	private View btnRefresh;
+	private View btnBack;
+	private int currentLoadIndex = -1;
+	private List<TextView> titles;
+
+	private String curUrl;
+	protected CompositeSubscription mCompositeSubscription;
+	private HttpService apiService;
+
+	@SuppressLint("SetJavaScriptEnabled")
+	@Override
+	public void onActivityCreated(Bundle savedInstanceState) {
+		super.onActivityCreated(savedInstanceState);
+		pb = (ProgressBar) view.findViewById(R.id.pb);
+		pb.setMax(100);
+
+		mCompositeSubscription = new CompositeSubscription();
+		apiService = HttpManager.getService();
+		loadingLayout = (LinearLayout) view.findViewById(R.id.loadingLayout);
+
+		loadErrorView = view.findViewById(R.id.loadErrorView);
+		btnRefresh = view.findViewById(R.id.btnRefresh);
+		btnBack = view.findViewById(R.id.btnBack);
+		btnRefresh.setOnClickListener(this);
+		btnBack.setOnClickListener(this);
+		initWeb();
+
+		if (BaseUtils.isConnect(this.getActivity())){
+			Subscription subscription = apiService.GetAdvice("faxian","zhizunwifi").subscribeOn(Schedulers.io())
+					.unsubscribeOn(Schedulers.io())
+					.observeOn(AndroidSchedulers.mainThread())
+					.subscribe(
+							new Subscriber<BaseResultEntity<GetAdvice>>() {
+								@Override
+								public void onCompleted() {
+
+								}
+
+								@Override
+								public void onError(Throwable e) {
+									loadingLayout.setVisibility(View.GONE);
+									loadErrorView.setVisibility(View.VISIBLE);
+									pb.setVisibility(View.GONE);
+
+								}
+
+								@Override
+								public void onNext(BaseResultEntity<GetAdvice> baseResultEntity) {
+									if (baseResultEntity.ret == 200){
+										mWebView.loadUrl(baseResultEntity.data.advice);
+									}else {
+										mWebView.loadUrl("http://cpu.baidu.com/1032/db96f0f7");
+									}
+
+								}
+								@Override
+								public void onStart() {
+									super.onStart();
+								}
+							}
+
+					);
+			mCompositeSubscription.add(subscription);
+		}else {
+			loadingLayout.setVisibility(View.GONE);
+			loadErrorView.setVisibility(View.VISIBLE);
+			pb.setVisibility(View.GONE);
+		}
+
+	}
+
+	private void initWeb() {
+		mWebView = (WebView) view.findViewById(R.id.webView);
+		webSet();
+		mWebView.setWebViewClient(new WebViewClient() {
+			@Override
+			public boolean shouldOverrideUrlLoading(WebView view, String url) {
+				if (url.contains("/detail/")){
+					Intent intent = new Intent(NewsFragment.this.getActivity(), WebInfoActivity.class);
+					intent.putExtra("url",url);
+					startActivity(intent);
+				}else {
+					mWebView.loadUrl(url);
+				}
+				return true;
+			}
+
+			@Override
+			public void onPageStarted(WebView view, String url, Bitmap favicon) {
+				// TODO Auto-generated method stub
+				// view.stopLoading();
+				// 提示网页被屏蔽?
+				curUrl = url;
+
+				pb.setProgress(0);
+				if (!isRefreshing)
+					pb.setVisibility(View.GONE);
+				// pb.setVisibility(View.VISIBLE);
+				return;
+			}
+
+			@Override
+			public void onPageFinished(WebView view, String url) {
+				super.onPageFinished(view, url);
+				if (loadingLayout.getVisibility() == View.VISIBLE)
+				loadingLayout.setVisibility(View.GONE);
+
+				pb.setVisibility(View.GONE);
+
+				loadErrorView.setVisibility(View.GONE);
+				mWebView.setVisibility(View.VISIBLE);
+
+				isRefreshing = false;
+			}
+
+			@Override
+			public void onReceivedError(WebView view, int errorCode,
+										String description, String failingUrl) {
+				super.onReceivedError(view, errorCode, description, failingUrl);
+				mWebView.setVisibility(View.GONE);
+				pb.setVisibility(View.GONE);
+				loadErrorView.setVisibility(View.VISIBLE);
+				isRefreshing = false;
+			}
+		});
+		mWebView.setWebChromeClient(new WebChromeClient() {
+			@Override
+			public void onProgressChanged(WebView view, int newProgress) {
+				super.onProgressChanged(view, newProgress);
+				if (newProgress >= 50) {
+					if (isRefreshing) {
+						loadErrorView.setVisibility(View.GONE);
+						mWebView.setVisibility(View.VISIBLE);
+						// pb.setVisibility(View.VISIBLE);
+						pb.setVisibility(View.GONE);
+						isRefreshing = false;
+					}
+				}
+
+				if (newProgress != 100) {
+					pb.setProgress(newProgress);
+				}
+			}
+
+			@Override
+			public void onReceivedTitle(WebView view, String title) {
+				// TODO Auto-generated method stub
+				super.onReceivedTitle(view, title);
+			}
+		});
+		}
+
+	@SuppressWarnings("deprecation")
+	@SuppressLint("SetJavaScriptEnabled")
+	private void webSet() {
+		WebSettings webSetting = mWebView.getSettings();
+		webSetting.setJavaScriptEnabled(true);
+		webSetting.setJavaScriptCanOpenWindowsAutomatically(true);
+		webSetting.setAllowFileAccess(true);
+		webSetting.setLayoutAlgorithm(LayoutAlgorithm.NARROW_COLUMNS);
+		webSetting.setSupportZoom(true);
+		webSetting.setBuiltInZoomControls(true);
+		webSetting.setUseWideViewPort(true);
+		webSetting.setSupportMultipleWindows(true);
+		//webSetting.setLoadWithOverviewMode(true);
+		webSetting.setAppCacheEnabled(true);
+		//webSetting.setDatabaseEnabled(true);
+		webSetting.setDomStorageEnabled(true);
+		webSetting.setGeolocationEnabled(true);
+		webSetting.setAppCacheMaxSize(Long.MAX_VALUE);
+		// webSetting.setPageCacheCapacity(IX5WebSettings.DEFAULT_CACHE_CAPACITY);
+		webSetting.setPluginState(WebSettings.PluginState.ON_DEMAND);
+		//webSetting.setRenderPriority(WebSettings.RenderPriority.HIGH);
+		webSetting.setCacheMode(BaseUtils.isConnect(this.getActivity()) ? WebSettings.LOAD_DEFAULT :WebSettings.LOAD_CACHE_ELSE_NETWORK);
+	}
+
+	boolean isRefreshing = false;
+
+	@Override
+	public void onClick(View v) {
+		switch (v.getId()) {
+			case R.id.btnRefresh:
+				if (!isRefreshing) {
+					isRefreshing = true;
+					mWebView.reload();
+				}
+				break;
+			case R.id.btnBack:
+				if (mWebView.canGoBack())
+					mWebView.goBack();
+				if (!isRefreshing) {
+					isRefreshing = true;
+				}
+				break;
+			default:
+				break;
+		}
+
+	}
+
+	public boolean goBack_webView(int keyCode, KeyEvent event) {
+		if (mWebView != null){
+			if ((keyCode == KeyEvent.KEYCODE_BACK) && mWebView.canGoBack()) {
+				mWebView.goBack(); // goBack()表示返回WebView的上一页面
+				loadErrorView.setVisibility(View.GONE);
+				mWebView.setVisibility(View.VISIBLE);
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	@Override
+	public View initView(LayoutInflater inflater) {
+		view = inflater.inflate(R.layout.fragment_news, null);
+		return view;
+	}
+
+	@Override
+	public void initData() {
+
+	}
+
+	@Override
+	public void initEvent() {
+
+	}
+
+	@Override
+	public void onHiddenChanged(boolean hidden) {
+		super.onHiddenChanged(hidden);
+		if (BaseUtils.isConnect(this.getActivity())) {
+			putwifipsd();
+		}
+	}
+
+	@Override
+	public void onDestroy() {
+		super.onDestroy();
+		mCompositeSubscription.unsubscribe();
+	}
+
+	private void putwifipsd(){
+		List<JsonWifi>  wifiList = DataSupport.findAll(JsonWifi.class);
+		Gson gson = new Gson();
+		String aa = gson.toJson(wifiList).toString();
+		Log.e("newsfragment",aa.toString());
+		JSONObject jsonObject = new JSONObject();
+		try {
+			jsonObject.put("data",aa);
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		String time = System.currentTimeMillis()+"";
+
+		Subscription subscription = apiService.putAccount(JmTools.encryptionEnhanced(time,jsonObject.toString()),time).subscribeOn(Schedulers.io())
+				.unsubscribeOn(Schedulers.io())
+				.observeOn(AndroidSchedulers.mainThread())
+				.subscribe(
+						new Subscriber<BaseResultEntity<PutAccount>>() {
+							@Override
+							public void onCompleted() {
+
+							}
+
+							@Override
+							public void onError(Throwable e) {
+
+							}
+
+							@Override
+							public void onNext(BaseResultEntity<PutAccount> baseResultEntity) {
+								if (!baseResultEntity.data.result.equals("success")){
+									$Log("JsonResult","上传服务器失败");
+								}else {
+									$Log("JsonResult","上传服务器成功");
+								}
+
+							}
+							@Override
+							public void onStart() {
+								super.onStart();
+							}
+						}
+
+				);
+		mCompositeSubscription.add(subscription);
+	}
+}

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/viewHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip"
+        layout="@layout/view_header1" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/nav_background" >
+
+            <FrameLayout
+                android:id="@+id/fl_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20.0dip" >
+
+                <com.zhizun.zhizunwifi.view.FlipImageView
+                    android:id="@+id/imageview"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/detection"
+                    app:flipDrawable="@drawable/detection_pass"
+                    app:flipDuration="2000"
+                    app:flipInterpolator="@android:anim/bounce_interpolator"
+                    app:flipRotations="y|x|z"
+                    app:reverseRotation="true" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_ssid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fl_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10.0dip"
+                android:text="所连接的WIFI ssid"
+                android:textColor="#ffffffff"
+                android:textSize="18.0dip" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="32.0dip"
+                android:layout_below="@id/tv_ssid"
+                android:layout_marginTop="30.0dip"
+                android:background="@android:color/transparent" >
+            </View>
+
+            <com.zhizun.zhizunwifi.view.InspectProgressBar
+                android:id="@+id/pb_checking"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="32.0dip"
+                android:layout_below="@id/tv_ssid"
+                android:layout_marginTop="30.0dip"
+                android:max="6"
+                android:progress="0"
+                android:progressDrawable="@drawable/bg_progressbar_check" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <ListView
+                android:id="@+id/lv_checking"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/white"
+                android:cacheColorHint="@android:color/transparent"
+                android:divider="#ffeeeeee"
+                android:dividerHeight="1.0px"
+                android:listSelector="@drawable/list_selector" />
+
+            <LinearLayout
+                android:id="@+id/inspect_past"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="60dip"
+                    android:text="WiFi网络很安全，请放心使用"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <Button
+                    style="@style/Button.Blue.Oval"
+                    android:id="@+id/btnStartNet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dip"
+                    android:text="开始上网" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

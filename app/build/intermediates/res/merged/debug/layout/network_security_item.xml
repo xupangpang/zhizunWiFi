@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:visibility="gone"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@color/gray" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/sliding_menu_height"
+        android:background="@drawable/pref_secury_item_bg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/sliding_menu_text"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/sliding_menu_height"
+            android:layout_marginLeft="15.0dip"
+            android:gravity="left|center"
+            android:text="是否连接上WiFi"
+            android:textColor="#ff333333" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_safe_xiao"
+                android:gravity="center"
+                android:text="已连接"
+                android:drawablePadding="3dp"
+                android:textColor="@color/text_color_828282" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@color/gray" />
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/sliding_menu_height"
+        android:background="@drawable/pref_secury_item_bg"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/sliding_menu_text"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/sliding_menu_height"
+            android:layout_marginLeft="15.0dip"
+            android:gravity="left|center"
+            android:text="是否能上网"
+            android:textColor="#ff333333" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:gravity="center" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_safe_xiao"
+                android:drawablePadding="3dp"
+                android:textColor="@color/text_color_828282"
+                android:text="正常"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@color/gray" />
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/sliding_menu_height"
+        android:background="@drawable/pref_secury_item_bg"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/sliding_menu_text"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/sliding_menu_height"
+            android:layout_marginLeft="15.0dip"
+            android:gravity="left|center"
+            android:text="检测DNS是否正常"
+            android:textColor="#ff333333" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:gravity="center" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_safe_xiao"
+                android:drawablePadding="3dp"
+                android:text="正常"
+                android:textColor="@color/text_color_828282" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@color/gray" />
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/sliding_menu_height"
+        android:background="@drawable/pref_secury_item_bg"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/sliding_menu_text"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/sliding_menu_height"
+            android:layout_marginLeft="15.0dip"
+            android:gravity="left|center"
+            android:text="检测是否收到ARP攻击"
+            android:textColor="#ff333333" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:gravity="center" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_safe_xiao"
+                android:drawablePadding="3dp"
+                android:textColor="@color/text_color_828282"
+                android:text="安全"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@color/gray" />
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/sliding_menu_height"
+        android:background="@drawable/pref_secury_item_bg"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/sliding_menu_text"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/sliding_menu_height"
+            android:layout_marginLeft="15.0dip"
+            android:gravity="left|center"
+            android:text="检测虚假WiFi"
+            android:textColor="#ff333333" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:gravity="center" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_safe_xiao"
+                android:drawablePadding="3dp"
+                android:textColor="@color/text_color_828282"
+                android:text="安全"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/sliding_menu_height"
+        android:background="@drawable/pref_secury_item_bg"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/sliding_menu_text"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/sliding_menu_height"
+            android:layout_marginLeft="15.0dip"
+            android:gravity="left|center"
+            android:text="检测是否存在泄密风险"
+            android:textColor="#ff333333" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:gravity="center" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_safe_xiao"
+                android:drawablePadding="3dp"
+                android:textColor="@color/text_color_828282"
+                android:text="安全"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+</LinearLayout>

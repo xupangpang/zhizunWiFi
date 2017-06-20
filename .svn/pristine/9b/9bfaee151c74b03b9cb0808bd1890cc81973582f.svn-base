@@ -1,0 +1,250 @@
+[
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\g_default_seek_bar_track.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\exploded-aar\\net.qiujuer.genius\\ui\\2.0.0-beta2\\res\\color\\g_default_seek_bar_track.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\sync_btn_selector.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\color\\sync_btn_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\switch_thumb_material_dark.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\color\\switch_thumb_material_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\g_default_seek_bar_scrubber.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\exploded-aar\\net.qiujuer.genius\\ui\\2.0.0-beta2\\res\\color\\g_default_seek_bar_scrubber.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\lt_dlg_btn_cancel.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\color\\lt_dlg_btn_cancel.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_disable_only_material_light.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\color\\abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\qp_wallet_tab_text_color.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\color\\qp_wallet_tab_text_color.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_search_url_text_holo.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\color\\abc_search_url_text_holo.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\manor_abandon_btn_text.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\color\\manor_abandon_btn_text.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\btn_text_orange_fillet.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\color\\btn_text_orange_fillet.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_default.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\color\\abc_tint_default.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_secondary_text_material_light.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\color\\abc_secondary_text_material_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\barcode_album_btn_selector.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\color\\barcode_album_btn_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\notice_go_text.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\color\\notice_go_text.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\push_sdk_lt_dlg_btn_ok.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\color\\push_sdk_lt_dlg_btn_ok.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\lt_dlg_btn_ok.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\color\\lt_dlg_btn_ok.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\color_radiobutton.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\color\\color_radiobutton.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\hongbao_change_btn_selector.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\color\\hongbao_change_btn_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\dialog_button_text.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\color\\dialog_button_text.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\btn_text_blue_white.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\color\\btn_text_blue_white.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\common_signin_btn_text_light.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\color\\common_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\nav_text.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\color\\nav_text.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_spinner.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\color\\abc_tint_spinner.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\text_radiobutton.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\color\\text_radiobutton.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\g_default_edit_view_line.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\exploded-aar\\net.qiujuer.genius\\ui\\2.0.0-beta2\\res\\color\\g_default_edit_view_line.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_edittext.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\color\\abc_tint_edittext.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\app_wall_tab_title_color.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\color\\app_wall_tab_title_color.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\mm_hyper_text.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\color\\mm_hyper_text.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_material_dark.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\color\\abc_primary_text_material_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_seek_thumb.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\color\\abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\logwin_menu.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\color\\logwin_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_search_url_text.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\color\\abc_search_url_text.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\nav_menu_text.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\color\\nav_menu_text.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\g_default_float_action_bg.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\exploded-aar\\net.qiujuer.genius\\ui\\2.0.0-beta2\\res\\color\\g_default_float_action_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\switch_thumb_material_light.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\color\\switch_thumb_material_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_btn_checkable.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\color\\abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\lt_edittext_hint.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\color\\lt_edittext_hint.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\g_default_seek_bar_thumb.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\exploded-aar\\net.qiujuer.genius\\ui\\2.0.0-beta2\\res\\color\\g_default_seek_bar_thumb.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\btn_text_blue.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\color\\btn_text_blue.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\news_text.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\color\\news_text.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_switch_thumb.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\color\\abc_tint_switch_thumb.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\push_sdk_lt_dlg_btn_cancel.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\color\\push_sdk_lt_dlg_btn_cancel.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_material_light.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\color\\abc_primary_text_material_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\hongbao_result_share_btn_selector.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\color\\hongbao_result_share_btn_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\dialog_default_button_text.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\color\\dialog_default_button_text.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\btn_text_orange2.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\color\\btn_text_orange2.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_secondary_text_material_dark.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\color\\abc_secondary_text_material_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_hint_foreground_material_light.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\color\\abc_hint_foreground_material_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\hongbao_result_back_btn_selector.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\color\\hongbao_result_back_btn_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_switch_track.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\color\\abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\common_signin_btn_text_dark.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\color\\common_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\g_default_edit_view_hint.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\exploded-aar\\net.qiujuer.genius\\ui\\2.0.0-beta2\\res\\color\\g_default_edit_view_hint.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_disable_only_material_dark.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\barcode_type_btn_text_color.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\color\\barcode_type_btn_text_color.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\common_font_color_selector_2.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\color\\common_font_color_selector_2.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\logwin_text.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\color\\logwin_text.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\wifilist_ap_menu.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\color\\wifilist_ap_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\title_text_middle_color.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\color\\title_text_middle_color.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_btn_colored_borderless_text_material.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\color\\abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\btn_text_button_grey.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\color\\btn_text_button_grey.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\g_default_check_box.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\exploded-aar\\net.qiujuer.genius\\ui\\2.0.0-beta2\\res\\color\\g_default_check_box.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_hint_foreground_material_dark.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\color\\abc_hint_foreground_material_dark.xml"
+    }
+]

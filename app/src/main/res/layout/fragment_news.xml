@@ -1,0 +1,209 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+	>
+
+	<View
+		android:id="@+id/status_bar_fix"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/blue_bg"
+		></View>
+
+	<ProgressBar
+		android:id="@+id/pb"
+		style="?android:attr/progressBarStyleHorizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="3dip"
+		android:indeterminateOnly="false"
+		android:max="100"
+		android:progressDrawable="@drawable/progress_bar_states"
+		android:visibility="visible" />
+
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="48dp"
+		android:background="@color/blue_bg"
+		>
+		<TextView
+			android:id="@+id/new_title_ssid"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textSize="17sp"
+			android:textColor="@color/white"
+			android:layout_centerVertical="true"
+			android:layout_marginLeft="15dp"
+			android:text="SSID"
+			/>
+
+		<TextView
+			android:id="@+id/new_title_ceshu"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textSize="15sp"
+			android:textColor="@color/white"
+			android:layout_centerVertical="true"
+			android:layout_alignParentRight="true"
+			android:layout_marginRight="15dp"
+			android:text="体检测速"
+			/>
+
+	</RelativeLayout>
+
+
+        
+	<!-- <HorizontalScrollView 
+	    android:layout_width="fill_parent"
+	    android:layout_height="50dp"
+	    android:scrollbars="none"
+	    android:background="#278DFE"
+	    android:paddingLeft="10dp"
+	    android:paddingRight="10dp"
+	    android:scrollbarAlwaysDrawHorizontalTrack="false"
+	    >
+	    
+	    <LinearLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:orientation="horizontal">
+	        
+		    <TextView 
+		        android:id="@+id/tv_app"
+		        android:layout_width="70dp"
+		        android:layout_height="fill_parent"
+		        android:text="应用"
+		        android:textColor="@color/white"
+		        android:textSize="17sp"
+		        android:gravity="center"/>
+		    
+		    <TextView 
+		        android:id="@+id/tv_joke"
+		        android:layout_width="70dp"
+		        android:layout_height="fill_parent"
+		        android:text="笑话"
+		        android:textColor="@color/white"
+		        android:textSize="17sp"
+		        android:gravity="center"
+		        />
+		    
+		    <TextView 
+		        android:id="@+id/tv_weather"
+		        android:layout_width="70dp"
+		        android:layout_height="fill_parent"
+		        android:text="天气"
+		        android:textColor="@color/white"
+		        android:textSize="17sp"
+		        android:gravity="center"/>
+		    
+		    <TextView 
+		        android:id="@+id/tv_star"
+		        android:layout_width="70dp"
+		        android:layout_height="fill_parent"
+		        android:text="明星"
+		        android:textColor="@color/white"
+		        android:textSize="17sp"
+		        android:gravity="center"/>
+		    
+		    <TextView 
+		        android:id="@+id/tv_health"
+		        android:layout_width="70dp"
+		        android:layout_height="fill_parent"
+		        android:text="养生"
+		        android:textColor="@color/white"
+		        android:textSize="17sp"
+		        android:gravity="center"/>
+	    </LinearLayout>
+	</HorizontalScrollView> -->
+	
+	<LinearLayout
+	    android:id="@+id/loadingLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/white"
+            android:visibility="visible"
+            android:orientation="vertical"
+            android:gravity="center">
+
+		<net.qiujuer.genius.ui.widget.Loading
+			android:layout_width="60dp"
+		    android:layout_height="60dp"
+		    app:gBackgroundLineSize="2dp"
+		    app:gForegroundLineSize="3dp"
+		    app:gBackgroundColor="@color/grey_300"
+		    app:gForegroundColor="@color/blue_a700"
+		    app:gAutoRun="true"/>
+	    
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+			android:textColor="@color/aaabbb"
+			android:textSize="16dp"
+	        android:text="载入中..."
+	        android:layout_marginTop="20dp"/>
+	</LinearLayout>
+	
+	<LinearLayout 
+	    android:id="@+id/loadErrorView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:gravity="center">
+	    
+	    <ImageView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:background="@drawable/load_fail" /> 
+	    
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="网络加载失败"
+	        android:textSize="20sp"
+	        android:layout_marginTop="20dp"/>
+	    
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="请尝试刷新查看，或检查您的网络连接状态"
+	        android:textColor="@color/text_gray"
+	        android:layout_marginTop="10dp"/>
+	    
+	    <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:gravity="center">
+            <Button
+            android:id="@+id/btnRefresh"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/radiu_blue_bg"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:text="刷新" />
+            
+            <Button
+            android:id="@+id/btnBack"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/radiu_gray_bg"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:text="返回" />
+            </LinearLayout>
+	    
+	</LinearLayout>
+	
+	<com.tencent.smtt.sdk.WebView
+            android:id="@+id/webView"
+            android:layout_width="fill_parent"
+		    android:scrollbars="none"
+            android:layout_height="fill_parent" />
+</LinearLayout>

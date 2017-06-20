@@ -1,0 +1,110 @@
+package com.zhizun.zhizunwifi.fragment;
+
+import android.content.Context;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.GridView;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+
+import com.zhizun.zhizunwifi.R;
+import com.zhizun.zhizunwifi.utils.ImageLoader;
+import com.zhizun.zhizunwifi.utils.ImageLoader.Type;
+import com.zhizun.zhizunwifi.utils.Images;
+
+public class App_honly_Fragment extends BaseFragment {
+	/** GridView **/
+	private GridView mGridView;
+	/** bottomLoading **/
+	private LinearLayout bottomLoading;  
+	private String[] mUrlStrs = Images.imageThumbUrls;
+	private ImageLoader mImageLoader;
+	
+	
+	@Override
+	public void onActivityCreated(Bundle savedInstanceState) {
+		super.onActivityCreated(savedInstanceState);
+		mGridView = (GridView) view.findViewById(R.id.itemGridView);
+		bottomLoading = (LinearLayout) view.findViewById(R.id.bottomLoading);
+		
+		setUpAdapter();
+	}
+	
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		mImageLoader = ImageLoader.getInstance(3, Type.LIFO);
+	}
+	
+	@Override
+	public void onClick(View v) {
+		
+	}
+
+	@Override
+	public View initView(LayoutInflater inflater) {
+		view = inflater.inflate(R.layout.act_apps_store_honly, null);
+		return view;
+	}
+
+	@Override
+	public void initData() {
+		
+	}
+	
+	@Override
+	public void onResume() {
+		super.onResume();
+	}
+
+	@Override
+	public void initEvent() {
+	}
+	
+	private void setUpAdapter()
+	{
+		if (getActivity() == null || mGridView == null)
+			return;
+
+		if (mUrlStrs != null)
+		{
+			mGridView.setAdapter(new ListImgItemAdaper(getActivity(), 0,
+					mUrlStrs));
+		} else
+		{
+			mGridView.setAdapter(null);
+		}
+
+	}
+
+	private class ListImgItemAdaper extends ArrayAdapter<String>
+	{
+
+		public ListImgItemAdaper(Context context, int resource, String[] datas)
+		{
+			super(getActivity(), 0, datas);
+			Log.e("TAG", "ListImgItemAdaper");
+		}
+
+		@Override
+		public View getView(int position, View convertView, ViewGroup parent)
+		{
+			if (convertView == null)
+			{
+				convertView = getActivity().getLayoutInflater().inflate(
+						R.layout.act_apps_appitem_h_h_only, parent, false);
+			}
+			ImageView imageview = (ImageView) convertView
+					.findViewById(R.id.appicon);
+			imageview.setImageResource(R.drawable.pictures_no);
+			mImageLoader.loadImage(getItem(position), imageview, true);
+			return convertView;
+		}
+
+	}
+	
+}

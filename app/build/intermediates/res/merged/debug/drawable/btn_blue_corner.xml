@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_enabled="false"><shape>
+            <solid android:color="@color/blue_a70" />
+
+            <padding android:bottom="8.0dip" android:left="30.0dip" android:right="30.0dip" android:top="8.0dip" />
+
+            <corners android:bottomLeftRadius="3.0dip" android:bottomRightRadius="3.0dip" android:topLeftRadius="3.0dip" android:topRightRadius="3.0dip" />
+        </shape></item>
+    <item android:state_pressed="true"><shape>
+            <solid android:color="@color/blue_a70" />
+
+            <padding android:bottom="8.0dip" android:left="30.0dip" android:right="30.0dip" android:top="8.0dip" />
+
+            <corners android:bottomLeftRadius="3.0dip" android:bottomRightRadius="3.0dip" android:topLeftRadius="3.0dip" android:topRightRadius="3.0dip" />
+        </shape></item>
+    <item><shape>
+            <solid android:color="@color/blue" />
+
+            <padding android:bottom="8.0dip" android:left="30.0dip" android:right="30.0dip" android:top="8.0dip" />
+
+            <corners android:bottomLeftRadius="3.0dip" android:bottomRightRadius="3.0dip" android:topLeftRadius="3.0dip" android:topRightRadius="3.0dip" />
+        </shape></item>
+    <item android:state_enabled="true"><shape>
+            <solid android:color="@color/blue" />
+
+            <padding android:bottom="8.0dip" android:left="30.0dip" android:right="30.0dip" android:top="8.0dip" />
+
+            <corners android:bottomLeftRadius="3.0dip" android:bottomRightRadius="3.0dip" android:topLeftRadius="3.0dip" android:topRightRadius="3.0dip" />
+        </shape></item>
+
+</selector>

@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "E:\\Android\\ZZwifi\\ZhizunWIFI\\app\\build\\intermediates\\res\\merged\\release\\drawable-zh-mdpi-v4\\switch_off_disable.png",
+        "source": "E:\\Android\\ZZwifi\\ZhizunWIFI\\app\\src\\main\\res\\drawable-zh-mdpi\\switch_off_disable.png"
+    },
+    {
+        "merged": "E:\\Android\\ZZwifi\\ZhizunWIFI\\app\\build\\intermediates\\res\\merged\\release\\drawable-zh-mdpi-v4\\switch_off_normal.png",
+        "source": "E:\\Android\\ZZwifi\\ZhizunWIFI\\app\\src\\main\\res\\drawable-zh-mdpi\\switch_off_normal.png"
+    },
+    {
+        "merged": "E:\\Android\\ZZwifi\\ZhizunWIFI\\app\\build\\intermediates\\res\\merged\\release\\drawable-zh-mdpi-v4\\switch_on_normal.png",
+        "source": "E:\\Android\\ZZwifi\\ZhizunWIFI\\app\\src\\main\\res\\drawable-zh-mdpi\\switch_on_normal.png"
+    },
+    {
+        "merged": "E:\\Android\\ZZwifi\\ZhizunWIFI\\app\\build\\intermediates\\res\\merged\\release\\drawable-zh-mdpi-v4\\switch_on_disable.png",
+        "source": "E:\\Android\\ZZwifi\\ZhizunWIFI\\app\\src\\main\\res\\drawable-zh-mdpi\\switch_on_disable.png"
+    },
+    {
+        "merged": "E:\\Android\\ZZwifi\\ZhizunWIFI\\app\\build\\intermediates\\res\\merged\\release\\drawable-zh-mdpi-v4\\setupguide_appname.png",
+        "source": "E:\\Android\\ZZwifi\\ZhizunWIFI\\app\\src\\main\\res\\drawable-zh-mdpi\\setupguide_appname.png"
+    }
+]

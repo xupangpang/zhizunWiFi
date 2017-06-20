@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff5f5f5"
+    android:orientation="vertical" 
+    android:fitsSystemWindows="true">
+
+    <include
+        android:id="@id/viewHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip"
+        layout="@layout/view_header1" />
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="15.0dip"
+        layout="@layout/view_split_bottom" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:background="@drawable/btn_list_cell" >
+
+            <ImageView
+                android:id="@+id/iv1"
+                android:layout_width="25.0dip"
+                android:layout_height="25.0dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dip"
+                android:background="@drawable/setting_icon_floater" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@id/iv1"
+                android:text="桌面悬浮窗"
+                android:textColor="#ff333333"
+                android:textSize="15dip" />
+
+            <com.zhizun.zhizunwifi.view.SwitchButtonBlue
+                android:id="@+id/switch_float"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10.0dip"
+                android:visibility="visible" />
+               />        
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="2.0px"
+            android:layout_marginLeft="46.0dip"
+            android:background="#fff0f0f0"
+            android:contentDescription="@string/empty" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:background="@drawable/btn_list_cell" >
+
+            <ImageView
+                android:id="@+id/iv1"
+                android:layout_width="25.0dip"
+                android:layout_height="25.0dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dip"
+                android:background="@drawable/setting_icon_switch" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@id/iv1"
+                android:text="接入WiFi后关闭数据流量"
+                android:textColor="#ff333333"
+                android:textSize="15dip" />
+
+            <com.zhizun.zhizunwifi.view.SwitchButtonBlue
+                android:id="@+id/switch_closeflow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10.0dip"
+                android:visibility="visible" />
+               
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="2.0px"
+            android:layout_marginLeft="46.0dip"
+            android:background="#fff0f0f0"
+            android:contentDescription="@string/empty" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:background="@drawable/btn_list_cell" >
+
+            <ImageView
+                android:id="@+id/iv1"
+                android:layout_width="25.0dip"
+                android:layout_height="25.0dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dip"
+                android:background="@drawable/item_wifi_reconnect" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@id/iv1"
+                android:text="掉线后自动连接"
+                android:textColor="#ff333333"
+                android:textSize="15dip" />
+
+            <com.zhizun.zhizunwifi.view.SwitchButtonBlue
+                android:id="@+id/switch_autoconnect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10.0dip"
+                android:visibility="visible" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="15.0dip"
+        layout="@layout/view_split_both" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:background="@drawable/btn_list_cell" >
+
+            <ImageView
+                android:id="@+id/iv1"
+                android:layout_width="25.0dip"
+                android:layout_height="25.0dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dip"
+                android:background="@drawable/setting_icon_share" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@id/iv1"
+                android:text="申请取消WiFi分享"
+                android:textColor="#ff333333"
+                android:textSize="15dip" />
+
+            <ImageView
+                android:layout_width="8dip"
+                android:layout_height="10dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10.0dip"
+                android:background="@drawable/mine_icon_arrow" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="2.0px"
+            android:layout_marginLeft="46.0dip"
+            android:background="#fff0f0f0"
+            android:contentDescription="@string/empty" />
+
+        <RelativeLayout
+            android:id="@+id/blacklist"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:background="@drawable/btn_list_cell" >
+
+            <ImageView
+                android:id="@+id/iv1"
+                android:layout_width="25.0dip"
+                android:layout_height="25.0dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dip"
+                android:background="@drawable/setting_icon_blacklist" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@id/iv1"
+                android:text="WiFi黑名单"
+                android:textColor="#ff333333"
+                android:textSize="15dip" />
+
+            <ImageView
+                android:id="@+id/iv"
+                android:layout_width="8dip"
+                android:layout_height="10dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10.0dip"
+                android:background="@drawable/mine_icon_arrow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:layout_toLeftOf="@id/iv"
+                android:text="0"
+                android:textColor="#ff333333"
+                android:textSize="12dip" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="15.0dip"
+        layout="@layout/view_split_both" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:background="@drawable/btn_list_cell" >
+
+            <ImageView
+                android:id="@+id/iv1"
+                android:layout_width="25.0dip"
+                android:layout_height="25.0dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dip"
+                android:background="@drawable/setting_icon_default_wifi" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@id/iv1"
+                android:text="设为默认WiFi连接工具"
+                android:textColor="#ff333333"
+                android:textSize="15dip" />
+
+            <ImageView
+                android:layout_width="8dip"
+                android:layout_height="10dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10.0dip"
+                android:background="@drawable/mine_icon_arrow" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="15.0dip"
+        layout="@layout/view_split_top" />
+
+</LinearLayout>

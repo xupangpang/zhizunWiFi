@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" 
+    android:fitsSystemWindows="true">
+    
+        <include
+        android:id="@id/viewHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip"
+        layout="@layout/view_header1" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewHeader"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/act_wifi_back_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/sliding_menu_height"
+                android:background="@drawable/pref_secury_item_bg"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/act_wifi_backupauto_tv"
+                    style="@style/sliding_menu_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/sliding_menu_height"
+                    android:layout_marginLeft="15.0dip"
+                    android:gravity="left|center"
+                    android:text="WiFi名称"
+                    android:textColor="#ff333333" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:id="@+id/wifi_detail_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/darker_gray"
+                        android:text=""
+                        />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/act_wifi_back_line"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/line_cache_olor_hint" />
+
+            <RelativeLayout
+                android:id="@+id/act_wifi_show_info_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/sliding_menu_height"
+                android:background="@drawable/pref_secury_item_bg"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/sliding_menu_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/sliding_menu_height"
+                    android:layout_marginLeft="15.0dip"
+                    android:gravity="left|center"
+                    android:text="信号强度"
+                    android:textColor="#ff333333" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:id="@+id/wifi_detail_intensity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/darker_gray"
+                        android:text=""
+                        />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/line_cache_olor_hint" />
+
+            <RelativeLayout
+                android:id="@+id/act_wifi_update_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/sliding_menu_height"
+                android:background="@drawable/pref_secury_item_bg"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/sliding_menu_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/sliding_menu_height"
+                    android:layout_marginLeft="15.0dip"
+                    android:gravity="left|center"
+                    android:text="加密方式"
+                    android:textColor="#ff333333" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:id="@+id/wifi_detail_encryption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/darker_gray"
+                        android:text=""
+                        />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/line_cache_olor_hint" />
+
+            <RelativeLayout
+                android:id="@+id/act_wifi_exit_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/sliding_menu_height"
+                android:background="@drawable/pref_secury_item_bg"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/wifi_location"
+                    style="@style/sliding_menu_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/sliding_menu_height"
+                    android:layout_marginLeft="15.0dip"
+                    android:gravity="left|center"
+                    android:text="WiFi位置"
+                    android:textColor="#ff333333" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/wifi_location"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:id="@+id/wifi_detail_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:textColor="@android:color/darker_gray"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:text=""
+                         />
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/wifi_details_paw"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/sliding_menu_height"
+                android:background="@drawable/pref_secury_item_bg"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    style="@style/sliding_menu_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/sliding_menu_height"
+                    android:layout_marginLeft="15.0dip"
+                    android:gravity="left|center"
+                    android:text="取消热点分享"
+                    android:textColor="#ff333333" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center" >
+
+                    <ImageView
+                        android:id="@+id/act_wifi_server_wiperswitch"
+                         android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/aliwx_arrow" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/line_cache_olor_hint" />
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        >
+        <net.qiujuer.genius.ui.widget.Button
+            android:id="@+id/wifi_detail_forgotpassword"
+            android:background="#e3e3e3"
+            android:textColor="@color/text_color"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:gTouchColor="@color/black_alpha_48"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            app:gTouchEffect="auto"
+            android:text="忘记密码"
+            android:textSize="17sp" />
+
+        <net.qiujuer.genius.ui.widget.Button
+            android:id="@+id/wifi_detail_connect"
+            android:background="@color/blue"
+            android:textColor="@color/white"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:gTouchColor="@color/black_alpha_48"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            app:gTouchEffect="auto"
+            android:text="连接WiFi"
+            android:textSize="17sp" />
+
+    </LinearLayout>
+        
+
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="common_font_color_1">#ff000000</color>
+    <color name="common_font_color_2">#ff4d4d4d</color>
+    <color name="common_font_color_3">#ff999999</color>
+    <color name="common_font_color_5">#ff29a600</color>
+    <color name="common_font_color_6">#fff14c0c</color>
+    <color name="common_font_color_7">#ffffffff</color>
+    <color name="common_font_color_9">@color/common_font_color_5</color>
+    <color name="common_font_color_10">@color/common_font_color_2</color>
+    <color name="common_bg_color_3">#fff0f0f0</color>
+    <color name="common_bg_color_4">#fff5f5f5</color>
+    <color name="common_bg_green">#ff009900</color>
+    <color name="common_bg_white">#ffffffff</color>
+    <color name="common_transparent">#00000000</color>
+    <color name="common_dlg_bar_divider">#ffd1d5db</color>
+    <color name="common_list_row_divider">#ffdbdbdb</color>
+    <color name="common_font_color_wifi">#ff288dff</color>
+</resources>

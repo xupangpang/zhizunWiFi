@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_loading">正在载入</string>
+    <string name="common_confirm">确定</string>
+    <string name="common_cancel">取消</string>
+    <string name="common_default">默认</string>
+    <string name="common_setting_up">设定</string>
+    <string name="common_done">完成</string>
+    <string name="common_close">关闭</string>
+    <string name="common_yes">是</string>
+    <string name="common_no">否</string>
+    <string name="common_setting">设置</string>
+    <string name="common_already_open">已开启</string>
+    <string name="common_already_close">已关闭</string>
+    <string name="common_already_forbidden">已禁止</string>
+    <string name="common_switch_checkbox_on">ON</string>
+    <string name="common_switch_checkbox_off">OFF</string>
+</resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/info_window_wrapper"
+    android:layout_width="@dimen/map_marker_info_window_width"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/map_marker_shade_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/list_item_mapinfo" />
+
+    <View
+        android:layout_width="@dimen/map_marker_info_window_width"
+        android:layout_height="2.0px"
+        android:background="#fff5f5f5" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10.0dip"
+        android:paddingTop="10.0dip" >
+
+        <TextView
+            android:id="@+id/ap_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15.0dip"
+            android:layout_toLeftOf="@+id/ap_distance"
+            android:drawableLeft="@drawable/map_mark_location_other"
+            android:drawablePadding="2.0dip"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="暂无地理位置信息"
+            android:textColor="#ff888999"
+            android:textSize="12.0sp" />
+
+        <TextView
+            android:id="@+id/ap_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10.0dip"
+            android:drawableLeft="@drawable/map_icon_distance"
+            android:singleLine="true"
+            android:textColor="@color/blue"
+            android:textSize="12.0dip" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/ap_tip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:minHeight="40.0dip"
+        android:singleLine="true"
+        android:text="前往此处，就可在WiFi列表里免费连接了!"
+        android:textColor="#ff888999"
+        android:textSize="12.0sp" />
+
+</LinearLayout>

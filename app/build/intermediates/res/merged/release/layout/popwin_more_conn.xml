@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/more_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/see_the_share_pop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="@drawable/list_selector"
+        >
+
+        <ImageView
+            android:id="@+id/wifi_switch"
+            android:layout_marginLeft="7dp"
+            style="@style/wrap"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/home_icon_share_blue" />
+
+        <TextView
+            android:id="@+id/wifi_switch_text"
+            style="@style/fillall"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            android:layout_marginLeft="5dp"
+            android:gravity="left|center_vertical"
+            android:layout_gravity="center_vertical"
+            android:text="查看分享" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/alertdialog_line"
+        ></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/main_more_disconnect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/list_selector"
+        android:padding="10dp"
+        >
+
+        <ImageView
+            android:layout_marginLeft="7dp"
+            style="@style/wrap"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/home_icon_connect_blue" />
+
+        <TextView
+            style="@style/fillall"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            android:gravity="left|center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center_vertical"
+            android:text="断开连接" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/alertdialog_line"
+        ></LinearLayout>
+
+    <LinearLayout
+    android:id="@+id/main_more_offwifi"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/list_selector"
+        android:padding="10dp"
+    >
+
+    <ImageView
+        android:layout_marginLeft="7dp"
+        style="@style/wrap"
+        android:scaleType="fitCenter"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ico_wifi_off" />
+
+        <TextView
+            android:id="@+id/textView4"
+            style="@style/fillall"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:gravity="left|center_vertical"
+            android:text="关闭WiFi"
+            android:textColor="@color/text_color"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

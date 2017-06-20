@@ -1,0 +1,514 @@
+[
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\faxian.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\faxian.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\dianpuhezhuo.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\dianpuhezhuo.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\me_icon_type.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\me_icon_type.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\me_ico_password.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\me_ico_password.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\ico_identity.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\ico_identity.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\img_score_midring.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\img_score_midring.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\me_dpxx_masks.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\me_dpxx_masks.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\me_ico_code.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\me_ico_code.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\me_icon_location.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\me_icon_location.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\ico_refresh04.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\ico_refresh04.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\icon_game.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\icon_game.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\redian.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\redian.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\gengxin.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\gengxin.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\ico_refresh03.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\ico_refresh03.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\me_dpxx_img_weitongguo.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\me_dpxx_img_weitongguo.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\ico_wifi_off.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\ico_wifi_off.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\me_icon_shop.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\me_icon_shop.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_text_select_handle_middle_mtrl_dark.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_middle_mtrl_dark.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\icon_ipo_city.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\icon_ipo_city.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_text_select_handle_right_mtrl_dark.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_right_mtrl_dark.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_text_select_handle_left_mtrl_dark.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_left_mtrl_dark.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_ic_star_black_48dp.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_48dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\ico_refresh01.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\ico_refresh01.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\icon_equipment.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\icon_equipment.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_text_select_handle_right_mtrl_light.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_right_mtrl_light.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\icon_online.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\icon_online.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\icon_loading_speed.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\icon_loading_speed.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\bg_position.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\bg_position.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_text_select_handle_left_mtrl_light.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_left_mtrl_light.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\home_icon_connect_blue.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\home_icon_connect_blue.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_015.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_ic_star_half_black_36dp.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_ic_star_half_black_36dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\ico_wifi_on.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\ico_wifi_on.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_list_focused_holo.9.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_list_focused_holo.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\home_icon_share_blue.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\home_icon_share_blue.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_text_select_handle_middle_mtrl_light.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_middle_mtrl_light.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\me_dpxx_img_shenghe.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\me_dpxx_img_shenghe.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\touxiang_bg.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\touxiang_bg.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\icon_speed_shi.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\icon_speed_shi.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\ico_refresh.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\ico_refresh.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\ico_connect.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\ico_connect.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_list_pressed_holo_dark.9.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_list_pressed_holo_dark.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_switch_track_mtrl_alpha.9.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\wifi.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\wifi.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\icon_safe.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\icon_safe.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\ico_disconnect.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\ico_disconnect.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\icon_safe_xiao.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\icon_safe_xiao.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\wifi_guanli.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\wifi_guanli.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\ico.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\ico.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\me_icon_warn.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\me_icon_warn.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\icon_text.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\icon_text.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\img_score_outerring.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\img_score_outerring.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\bangzhuyufankui.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\bangzhuyufankui.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\ico_ip.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\ico_ip.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_popup_background_mtrl_mult.9.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_popup_background_mtrl_mult.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\faxian_btn.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\faxian_btn.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\about_me.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\about_me.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_ic_star_black_16dp.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_16dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\wifi_bg.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\wifi_bg.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\me.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\me.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\icon_video.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\icon_video.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\nav_bg.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\nav_bg.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_list_longpressed_holo.9.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_list_longpressed_holo.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_list_pressed_holo_light.9.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_list_pressed_holo_light.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\icon_chat.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\icon_chat.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\u984.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\u984.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\img_scanning.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\img_scanning.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_textfield_default_mtrl_alpha.9.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_ic_star_half_black_16dp.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_ic_star_half_black_16dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_list_selector_disabled_holo_light.9.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\yuanpan.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\yuanpan.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\fenxiang.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\fenxiang.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\u882.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\u882.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\ico_hotspot.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\ico_hotspot.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\me_dpxx_icon_location.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\me_dpxx_icon_location.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\btn_wifi_more.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\btn_wifi_more.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\u986.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\u986.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\wifi_btn.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\wifi_btn.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\me_icon_add.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\me_icon_add.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\icon_safe_shi.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\icon_safe_shi.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\map_marker.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\map_marker.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\me_btn.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\me_btn.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\btn_exit.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\btn_exit.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\shezhi.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\shezhi.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\map_marker_mine_location.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\map_marker_mine_location.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\ico_router.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\ico_router.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\ico_share.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\ico_share.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_ic_star_black_36dp.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_36dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\ico_refresh02.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\ico_refresh02.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\me_ico_wifi.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\me_ico_wifi.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\img_score_round.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\img_score_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\me_ico_tel.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\me_ico_tel.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\icon_speed.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\icon_speed.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_ic_star_half_black_48dp.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_ic_star_half_black_48dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_list_divider_mtrl_alpha.9.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_000.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\home_btn_connect.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\home_btn_connect.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\icon_equipment_shi.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\icon_equipment_shi.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\bg_large.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\bg_large.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\speed_pointer.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\speed_pointer.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\home_icon_wifi_blue.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\home_icon_wifi_blue.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\ico_refresh05.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\ico_refresh05.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\drawable-xxhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\ic_menu_ap_manucon_p.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\ic_menu_ap_manucon_p.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\icon_map_default.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-xxhdpi\\icon_map_default.png"
+    }
+]

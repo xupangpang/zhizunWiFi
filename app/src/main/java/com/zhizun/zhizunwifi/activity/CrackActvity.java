@@ -1,0 +1,416 @@
+package com.zhizun.zhizunwifi.activity;
+
+import android.annotation.SuppressLint;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.content.ServiceConnection;
+import android.net.wifi.ScanResult;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.IBinder;
+import android.os.Message;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+
+import com.zhizun.zhizunwifi.R;
+import com.zhizun.zhizunwifi.adapter.CrackAdapter;
+import com.zhizun.zhizunwifi.bean.JsonWifi;
+import com.zhizun.zhizunwifi.http.HttpManager;
+import com.zhizun.zhizunwifi.http.HttpService;
+import com.zhizun.zhizunwifi.service.ListenNetStateService;
+import com.zhizun.zhizunwifi.service.ListenNetStateService.NetBind;
+import com.zhizun.zhizunwifi.utils.BaseUtils;
+import com.zhizun.zhizunwifi.utils.WifiUtils;
+
+import net.duohuo.dhroid.ioc.annotation.InjectView;
+
+import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
+
+import rx.subscriptions.CompositeSubscription;
+
+/*
+   挖掘机页面
+ */
+public class CrackActvity extends BaseActivity {
+
+	@InjectView(id = R.id.headerTitle)
+	TextView headerTitle;
+	@InjectView(id = R.id.tv_Progress)
+	TextView tv_Progress;
+	@InjectView(id = R.id.pb_cracking)
+	ProgressBar pb_cracking;
+	@InjectView(id = R.id.headerLeft,click = "click")
+	ImageView headerLeft;
+	@InjectView(id = R.id.listview)
+	ListView listview;
+	@InjectView(id = R.id.view_cracking)
+	LinearLayout view_cracking;
+	@InjectView(id = R.id.view_crack_failed)
+	LinearLayout view_crack_failed;
+	@InjectView(id = R.id.btn_continue,click = "click")
+	Button btn_continue;
+
+	private int progress = 0;
+
+	/** 扫描出的wifi集合 **/
+	private List<ScanResult> scanResultList;
+	/** 数据库查询的wif信息集合 **/
+	private List<String> queryList;
+	/** 状态码 **/
+	private int wifiItemId = -1;
+	/** 当前挖掘的wifi **/
+	private String wifiSSID;
+	/** 匹配密码后 返回结果 **/
+	private int netId;
+	/** 选择密码的index **/
+	private int pswIndex = 0;
+
+	/** 更新挖掘进度条 **/
+	public static final int UpdateProgess = 0x114;
+	/** 连接wifi成功消息 **/
+	public static final int ConncetSuccess = 0x113;
+	/** 连接wifi失败消息 **/
+	public static final int ConncetFaild = 0x115;
+
+	public static final  int TIMER = 116;
+	private WifiUtils localWifiUtils;
+	/** 当前挖掘的WiFi **/
+	String CrackWiFi;
+	private CrackAdapter adapter;
+	private Intent NetStateService;
+	private String BSSID;
+	private String SSID;
+	protected CompositeSubscription mCompositeSubscription;
+	private HttpService apiService;
+	private Timer timer;
+	private int crackProgess = 0;
+	private String jsonpsw;
+
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_crack);
+
+		localWifiUtils = new WifiUtils(this);
+		NetStateService = new Intent(this, ListenNetStateService.class);
+		boolean isTrue = bindService( NetStateService, conn, Context.BIND_AUTO_CREATE);
+
+		apiService =  HttpManager.getService();
+		mCompositeSubscription = new CompositeSubscription();
+
+		timer = new Timer();
+
+
+
+		headerTitle.setText("挖掘免费WiFi");
+		pb_cracking.setMax(100);
+//		handler.sendEmptyMessageDelayed(UpdateProgess, 500);
+		scanResultList = (List<ScanResult>) getIntent().getSerializableExtra("ScanList");
+		CrackWiFi = getIntent().getStringExtra("CrackWiFi");
+		for(int i = 0; i < scanResultList.size(); i++){
+			ScanResult result = scanResultList.get(i);
+			if(result.SSID.equals(CrackWiFi)){
+				BSSID = result.BSSID;
+				SSID = result.SSID;
+				ScanResult scanResult  = result;
+				scanResultList.clear();
+				scanResultList.add(scanResult);
+			}
+		}
+		adapter = new CrackAdapter(this, scanResultList);
+		listview.setAdapter(adapter);
+
+			//getPsw();
+
+
+
+		timer.schedule(new TimerTask() {
+			@Override
+			public void run() {
+				handler.sendEmptyMessage(TIMER);
+
+			}
+		},2000,1000);
+	}
+
+	public void click(View v){
+		Intent intent = null;
+		switch (v.getId()) {
+			case R.id.headerLeft:
+				finish();
+				break;
+			case R.id.btn_continue:
+				view_cracking.setVisibility(View.VISIBLE);
+				view_crack_failed.setVisibility(View.GONE);
+				finish();
+				break;
+		}
+	}
+
+	@SuppressLint("HandlerLeak")
+	private Handler handler = new Handler() {
+		@SuppressLint("HandlerLeak")
+		@Override
+		public void handleMessage(Message msg) {
+			switch (msg.what) {
+				case UpdateProgess:
+//				if(progress <= 100){
+//					pb_cracking.setProgress(progress);
+//					tv_Progress.setText(progress +"%");
+//					progress += 20;
+//					handler.sendEmptyMessageDelayed(0, 2000);
+//				}
+					break;
+				case TIMER:
+					pb_cracking.setProgress(crackProgess);
+					tv_Progress.setText(crackProgess +"%");
+					crackProgess++;
+					if (crackProgess >= 100){
+						pb_cracking.setProgress(100);
+						tv_Progress.setText(100 +"%");
+						view_cracking.setVisibility(View.GONE);
+						view_crack_failed.setVisibility(View.VISIBLE);
+					}
+					break;
+
+				case ConncetSuccess:
+                    if (msg.obj != null){
+						// 判断连接上的是否是当前挖掘的WiFi，如果不是，继续挖掘
+						if(CrackWiFi.equals((String)msg.obj)){
+							BaseUtils.setSharedPreferences("CrackSuccess", "true", CrackActvity.this);
+							BaseUtils.setSharedPreferences("CrackSSID", CrackWiFi, CrackActvity.this);
+							System.out.println("ConncetSuccess-------------------------= ");
+							// 如果参数为null的话，会将所有的Callbacks和Messages全部清除掉。
+							handler.removeCallbacksAndMessages(null);
+
+
+							crackProgess = 100;
+							pb_cracking.setProgress(crackProgess);
+							tv_Progress.setText(100 +"%");
+							timer.cancel();
+
+							//破解成功的保存到数据库
+							JsonWifi jsonWifi0 = new JsonWifi();
+							jsonWifi0.setRouter(BSSID);
+							jsonWifi0.setSsid(SSID);
+							if (pswIndex == queryList.size()){
+								pswIndex = queryList.size() - 1;
+							}
+							jsonWifi0.setPasswd(queryList.get(pswIndex));
+							jsonWifi0.setLat(BaseUtils.getSharedPreferences("lat",CrackActvity.this));
+							jsonWifi0.setLon(BaseUtils.getSharedPreferences("lon",CrackActvity.this));
+							jsonWifi0.save();
+							finish();
+
+					} else {
+						System.out.println("连接不对，继续挖掘-------------------------= ");
+							if (queryList != null){
+								pswIndex ++;
+								if(pswIndex <= queryList.size()-1){
+									crackProgess = (int) ((float)((pswIndex+1)/(float)queryList.size()) * 100);
+									// 进行下一个密码连接
+									tryConnect(CrackWiFi, queryList.get(pswIndex), 1111);
+									$Log("wifi---->",CrackWiFi+" "+queryList.get(pswIndex));
+								}else {
+									// 挖掘失败
+									view_cracking.setVisibility(View.GONE);
+									view_crack_failed.setVisibility(View.VISIBLE);
+								}
+							}
+						}
+					}
+					break;
+				case ConncetFaild:
+					System.out.println("ConncetFaild-------------------------");
+					handler.removeCallbacks(continuConnect);
+
+					if (queryList != null){
+						if (queryList.size() > 0){
+
+							if(pswIndex < queryList.size()) {
+								pswIndex++;
+							}
+
+							if(pswIndex <= queryList.size()-1){
+								crackProgess = (int) ((float)((pswIndex+1)/(float)queryList.size()) * 100);
+								// 进行下一个密码连接
+								tryConnect(CrackWiFi, queryList.get(pswIndex), 1111);
+								$Log("wifi---->",CrackWiFi+" "+queryList.get(pswIndex));
+
+							}else {
+								// 挖掘失败
+								view_cracking.setVisibility(View.GONE);
+								view_crack_failed.setVisibility(View.VISIBLE);
+							}
+						}else {
+							// 挖掘失败
+							view_cracking.setVisibility(View.GONE);
+							view_crack_failed.setVisibility(View.VISIBLE);
+						}
+					}else {
+						// 挖掘失败
+						view_cracking.setVisibility(View.GONE);
+						view_crack_failed.setVisibility(View.VISIBLE);
+					}
+					break;
+			}
+		}
+	};
+
+	/**
+	 * 超时------- 进行下一个密码连接尝试
+	 */
+	Runnable continuConnect = new Runnable() {
+		@Override
+		public void run() {
+			// 进行下一个连接，把队列中多余的消息删除掉
+			handler.removeCallbacks(continuConnect);
+			$Log("WifiUtils", "超时------- 进行下一个密码连接尝试");
+			pswIndex ++;
+		}
+	};
+
+	/*// TODO: 2017/1/12  根据SSID获取库里边的密码
+	public void getPsw() {
+		Subscription subscription = apiService.getAccount(WifiUtils.getMacAddress(this),BSSID,CrackWiFi).subscribeOn(Schedulers.io())
+				.unsubscribeOn(Schedulers.io())
+				.observeOn(AndroidSchedulers.mainThread())
+				.subscribe(new Subscriber<BaseResultEntity<GetAccount>>() {
+							@Override
+							public void onCompleted() {
+
+							}
+
+							@Override
+							public void onError(Throwable e) {
+								//无网络或报错 调用本地数据库破解
+								List<JsonWifi>   jsonWifiList = DataSupport.findAll(JsonWifi.class);
+								if (jsonWifiList != null && jsonWifiList.size() > 0){
+									for (int i = 0; i < jsonWifiList.size(); i++) {
+										queryList.add(jsonWifiList.get(i).getPasswd());
+									}
+									tryConnect(CrackWiFi, queryList.get(pswIndex), 0);
+								}
+							}
+							@Override
+							public void onNext(BaseResultEntity<GetAccount> baseResultEntity) {
+								if (baseResultEntity.ret == 200){
+									queryList = baseResultEntity.data.list;
+									tryConnect(CrackWiFi, queryList.get(pswIndex), 0);
+								}
+							}
+							@Override
+							public void onStart() {
+								super.onStart();
+							}
+						}
+
+				);
+		mCompositeSubscription.add(subscription);
+	}*/
+
+	public void tryConnect(String SSID, String password,int connectWay){
+		wifiSSID = SSID;
+		// 状态码
+		wifiItemId = localWifiUtils.IsConfiguration("\"" + wifiSSID + "\"");
+
+		// 删除以前配置的wifi信息
+		if (wifiItemId != -1) localWifiUtils.removeNetwork(wifiItemId);
+		if (password != null) {
+			// 添加指定WIFI的配置信息,原列表不存在此SSID 输入密码后返回的结果
+			netId = localWifiUtils.AddWifiConfig(scanResultList, wifiSSID, password);
+			$Log("WifiUtils", "netId= " + netId);
+
+			// 密码正确
+			if (netId != -1) {
+				// 得到Wifi配置好的信息
+				if (localWifiUtils.ConnectWifi(netId)) {
+					$Log("WifiUtils", "连接成功,开始验证身份");
+					/*if(connectWay != PasswordConnect){
+						// 不是密码连接的发送消息，如果延时未连接上，进行下一个密码连接
+						handler.postDelayed(continuConnect, delayedTime * 1000);
+					}*/
+				}
+			} else {
+				$Log("WifiUtils", "建立连接失败");
+				// 挖掘失败
+				view_cracking.setVisibility(View.GONE);
+				view_crack_failed.setVisibility(View.VISIBLE);
+			}
+		}
+	}
+
+	private boolean conncetState = true;
+
+	private ServiceConnection conn = new ServiceConnection() {
+		@Override
+		public void onServiceDisconnected(ComponentName name) {
+			$Log("zhizunwifi","ServiceDisconnected");
+		}
+
+		@Override
+		public void onServiceConnected(ComponentName name, IBinder service) {
+			$Log("zhizunwifi","ServiceConnected");
+			NetBind bind = (NetBind) service;
+			ListenNetStateService netService = bind.getNetService();
+
+			//netService.setOnWifiConnectStateListener(mWifiConnectStateListener0);
+			// 此处回调
+			netService.setOnGetConnectState(new ListenNetStateService.GetConnectState() {
+				@Override
+				public void GetState(String ssid, boolean isConnected) {
+					if (conncetState != isConnected) {
+						conncetState = isConnected;
+					}
+					Message msg = handler.obtainMessage();
+					if (conncetState) {
+						msg.obj = ssid;
+						msg.what = ConncetSuccess;
+					} else {
+						msg.what = ConncetFaild;
+					}
+					handler.sendMessage(msg);
+				}
+				@Override
+				public void isAvailable(boolean isAvailable) {
+					if(isAvailable){
+					}else {
+					}
+				}
+			});
+
+		}
+	};
+
+	@Override
+	public void onDestroy() {
+		super.onDestroy();
+		if (conn != null) {
+			unbindService(conn);
+		}
+		if (NetStateService != null){
+			stopService(NetStateService);
+		}
+		if (timer != null)
+			timer.cancel();
+
+		mCompositeSubscription.unsubscribe();
+
+		if (!BaseUtils.isWifiConnected(this))
+		localWifiUtils.crackExit(wifiItemId);
+
+	}
+
+
+
+}

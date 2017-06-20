@@ -1,0 +1,133 @@
+package com.zhizun.zhizunwifi.activity;
+import net.duohuo.dhroid.Const;
+import net.duohuo.dhroid.ioc.InjectUtil;
+import android.app.Activity;
+import android.content.Context;
+import android.os.Build;
+import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.DisplayMetrics;
+import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.WindowManager;
+import android.widget.Toast;
+
+import com.umeng.analytics.MobclickAgent;
+import com.zhizun.zhizunwifi.R;
+import com.zhizun.zhizunwifi.http.HttpManager;
+import com.zhizun.zhizunwifi.utils.SystemStatusManager;
+import com.zhizun.zhizunwifi.utils.TranslucentStatusBarUtils;
+import com.zhizun.zhizunwifi.view.CustomProgressDialog;
+
+import rx.subscriptions.CompositeSubscription;
+
+/***
+ *
+ */
+public class BaseActivity extends Activity  implements OnClickListener  {
+	
+	protected int mScreenWidth;
+	protected int mScreenHeight;
+	private ActivityTack tack=ActivityTack.getInstanse();
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		TranslucentStatusBarUtils.setTranslucentStatus(this);
+		tack.addActivity(this);
+		DisplayMetrics metric = new DisplayMetrics();
+		getWindowManager().getDefaultDisplay().getMetrics(metric);
+		mScreenWidth = metric.widthPixels;
+		mScreenHeight = metric.heightPixels;
+	}
+	
+	@Override
+	protected void onResume() {
+		super.onResume();
+		 MobclickAgent.onResume(this);
+	}
+
+	protected void onPause() {
+	    super.onPause();
+	    MobclickAgent.onPause(this);
+	}
+
+
+
+	@Override
+	public void finish() {
+		super.finish();
+		tack.removeActivity(this);
+	}
+	Toast mToast;
+
+	public void ShowToast(final String text) {
+		if (!TextUtils.isEmpty(text)) {
+			runOnUiThread(new Runnable() {
+				
+				@Override
+				public void run() {
+					// TODO Auto-generated method stub
+					if (mToast == null) {
+						mToast = Toast.makeText(getApplicationContext(), text,
+								Toast.LENGTH_SHORT);
+					} else {
+						mToast.setText(text);
+					}
+					mToast.show();
+				}
+			});
+			
+		}
+	}
+	@Override
+	public void setContentView(int layoutResID) {
+		super.setContentView(layoutResID);
+		if(Const.auto_inject){
+			InjectUtil.inject(this);
+		}
+	}
+
+	@Override
+	public void onClick(View v) {
+		
+	}
+
+	CustomProgressDialog mCustomProgressDialog;
+	public void baseShowProgressDialog(String msg, boolean isCancelable) {
+		if(mCustomProgressDialog == null)
+			mCustomProgressDialog = new CustomProgressDialog(this);
+		mCustomProgressDialog.setMessage(msg);
+		mCustomProgressDialog.setCancelable(isCancelable);
+		if(!mCustomProgressDialog.isShowing())
+			mCustomProgressDialog.show();
+	}
+
+	public void baseShowProgressDialog(int msgid, boolean isCancelable) {
+		if(mCustomProgressDialog == null)
+			mCustomProgressDialog = new CustomProgressDialog(this);
+		mCustomProgressDialog.setMessage(getString(msgid));
+		mCustomProgressDialog.setCancelable(isCancelable);
+		if(!mCustomProgressDialog.isShowing())
+			mCustomProgressDialog.show();
+	}
+
+	public void basehideProgressDialog() {
+		if(mCustomProgressDialog == null)
+			return;
+
+		if(mCustomProgressDialog.isShowing())
+			mCustomProgressDialog.dismiss();
+	}
+
+	/**
+	 * [日志输出]
+	 *
+	 * @param msg
+	 */
+	protected void $Log(String tag,String msg) {
+		if (HttpManager.debug) {
+			Log.d(tag, msg);
+		}
+	}
+}

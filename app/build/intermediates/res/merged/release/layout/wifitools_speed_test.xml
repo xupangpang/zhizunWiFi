@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/netspeedLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/viewHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip"
+        layout="@layout/view_header1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/viewHeader"
+        android:background="@drawable/bg_large"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/wifi_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="24.0sp" />
+
+        <RelativeLayout
+            android:id="@+id/speedProgressBarlayout"
+            android:layout_width="300dip"
+            android:layout_height="310dip"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center" >
+
+
+            <com.zhizun.zhizunwifi.view.RoundProgressBar
+                android:id="@+id/roundProgressBar"
+                ptr:style="FILL"
+                android:layout_width="300dip"
+                android:layout_height="300dip"
+                android:layout_centerHorizontal="true"
+                ptr:roundArcOutColor="@color/trans"
+                ptr:roundBaseBackground="@color/trans"
+                ptr:roundColor="@color/trans"
+                ptr:roundProgressBackgroundColor="@color/trans"
+                ptr:roundProgressColor="@color/trans"
+                ptr:roundScaleColor="@color/trans"
+                ptr:roundScaleTextColor="@color/trans"
+                ptr:roundTextSize="15.0sp"
+                ptr:roundWidth="8dip"
+                ptr:textIsDisplayable="false" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/yuanpan"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/imageView" />
+
+            <net.qiujuer.genius.ui.widget.Button
+                android:id="@+id/startButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/home_btn_connect"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:text="开始测速"
+                android:textColor="@color/blue_bg"
+                android:textSize="16sp"
+                ptr:gTouchColor="@color/black_alpha_48"
+                ptr:gTouchEffect="auto" />
+
+            <TextView
+                android:id="@+id/tv_network_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/imageView"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="24.0sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/wifi_speed_finsh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:visibility="gone"
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:text="网络延时"
+                />
+
+            <TextView
+                android:id="@+id/wifi_speed_test_ys"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:textSize="18sp"
+                android:text=""
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@color/common_bg"
+            ></LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:text="下载速度"
+                />
+
+            <TextView
+                android:id="@+id/wifi_speed_test_xz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:textSize="18sp"
+                android:text=""
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@color/common_bg"
+            ></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:text="上传速度"
+                />
+
+            <TextView
+                android:id="@+id/wifi_speed_test_sc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:textSize="18sp"
+                android:text=""
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

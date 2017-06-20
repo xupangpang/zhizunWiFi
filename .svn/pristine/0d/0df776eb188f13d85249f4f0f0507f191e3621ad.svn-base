@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:visibility="gone"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@color/gray" />
+
+    <RelativeLayout
+        android:id="@+id/wifi_detail_name_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/sliding_menu_height"
+        android:background="@drawable/pref_secury_item_bg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/wifi_detail_name_tv"
+            style="@style/sliding_menu_text"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/sliding_menu_height"
+            android:layout_marginLeft="15.0dip"
+            android:gravity="left|center"
+            android:text="WiFi名称"
+            android:textColor="#ff333333" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/wifi_detail_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/text_color_828282" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@color/gray" />
+
+
+    <RelativeLayout
+        android:id="@+id/signal_strength_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/sliding_menu_height"
+        android:background="@drawable/pref_secury_item_bg"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/signal_strength_tv"
+            style="@style/sliding_menu_text"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/sliding_menu_height"
+            android:layout_marginLeft="15.0dip"
+            android:gravity="left|center"
+            android:text="信号强度"
+            android:textColor="#ff333333" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/signal_strength_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_828282"
+                android:text=""
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@color/gray" />
+
+
+    <RelativeLayout
+        android:id="@+id/encryption_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/sliding_menu_height"
+        android:background="@drawable/pref_secury_item_bg"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/encryption_tv"
+            style="@style/sliding_menu_text"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/sliding_menu_height"
+            android:layout_marginLeft="15.0dip"
+            android:gravity="left|center"
+            android:text="加密方式"
+            android:textColor="#ff333333" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/encryption_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_828282"
+                android:text=""
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@color/gray" />
+
+
+    <RelativeLayout
+        android:id="@+id/max_speed_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/sliding_menu_height"
+        android:background="@drawable/pref_secury_item_bg"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/max_speed_tv"
+            style="@style/sliding_menu_text"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/sliding_menu_height"
+            android:layout_marginLeft="15.0dip"
+            android:gravity="left|center"
+            android:text="最大连接速度"
+            android:textColor="#ff333333" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/max_speed_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_828282"
+                android:text=""
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@color/gray" />
+
+
+    <RelativeLayout
+        android:id="@+id/ip_address_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/sliding_menu_height"
+        android:background="@drawable/pref_secury_item_bg"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/ip_address_tv"
+            style="@style/sliding_menu_text"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/sliding_menu_height"
+            android:layout_marginLeft="15.0dip"
+            android:gravity="left|center"
+            android:text="分配的IP地址"
+            android:textColor="#ff333333" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/ip_address_name_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_828282"
+                android:text=""
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@color/gray" />
+
+    <RelativeLayout
+        android:id="@+id/mac_address_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/sliding_menu_height"
+        android:background="@drawable/pref_secury_item_bg"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/mac_address_tv"
+            style="@style/sliding_menu_text"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/sliding_menu_height"
+            android:layout_marginLeft="15.0dip"
+            android:gravity="left|center"
+            android:text="WiFi MAC地址"
+            android:textColor="#ff333333" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/mac_address_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_828282"
+                android:text=""
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+</LinearLayout>

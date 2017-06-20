@@ -1,0 +1,706 @@
+[
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines_media.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\notification_template_lines_media.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_fb_fragment.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\umeng_fb_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\wifi_details_main.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\wifi_details_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow_custom.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\notification_template_big_media_narrow_custom.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\store_msg_audit.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\store_msg_audit.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_set_info.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\activity_set_info.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pull_loadmore_layout.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\c9163f9be31ce5bfdaac324d901f0f42610667ac\\output\\res\\layout\\pull_loadmore_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\list_more_view.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\list_more_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\discovery.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\discovery.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_fb_reply_item_text.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\umeng_fb_reply_item_text.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\refresh_header.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\refresh_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\abc_search_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dlg_exit_from_home.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\dlg_exit_from_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_search_near.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\item_search_near.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\connect_access_point_dialog_layout.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\connect_access_point_dialog_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\test_rotate.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\test_rotate.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\wifi_connect_main.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\wifi_connect_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_commondityd_details.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\activity_commondityd_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_edittext.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\dialog_edittext.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_fb_input_contact.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\umeng_fb_input_contact.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_news.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\fragment_news.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\access_point_detail_fragment_layout.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\access_point_detail_fragment_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\donate.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\donate.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\list_item_mapinfo.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\list_item_mapinfo.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_safety_inspect.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\activity_safety_inspect.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_exchange.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\activity_exchange.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_crack.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\activity_crack.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\popwin_more_conn.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\popwin_more_conn.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\store_review_main.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\store_review_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\abc_screen_content_include.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pop_wifistater.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\pop_wifistater.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\appintroduct_main.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\appintroduct_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\getui_notification.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\31fe1bb76b0edb040caa0f141e601d794510de0d\\output\\res\\layout\\getui_notification.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\list_refresh_head.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\list_refresh_head.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_fb_activity_help.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\umeng_fb_activity_help.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\store_type_pop.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\store_type_pop.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_set_updateinfo.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\activity_set_updateinfo.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_connect.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\fragment_connect.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_web_faq.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\activity_web_faq.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_oauth_dialog.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\umeng_socialize_oauth_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_split_bottom.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\view_split_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_more.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\fragment_more.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_header1.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\view_header1.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media_custom.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\notification_template_media_custom.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\store_sample_main.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\store_sample_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\refresh_footer.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\refresh_footer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\network_security_item.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\network_security_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\select_dialog_item_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\install_manage_main.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\install_manage_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\wifitools_speed_test.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\wifitools_speed_test.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dlg_exit.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\dlg_exit.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\group_my_homepage_header.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\group_my_homepage_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_current_connect_layout.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\dialog_current_connect_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dlg_repor_to_go_fishingt.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\dlg_repor_to_go_fishingt.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_fb_activity_conversation.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\umeng_fb_activity_conversation.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\abc_screen_simple.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_map_mark.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\view_map_mark.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\act_apps_appitem_v_h_only.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\act_apps_appitem_v_h_only.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_fb_reply_item_image.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\umeng_fb_reply_item_image.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\notification_template_media.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dlg_psw_connect.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\dlg_psw_connect.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\listview_header.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\listview_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\list_host.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\list_host.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_fb_fragment_question.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\umeng_fb_fragment_question.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_welcome.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\activity_welcome.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_webinfo.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\activity_webinfo.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_split_both.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\view_split_both.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\install_manage_item.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\install_manage_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\map_layout.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\map_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_setting_new.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\activity_setting_new.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_select_sort.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\dialog_select_sort.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_myscore.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\activity_myscore.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_register.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\act_deep_unlock_list_item.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\act_deep_unlock_list_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_setting.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\activity_setting.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_free_wifi.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\layout_free_wifi.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_reg_log.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\activity_reg_log.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_split_top.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\view_split_top.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\act_apps_appitem_v.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\act_apps_appitem_v.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\menu_upload_avatar.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\menu_upload_avatar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_home.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\abc_action_bar_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_exchange_listview.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\item_exchange_listview.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\photo_view_main.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\photo_view_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_splash.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\business_cooperation_main.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\business_cooperation_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_title_layout.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\dialog_title_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\connect_layout_old.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\connect_layout_old.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\act_apps_store.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\act_apps_store.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\popwin_more.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\popwin_more.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_timecard.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\activity_timecard.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_portal_footer.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\item_portal_footer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_custom_load.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\layout_custom_load.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_near_wifi.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\layout_near_wifi.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\base_loading_layout.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\base_loading_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_appwall.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\fragment_appwall.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\store_msg_nothrough.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\store_msg_nothrough.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\network_details_item.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\network_details_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_fb_welcome_item.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\umeng_fb_welcome_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\blacklist_data_empty.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\blacklist_data_empty.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\actionbar_bg.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\actionbar_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_safety_inspect.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\item_safety_inspect.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\store_information_main.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\store_information_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\network_speed_item.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\network_speed_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\add_wifi_msg_main.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\add_wifi_msg_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\act_apps_store_honly.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\act_apps_store_honly.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_store_add.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\dialog_store_add.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\connect_layout.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\connect_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main_tab.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\activity_main_tab.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_actionsheet.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\view_actionsheet.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\notification_media_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_security.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\fragment_security.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_login.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\buss_cooper_item.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\buss_cooper_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\download_notification_layout.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\download_notification_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_setting_old.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\activity_setting_old.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\webview_main_layout.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\webview_main_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\about_me_main.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\about_me_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_custom.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\act_about_item.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\act_about_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_header_item_layout.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\abc_popup_menu_header_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_layout.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\dialog_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\footer_layout.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\c9163f9be31ce5bfdaac324d901f0f42610667ac\\output\\res\\layout\\footer_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_setting_wifi.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\activity_setting_wifi.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\act_apps_appitem_h_h_only.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\act_apps_appitem_h_h_only.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_storeopen.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\activity_storeopen.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_fb_contact_spinner.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\umeng_fb_contact_spinner.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\banner.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\e887c34a834daab13b48af2c181665697ee2241d\\output\\res\\layout\\banner.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_userpanel_new.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\fragment_userpanel_new.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\act_feedback.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\act_feedback.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_fb_image_dialog.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\umeng_fb_image_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\forgot_password_main.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\forgot_password_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\phy_exa_speed_main.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\phy_exa_speed_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\exchange_grid.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\exchange_grid.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\notification_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_loading.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\dialog_loading.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\umeng_socialize_share.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\umeng_socialize_share.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\notification_template_big_media.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\socialize_share_menu_item.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\socialize_share_menu_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\map_marker_info_window_layout.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\map_marker_info_window_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\notification_template_part_time.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\functionin_main.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\functionin_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\act_about.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\act_about.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pop_showsex.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\pop_showsex.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\layout\\abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pop_showavator.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\pop_showavator.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\personal_hotspot_main.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\personal_hotspot_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\layout\\activity_main.xml"
+    }
+]

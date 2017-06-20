@@ -1,0 +1,327 @@
+[
+    {
+        "outputFile": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 7,
+                    "endColumn": 12,
+                    "endOffset": 319
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-v14\\styles.xml",
+                    "position": {
+                        "startLine": 35,
+                        "startColumn": 4,
+                        "startOffset": 1624,
+                        "endLine": 40,
+                        "endColumn": 12,
+                        "endOffset": 1893
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 324,
+                    "endLine": 12,
+                    "endColumn": 12,
+                    "endOffset": 657
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-v14\\styles.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 6,
+                        "startOffset": 891,
+                        "endLine": 25,
+                        "endColumn": 12,
+                        "endOffset": 1228
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 662,
+                    "endLine": 17,
+                    "endColumn": 12,
+                    "endOffset": 933
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\values-v14\\values-v14.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endLine": 6,
+                        "endColumn": 12,
+                        "endOffset": 326
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 938,
+                    "endLine": 21,
+                    "endColumn": 12,
+                    "endOffset": 1172
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-v14\\styles.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 5,
+                        "startOffset": 638,
+                        "endLine": 19,
+                        "endColumn": 12,
+                        "endOffset": 875
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 1177,
+                    "endColumn": 70,
+                    "endOffset": 1243
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\values-v14\\values-v14.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 331,
+                        "endColumn": 70,
+                        "endOffset": 397
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 1248,
+                    "endColumn": 82,
+                    "endOffset": 1326
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\values-v14\\values-v14.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 402,
+                        "endColumn": 82,
+                        "endOffset": 480
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 1331,
+                    "endLine": 29,
+                    "endColumn": 12,
+                    "endOffset": 1736
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\values-v14\\values-v14.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 485,
+                        "endLine": 14,
+                        "endColumn": 12,
+                        "endOffset": 890
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 30,
+                    "startColumn": 4,
+                    "startOffset": 1741,
+                    "endLine": 35,
+                    "endColumn": 12,
+                    "endOffset": 2158
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\values-v14\\values-v14.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 895,
+                        "endLine": 20,
+                        "endColumn": 12,
+                        "endOffset": 1312
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 36,
+                    "startColumn": 4,
+                    "startOffset": 2163,
+                    "endColumn": 119,
+                    "endOffset": 2278
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\values-v14\\values-v14.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 1317,
+                        "endColumn": 119,
+                        "endOffset": 1432
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 37,
+                    "startColumn": 4,
+                    "startOffset": 2283,
+                    "endColumn": 131,
+                    "endOffset": 2410
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\values-v14\\values-v14.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 1437,
+                        "endColumn": 131,
+                        "endOffset": 1564
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 38,
+                    "startColumn": 4,
+                    "startOffset": 2415,
+                    "endColumn": 119,
+                    "endOffset": 2530
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\values-v14\\values-v14.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 1569,
+                        "endColumn": 119,
+                        "endOffset": 1684
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 39,
+                    "startColumn": 4,
+                    "startOffset": 2535,
+                    "endColumn": 62,
+                    "endOffset": 2593
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\values-v14\\values-v14.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 1689,
+                        "endColumn": 62,
+                        "endOffset": 1747
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 40,
+                    "startColumn": 4,
+                    "startOffset": 2598,
+                    "endLine": 42,
+                    "endColumn": 12,
+                    "endOffset": 2747
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\values-v14\\values-v14.xml",
+                    "position": {
+                        "startLine": 25,
+                        "startColumn": 4,
+                        "startOffset": 1752,
+                        "endLine": 27,
+                        "endColumn": 12,
+                        "endOffset": 1901
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 43,
+                    "startColumn": 4,
+                    "startOffset": 2752,
+                    "endColumn": 62,
+                    "endOffset": 2810
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\values-v14\\values-v14.xml",
+                    "position": {
+                        "startLine": 28,
+                        "startColumn": 4,
+                        "startOffset": 1906,
+                        "endColumn": 62,
+                        "endOffset": 1964
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 44,
+                    "startColumn": 4,
+                    "startOffset": 2815,
+                    "endColumn": 131,
+                    "endOffset": 2942
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\.android\\build-cache\\6865b506774c79b0e403a3dc317b1def50e1ee53\\output\\res\\values-v14\\values-v14.xml",
+                    "position": {
+                        "startLine": 29,
+                        "startColumn": 4,
+                        "startOffset": 1969,
+                        "endColumn": 131,
+                        "endOffset": 2096
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 45,
+                    "startColumn": 4,
+                    "startOffset": 2947,
+                    "endLine": 50,
+                    "endColumn": 12,
+                    "endOffset": 3306
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-v14\\styles.xml",
+                    "position": {
+                        "startLine": 28,
+                        "startColumn": 4,
+                        "startOffset": 1248,
+                        "endLine": 33,
+                        "endColumn": 12,
+                        "endOffset": 1613
+                    }
+                }
+            }
+        ]
+    }
+]

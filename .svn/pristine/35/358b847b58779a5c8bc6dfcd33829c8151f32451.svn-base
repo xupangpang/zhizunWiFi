@@ -1,0 +1,275 @@
+package com.zhizun.zhizunwifi.activity;
+
+import net.duohuo.dhroid.ioc.annotation.InjectView;
+import net.duohuo.dhroid.util.NetworkUtils;
+import android.app.ProgressDialog;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
+import cn.bmob.v3.BmobInstallation;
+import cn.bmob.v3.BmobUser;
+import cn.bmob.v3.listener.SaveListener;
+import cn.bmob.v3.listener.UpdateListener;
+
+import com.bmob.utils.BmobLog;
+import com.zhizun.zhizunwifi.bean.MyUser;
+import com.zhizun.zhizunwifi.R;
+import com.zhizun.zhizunwifi.utils.BaseUtils;
+import com.zhizun.zhizunwifi.utils.Constants;
+
+/**
+ * @ClassName: LoginActivity
+ * @Description: TODO
+ *
+ */
+public class LoginActivity extends BaseActivity implements OnClickListener{
+
+
+	@InjectView(id = R.id.et_account)
+	EditText et_username;
+	@InjectView(id = R.id.et_password)
+	EditText et_password;
+	@InjectView(id = R.id.btn_reg_log, click = "click")
+	Button btn_login;
+	@InjectView(id = R.id.tv_regist, click = "click")
+	TextView btn_register;
+	@InjectView(id = R.id.headerTitle)
+	TextView headerTitle;
+	@InjectView(id = R.id.headerLeft)
+	ImageView headerLeft;
+	private MyBroadcastReceiver receiver = new MyBroadcastReceiver();
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_login);
+		//注册退出广播 登陆成功后 登陆页面自动退出
+		IntentFilter filter = new IntentFilter();
+		filter.addAction(Constants.ACTION_REGISTER_SUCCESS_FINISH);
+		registerReceiver(receiver, filter);
+//		showNotice();
+
+		headerLeft.setOnClickListener(this);
+		headerTitle.setText("至尊账号登陆");
+	}
+
+//	public void showNotice() {
+//		DialogTips dialog = new DialogTips(this,"提示",getResources().getString(R.string.show_notice), "确定",true,true);
+//		// 设置成功事件
+//		dialog.SetOnSuccessListener(new DialogInterface.OnClickListener() {
+//			public void onClick(DialogInterface dialogInterface, int userId) {
+//
+//			}
+//		});
+//		// 显示确认对话框
+//		dialog.show();
+//		dialog = null;
+//	}
+
+
+	public class MyBroadcastReceiver extends BroadcastReceiver {
+
+		@Override
+		public void onReceive(Context context, Intent intent) {
+			if (intent != null && Constants.ACTION_REGISTER_SUCCESS_FINISH.equals(intent.getAction())) {
+				finish();
+			}
+		}
+
+	}
+
+	public void click(View v) {
+		switch (v.getId()) {
+			case R.id.tv_regist:
+				Intent intent = new Intent(LoginActivity.this,
+						NewRegisterActivity.class);
+				startActivity(intent);
+				break;
+			case R.id.btn_reg_log:
+				boolean isNetConnected = NetworkUtils.isNetworkAvailable();
+				if(!isNetConnected){
+					ShowToast("当前网络不可用,请检查您的网络!");
+				}else {
+					login();
+				}
+
+				break;
+			default:
+				break;
+		}
+	}
+
+	private void login(){
+		final String name = et_username.getText().toString();
+		String password = et_password.getText().toString();
+
+		if (TextUtils.isEmpty(name)) {
+			ShowToast("用户名不能为空");
+			return;
+		}
+
+		if (TextUtils.isEmpty(password)) {
+			ShowToast("密码不能为空");
+			return;
+		}
+
+		final ProgressDialog progress = new ProgressDialog(
+				LoginActivity.this);
+		progress.setMessage("正在登陆...");
+		progress.setCanceledOnTouchOutside(false);
+		progress.show();
+		MyUser user = new MyUser();
+		user.setUsername(name);
+		user.setPassword(password);
+		login(user,new SaveListener() {
+
+			@Override
+			public void onSuccess() {
+				// TODO Auto-generated method stub
+//				runOnUiThread(new Runnable() {
+//
+//					@Override
+//					public void run() {
+//						// TODO Auto-generated method stub
+//						progress.setMessage("正在获取好友列表...");
+//					}
+//				});
+				//更新用户的地理位置以及好友的资料
+//				updateUserInfos();
+//				progress.dismiss();
+//				BaseUtils.setSharedPreferences("userName", name, LoginActivity.this);
+//				Intent intent = new Intent(LoginActivity.this,SetMyInfoActivity.class);
+//				startActivity(intent);
+				finish();
+			}
+
+			@Override
+			public void onFailure(int errorcode, String arg0) {
+				// TODO Auto-generated method stub
+				progress.dismiss();
+				BmobLog.i(arg0);
+				//目前具官方给出的文档无法判断有多少种错误状态 因故用if判断某个已知的状态 后提示我需要的内容给客户
+				if(arg0.equals("username or password incorrect.")){
+					ShowToast("用户名或密码错误！");
+
+				}
+
+			}
+		});
+
+	}
+	/** 新的登陆方法，解决登陆成功后无法获取本地存储的派生属性的值
+	 * @Title: login
+	 * @Description: TODO
+	 * @param  user
+	 * @throws
+	 */
+	public void login(final MyUser user, final SaveListener callback) {
+		if(user==null){
+
+			//用户为空
+			callback.onFailure(1003, "BmobChatUser is null。");
+			return;
+		}
+		if(user.getUsername()==null || user.getUsername().equals("")){
+			//用户名为空
+			callback.onFailure(1004, "please input your username。");
+			return;
+		}
+		user.login(LoginActivity.this, new SaveListener() {
+
+			@Override
+			public void onSuccess() {
+				// TODO Auto-generated method stub
+//				checkAndBindInstallation(getCurrentUserName());
+				//调换一个位置就行了，不能提交当前用户
+				updateInstallIdForUser(getCurrentUser(),new UpdateListener() {
+
+					@Override
+					public void onSuccess() {
+						// TODO Auto-generated method stub
+						callback.onSuccess();
+					}
+
+					@Override
+					public void onFailure(int code, String msg) {
+						// TODO Auto-generated method stub
+						BmobLog.i("updateInstallIdForUser-->更新User表中设备id字段onFailure："+msg);
+						callback.onSuccess();
+					}
+				});
+			}
+
+			@Override
+			public void onFailure(int arg0, String arg1) {
+				// TODO Auto-generated method stub
+				callback.onFailure(arg0,arg1);
+			}
+		});
+	}
+	/**获取当前登陆用户对象 getCurrentUser
+	 * @Title: getCurrentUser
+	 * @Description: TODO
+	 * @return BmobChatUser
+	 * @throws
+	 */
+	public MyUser getCurrentUser() {
+		return BmobUser.getCurrentUser(LoginActivity.this, MyUser.class);
+	}
+
+	/** 获取当前登录用户的用户名
+	 * @Description: TODO
+	 * @return String
+	 * @throws
+	 */
+	public String getCurrentUserName(){
+		return getCurrentUser()!=null ? getCurrentUser().getUsername():"";
+	}
+	/** 更新用户表中的installId和deviceType字段
+	 * @Title: updateInstallIdForUser
+	 * @Description: TODO
+	 * @param
+	 * @return
+	 * @throws
+	 */
+	public void updateInstallIdForUser(final MyUser user,UpdateListener listener){
+//		BmobLog.i("当前设备id："+BmobInstallation.getInstallationId(context)+",ObjectId  = "+user.getObjectId());
+		MyUser newUser = new MyUser();
+		newUser.setInstallId(BmobInstallation.getInstallationId(LoginActivity.this));
+		newUser.setDeviceType("android");
+		newUser.setMoney(user.getMoney());
+		newUser.setObjectId(user.getObjectId());
+		newUser.update(LoginActivity.this,listener);
+	}
+	@Override
+	protected void onDestroy() {
+		// TODO Auto-generated method stub
+		super.onDestroy();
+		unregisterReceiver(receiver);
+	}
+
+	@Override
+	public void onClick(View v) {
+
+		switch (v.getId()) {
+			case R.id.headerLeft:
+				finish();
+				break;
+
+			default:
+				break;
+		}
+
+	}
+
+}

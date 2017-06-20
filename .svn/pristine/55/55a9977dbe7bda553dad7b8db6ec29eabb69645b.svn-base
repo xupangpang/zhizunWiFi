@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/lt_activity_bg_default" >
+
+    <RelativeLayout
+        android:id="@+id/frag_wifilist_wifi_disable_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/sci_logo"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_wifi_state_disable" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10.0dip"
+                android:paddingTop="30.0dip"
+                android:text="@string/frg_wifilist_des_wifi_disable"
+                android:textColor="#ff666666"
+                android:textSize="16.0sp" />
+
+            <Button
+                android:id="@+id/frag_wifilist_wifi_disable_open"
+                android:layout_width="wrap_content"
+                android:layout_height="40.0dip"
+                android:background="@drawable/bg_btn_blue_comm"
+                android:gravity="center"
+                android:minWidth="180.0dip"
+                android:text="@string/frg_wifilist_btn_open_wifi"
+                android:textColor="#ffffffff"
+                android:textSize="18.0dip" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/sci_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/frag_wifilist_wifi_disable_tools"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30.0dip"
+            android:drawableLeft="@drawable/sci_logo"
+            android:singleLine="true"
+            android:text="@string/sci_tip"
+            android:textColor="#ff0285f0"
+            android:textSize="13.5dip" />
+
+        <LinearLayout
+            android:id="@+id/frag_wifilist_wifi_disable_tools"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@drawable/line" />
+
+            <HorizontalScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scrollbarAlwaysDrawHorizontalTrack="false"
+                android:scrollbarStyle="outsideOverlay" >
+
+                <LinearLayout
+                    android:id="@+id/frag_wifilist_wifi_disable_tools_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" />
+            </HorizontalScrollView>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/frag_wifilist_wifi_enable_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:visibility="visible">
+
+        <FrameLayout
+            android:id="@+id/frag_wifilist_content_frame"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <!-- <com.snda.wifilocating.ui.support.SlidingUpPanelLayout -->
+            <RelativeLayout
+                
+                android:id="@+id/frag_wifilist_sliding_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+               <!--  
+               	xmlns:sothree="http://schemas.android.com/apk/res-auto"
+               	android:gravity="bottom"
+                sothree:dragView="@+id/frag_wifilist_bar_layout"
+                sothree:overlay="false"
+                sothree:paralaxOffset="200.0dip"
+                sothree:shadowHeight="4.0dip"  -->
+
+                <LinearLayout
+                    android:id="@+id/frag_wifilist_main"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:textSize="16.0sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:orientation="vertical" >
+
+                    <FrameLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <LinearLayout
+                            android:id="@+id/frag_wifilist_address_layout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left|center"
+                            android:orientation="horizontal"
+                            android:visibility="gone" >
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:duplicateParentState="true"
+                                android:gravity="left|center"
+                                android:orientation="horizontal"
+                                android:paddingBottom="5.0dip"
+                                android:paddingLeft="15.0dip"
+                                android:paddingRight="15.0dip"
+                                android:paddingTop="5.0dip" >
+
+                                <ImageView
+                                    android:layout_width="18.0dip"
+                                    android:layout_height="18.0dip"
+                                    android:duplicateParentState="true"
+                                    android:src="@drawable/apaddr_mod_location_normal1" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:drawablePadding="4.0dip"
+                                    android:duplicateParentState="true"
+                                    android:ellipsize="end"
+                                    android:gravity="left|center"
+                                    android:maxWidth="200.0dip"
+                                    android:singleLine="true"
+                                    android:textColor="#ff666666"
+                                    android:textSize="14.0dip" />
+
+                                <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawablePadding="4.0dip"
+                                    android:drawableRight="@drawable/act_more_pref_left1"
+                                    android:duplicateParentState="true"
+                                    android:ellipsize="end"
+                                    android:gravity="right|center"
+                                    android:singleLine="true"
+                                    android:text="@string/banner_hotap_manage"
+                                    android:textColor="#ffff6d01"
+                                    android:textSize="14.0dip" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/frag_wifilist_chinanet928_layout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_ap_address_none"
+                            android:gravity="left|center"
+                            android:orientation="horizontal"
+                            android:visibility="visible" >
+
+                            <TextView
+                                android:id="@+id/tv_chinanet_928"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:duplicateParentState="true"
+                                android:gravity="left|center"
+                                android:paddingBottom="5.0dip"
+                                android:paddingLeft="15.0dip"
+                                android:paddingRight="15.0dip"
+                                android:paddingTop="5.0dip"
+                                android:textColor="#ff666666"
+                                android:textSize="14.0dip" />
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/sci_logo1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:drawableLeft="@drawable/sci_logo"
+                        android:gravity="center"
+                        android:paddingTop="5.0dip"
+                        android:singleLine="true"
+                        android:text="@string/sci_tip"
+                        android:textColor="#ff0285f0"
+                        android:textSize="13.5dip" />
+
+                    <RelativeLayout
+                        android:id="@+id/frag_wifilist_bar_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="22.0dip"
+                        android:paddingLeft="15.0dip"
+                        android:paddingRight="15.0dip"
+                        android:paddingTop="26.0dip" >
+
+                        <CheckBox
+                            android:id="@+id/frag_wifilist_wifistate_checkbox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:background="@drawable/bg_checkbox_wifistate"
+                            android:button="@null"
+                            android:checked="false" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/frag_wifilist_wifistate_checkbox"
+                            android:layout_alignParentRight="true"
+                            android:layout_toRightOf="@+id/frag_wifilist_wifistate_checkbox"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingLeft="15.0dip" >
+
+                            <TextView
+                                android:id="@+id/frag_wifilist_ap_des"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:paddingBottom="4.0dip"
+                                android:singleLine="true"
+                                android:textColor="#ff666666"
+                                android:textSize="16.0dip" />
+
+                            <Button
+                                android:id="@+id/frag_wifilist_yjcx"
+                                android:layout_width="fill_parent"
+                                android:layout_height="40.0dip"
+                                android:layout_marginBottom="2.0dip"
+                                android:background="@drawable/bg_btn_blue_comm"
+                                android:gravity="center"
+                                android:text="一键查询免费WiFi"
+                                android:textColor="#ffffffff"
+                                android:textSize="18.0dip" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dip"
+                        android:background="@drawable/line" />
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" >
+
+                        <LinearLayout
+                            android:id="@+id/frag_wifilist_prgbar_ap_scan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="horizontal" >
+
+                            <ProgressBar
+                                android:layout_width="30.0dip"
+                                android:layout_height="30.0dip"
+                                android:indeterminateBehavior="repeat"
+                                android:indeterminateDrawable="@drawable/lt_bg_progressbar_rotate"
+                                android:indeterminateOnly="true" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left|center"
+                                android:paddingLeft="5.0dip"
+                                android:text="@string/frg_wifilist_wifi_scanning"
+                                android:textSize="18.0sp" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_above="@+id/frag_wifilist_ad_box"
+                            android:layout_alignParentTop="true" >
+
+                            <LinearLayout
+                                android:id="@+id/frag_wifilist_result_no_ap"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:visibility="gone" >
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_wifilist_no_ap" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="2.0dip"
+                                    android:text="@string/frg_wifilist_no_ap"
+                                    android:textColor="#ff999999"
+                                    android:textSize="16.0sp" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10.0dip"
+                                    android:orientation="horizontal" >
+
+                                    <Button
+                                        android:id="@+id/frag_wifilist_checksetting"
+                                        android:layout_width="113.0dip"
+                                        android:layout_height="32.0dip"
+                                        android:background="@drawable/bg_btn_blue_border"
+                                        android:gravity="center"
+                                        android:text="@string/frg_wifilist_btn_checksetting_wifi"
+                                        android:textColor="#ff0285f0"
+                                        android:textSize="16.0sp" />
+
+                                    <Button
+                                        android:id="@+id/frag_wifilist_refreshlist"
+                                        android:layout_width="113.0dip"
+                                        android:layout_height="32.0dip"
+                                        android:layout_marginLeft="15.0dip"
+                                        android:background="@drawable/bg_btn_blue_comm"
+                                        android:gravity="center"
+                                        android:text="@string/frg_wifilist_btn_refresh_wifi"
+                                        android:textColor="#ffffffff"
+                                        android:textSize="16.0sp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <!-- <com.snda.wifilocating.ui.support.PullRefreshContainerView
+                                android:id="@+id/frag_wifilist_result_area"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:visibility="gone" > -->
+
+                                <ListView
+                                    android:id="@+id/listView"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:cacheColorHint="#00000000"
+                                    android:divider="@null" />
+                            <!-- </com.snda.wifilocating.ui.support.PullRefreshContainerView> -->
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/frag_wifilist_ad_box"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="@drawable/bg_xlb"
+                            android:gravity="left|center"
+                            android:orientation="horizontal"
+                            android:paddingLeft="25.0dip" />
+                    </RelativeLayout>
+                </LinearLayout>
+           <!--  </com.snda.wifilocating.ui.support.SlidingUpPanelLayout> -->
+           </RelativeLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/frag_wifilist_right_drawer"
+            android:layout_width="260.0dip"
+            android:layout_height="fill_parent"
+            android:layout_gravity="end"
+            android:background="@color/white"
+            android:choiceMode="singleChoice"
+            android:orientation="vertical" />
+    </android.support.v4.widget.DrawerLayout>
+
+</RelativeLayout>

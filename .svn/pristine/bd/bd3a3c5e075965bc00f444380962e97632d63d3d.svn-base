@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:app1="http://schemas.android.com/apk/res/com.zhizun.zhizunwifi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <include
+        android:id="@id/viewHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip"
+        layout="@layout/view_header1" 
+        />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#fff5f5f5"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/user_center"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/blue"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:padding="10.0dip" >
+
+                    <RelativeLayout
+                        android:id="@+id/root_avatar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <com.zhizun.zhizunwifi.utils.CircleImageView
+                            android:id="@+id/my_image"
+                            android:layout_width="75.0dip"
+                            android:layout_height="75.0dip"
+                            android:layout_centerInParent="true"
+                             android:layout_marginLeft="20dip"
+                            android:src="@drawable/icon_default_portal"
+                            app1:border_color="@color/white"
+                            app1:border_width="0dp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/avatar_size"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_toRightOf="@id/root_avatar"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:paddingTop="5.0dip" >
+
+                        <Button
+                            android:id="@+id/user"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:textColor="#ffffffff"
+                            android:textSize="17.0dip" />
+
+                        <TextView
+                            android:id="@+id/tv_login_tip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="5.0dip"
+                            android:layout_marginTop="10.0dip"
+                            android:drawablePadding="2.0dip"
+                            android:text="@string/account_login_bind_tip"
+                            android:textColor="#ffffffff"
+                            android:textSize="12.0dip" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/item_go"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/mine_icon_rightarrow" />
+
+                    <Button
+                        android:id="@+id/btn_account_bind"
+                        style="@style/Button.Blue.retangle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="14.0dip"
+                        android:layout_toLeftOf="@id/item_go"
+                        android:gravity="center"
+                        android:paddingBottom="3.0dip"
+                        android:paddingLeft="10.0dip"
+                        android:paddingRight="10.0dip"
+                        android:paddingTop="3.0dip"
+                        android:text="@string/account_Bind"
+                        android:textSize="13.0sp"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/btn_account"
+                        style="@style/Button.Blue.retangle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="14.0dip"
+                        android:layout_toLeftOf="@id/item_go"
+                        android:gravity="center"
+                        android:paddingBottom="3.0dip"
+                        android:paddingLeft="10.0dip"
+                        android:paddingRight="10.0dip"
+                        android:paddingTop="3.0dip"
+                        android:text="@string/account_login"
+                        android:textSize="13.0sp"
+                        android:visibility="visible" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/nologin_tips"
+                android:layout_width="fill_parent"
+                android:layout_height="48.0dip"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="10.0dip" >
+
+                <TextView
+                    android:id="@+id/tv_check_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/labby_title_checkin"
+                    android:textColor="#ff888999"
+                    android:textSize="14.0dip" />
+
+                <Button
+                    android:id="@+id/hiv_sign"
+                    style="@style/Button.Orange.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10.0dip"
+                    android:gravity="center"
+                    android:paddingLeft="20.0dip"
+                    android:paddingRight="20.0dip"
+                    android:text="签 到"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/hiv_sign_duihuan"
+                    style="@style/Button.Blue.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10.0dip"
+                    android:gravity="center"
+                    android:paddingLeft="20.0dip"
+                    android:paddingRight="20.0dip"
+                    android:text="兑 换"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/exchange_btn"
+                    style="@style/Button.Grey.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10.0dip"
+                    android:gravity="center"
+                    android:paddingLeft="20.0dip"
+                    android:paddingRight="20.0dip"
+                    android:text="去兑换"
+                    android:textSize="14.0dip"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:background="#ffeeeeee" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="100.0dip"
+                android:background="#ffffffff"
+                android:orientation="horizontal" 
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/viv_time_new"
+                    android:layout_width="0.0dip"
+                    android:layout_height="100.0dip"
+                    android:layout_weight="1.0"
+                    android:clickable="true"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/time_icon"
+                        android:layout_width="50.0dip"
+                        android:layout_height="50.0dip"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="15.0dip"
+                        android:background="@drawable/icon_mine_time" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="时长"
+                        android:textColor="#ff000000"
+                        android:textSize="12.0dip" />
+
+                   <!--  <TextView
+                        android:id="@+id/timeCounts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="0.0"
+                        android:textColor="#ff288dff"
+                        android:textSize="12.0dip" /> -->
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1.0px"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:background="#ffeeeeee"
+                    android:contentDescription="@string/empty" />
+
+                <LinearLayout
+                    android:id="@+id/viv_gold_new"
+                    android:layout_width="0.0dip"
+                    android:layout_height="100.0dip"
+                    android:layout_weight="1.0"
+                    android:clickable="true"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="50.0dip"
+                        android:layout_height="50.0dip"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="15.0dip"
+                        android:background="@drawable/icon_mine_gold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="金币"
+                        android:textColor="#ff000000"
+                        android:textSize="12.0dip" />
+
+                    <!-- <TextView
+                        android:id="@+id/goldCounts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="0.0"
+                        android:textColor="#ff288dff"
+                        android:textSize="12.0dip" /> -->
+                </LinearLayout>
+
+                <!--
+                     <View
+                    android:layout_width="1.0px"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:background="#ffeeeeee"
+                    android:contentDescription="@string/empty" />
+
+                <LinearLayout
+                    android:id="@+id/viv_wallet_new"
+                    android:layout_width="0.0dip"
+                    android:layout_height="100.0dip"
+                    android:layout_weight="1.0"
+                    android:clickable="true"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="30.0dip"
+                        android:layout_height="30.0dip"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="15.0dip"
+                        android:background="@drawable/icon_mine_wallet" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="钱包"
+                        android:textColor="#ff000000"
+                        android:textSize="12.0dip" />
+
+                    <TextView
+                        android:id="@+id/walletCountsLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="0.0"
+                        android:textColor="#ff288dff"
+                        android:textSize="12.0dip" />
+                </LinearLayout>-->
+            </LinearLayout>
+
+            <include
+                android:layout_width="fill_parent"
+                android:layout_height="10.0dip"
+                layout="@layout/view_split_both" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <!-- 1 -->
+
+                <!-- <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip" >
+
+                    <ImageView
+                        android:id="@+id/iv1"
+                        android:layout_width="30.0dip"
+                        android:layout_height="30.0dip"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5.0dip"
+                        android:background="@drawable/icon_mine_capture" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dip"
+                        android:layout_toRightOf="@id/iv1"
+                        android:text="分享的WiFi"
+                        android:textColor="#383838"
+                        android:textSize="16dip" />
+
+                    <ImageView
+                        android:layout_width="8dip"
+                        android:layout_height="10dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10.0dip"
+                        android:background="@drawable/mine_icon_arrow" />
+                </RelativeLayout> -->
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:background="@color/gray" />
+
+                <!-- 2 -->
+
+                <RelativeLayout
+                    android:id="@+id/share_userpanel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip" >
+
+                    <ImageView
+                        android:id="@+id/iv2"
+                        android:layout_width="30.0dip"
+                        android:layout_height="30.0dip"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5.0dip"
+                        android:background="@drawable/mine_icon_share" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dip"
+                        android:layout_toRightOf="@id/iv2"
+                        android:text="邀请好友"
+                        android:textColor="#383838"
+                        android:textSize="16dip" />
+
+                    <ImageView
+                        android:id="@+id/arrow"
+                        android:layout_width="8dip"
+                        android:layout_height="10dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10.0dip"
+                        android:background="@drawable/mine_icon_arrow" />
+
+                    <!-- <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5.0dip"
+                        android:layout_toLeftOf="@id/arrow"
+                        android:text="奖励100金币"
+                        android:textColor="@color/blue"
+                        android:textSize="12dip" /> -->
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:background="@color/gray" />
+                <!-- 3 -->
+
+                <!--  到店通
+                <RelativeLayout
+                    android:id="@+id/wifi2store"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip" >
+
+                    <ImageView
+                        android:id="@+id/iv3"
+                        android:layout_width="30.0dip"
+                        android:layout_height="30.0dip"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5.0dip"
+                        android:background="@drawable/icon_shop_big" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dip"
+                        android:layout_toRightOf="@id/iv3"
+                        android:text="WiFi到店通"
+                        android:textColor="#383838"
+                        android:textSize="16dip" />
+
+                    <ImageView
+                        android:layout_width="8dip"
+                        android:layout_height="10dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10.0dip"
+                        android:background="@drawable/mine_icon_arrow" />
+                </RelativeLayout> -->
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                layout="@layout/view_split_both" />
+
+            <View
+                android:id="@+id/view_split_shop"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                layout="@layout/view_split_both" />
+
+            <include
+                android:id="@+id/view_split_hongbao_top"
+                android:layout_width="fill_parent"
+                android:layout_height="10.0dip"
+                layout="@layout/view_split_both" />
+
+            <RelativeLayout
+                android:id="@+id/hongbao_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:background="@color/white" >
+
+                <ImageView
+                    android:id="@+id/iv2"
+                    android:layout_width="30.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5.0dip"
+                    android:background="@drawable/icon_hongbao_helper" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_toRightOf="@id/iv2"
+                    android:text="红包助手"
+                    android:textColor="#383838"
+                    android:textSize="16dip" />
+
+                <ImageView
+                    android:layout_width="8dip"
+                    android:layout_height="10dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10.0dip"
+                    android:background="@drawable/mine_icon_arrow" />
+            </RelativeLayout>
+
+            <include
+                android:id="@+id/view_split_hongbao_bottom"
+                android:layout_width="fill_parent"
+                android:layout_height="15.0dip"
+                layout="@layout/view_split_top" />
+
+<!--             <RelativeLayout
+                android:id="@+id/baidu_mobad_Banner"
+                android:layout_width="fill_parent"
+                android:gravity="bottom"
+                android:layout_height="wrap_content" >
+            </RelativeLayout> -->
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

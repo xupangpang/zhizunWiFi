@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@id/viewHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip"
+        layout="@layout/view_header1" />
+
+    <com.tencent.smtt.sdk.WebView
+        android:id="@+id/webview_webinfo"
+        android:layout_width="fill_parent"
+        android:scrollbars="none"
+        android:layout_height="fill_parent" />
+
+</LinearLayout>

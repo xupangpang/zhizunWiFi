@@ -1,0 +1,122 @@
+package com.zhizun.zhizunwifi.http;
+
+import com.zhizun.zhizunwifi.bean.GetAccount;
+import com.zhizun.zhizunwifi.bean.GetAdvice;
+import com.zhizun.zhizunwifi.bean.JsonWifiImp;
+import com.zhizun.zhizunwifi.bean.Login;
+import com.zhizun.zhizunwifi.bean.PutAccount;
+import com.zhizun.zhizunwifi.bean.Register;
+import com.zhizun.zhizunwifi.bean.UserHead;
+import com.zhizun.zhizunwifi.bean.UserSign;
+import com.zhizun.zhizunwifi.bean.Version;
+
+import java.util.List;
+
+import okhttp3.RequestBody;
+import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.Multipart;
+import retrofit2.http.POST;
+import retrofit2.http.Part;
+import rx.Observable;
+
+/**
+ * service统一接口数据
+ * Created by WZG on 2016/7/16.
+ */
+public interface HttpService {
+    //获取wifi密码
+    @FormUrlEncoded
+    @POST("?service=Wifi.getAccount")
+    Observable<BaseResultEntity<GetAccount>> getAccount(@Field("local") String phonemac,
+                                                        @Field("router") String bssid,
+                                                        @Field("ssid") String ssid);
+
+    //上传wifi密码
+    @FormUrlEncoded
+    @POST("?service=Wifi.putAccount")
+    Observable<BaseResultEntity<PutAccount>> putAccount(@Field("data") String data,
+                                                        @Field("T") String t);
+
+    //获取发现网页地址
+    @FormUrlEncoded
+    @POST("?service=Wifi.GetAdvice")
+    Observable<BaseResultEntity<GetAdvice>> GetAdvice(@Field("channel") String data,
+                                                                    @Field("flag") String flag);
+
+    //获取更新信息
+    @FormUrlEncoded
+    @POST("?service=Wifi.Version")
+    Observable<BaseResultEntity<Version>> Version(@Field("app_name") String app_name,
+                                                  @Field("version") String version,
+                                                  @Field("flag") String flag);
+
+
+    //上传用户头像
+    @Multipart
+    @POST("?service=Wifi.UploadUserHead")
+    Observable<BaseResultEntity<UserHead>> UploadUserHead(@Part("file\"; filename=\"image_head.png\"") RequestBody file,
+                                                          @Part("user") RequestBody description);
+
+
+    //上传用户头像
+    @Multipart
+    @POST("?service=Wifi.UploadUserHead")
+    Observable<BaseResultEntity<UserHead>> UploadUserHeadOpen(@Part("file\"; filename=\"image_head.png\"") RequestBody file,
+                                                          @Part("openid") RequestBody description);
+
+    //用户注册
+    @FormUrlEncoded
+    @POST("?service=Wifi.UserRegister")
+    Observable<BaseResultEntity<Register>> UserRegister(@Field("user") String user,
+                                                        @Field("passwd") String passwd);
+
+
+    //用户登录
+    @FormUrlEncoded
+    @POST("?service=Wifi.UserLogin")
+    Observable<BaseResultEntity<Login>> UserLogin(@Field("user") String user,
+                                                  @Field("passwd") String passwd);
+
+    //上传用户信息
+    @FormUrlEncoded
+    @POST("?service=Wifi.UploadUserInfo")
+    Observable<BaseResultEntity<PutAccount>> UploadUserInfo(@Field("user") String user,
+                                                            @Field("openid") String openid,
+                                                            @Field("name") String name,
+                                                            @Field("sex") String sex);
+
+    //签到
+    @FormUrlEncoded
+    @POST("?service=Wifi.UserSign")
+    Observable<BaseResultEntity<UserSign>> UserSign(@Field("user") String user,
+                                                    @Field("openid") String openid);
+
+
+    //向服务器发送用户连接成功
+    @FormUrlEncoded
+    @POST("?service=Wifi.ConnectSuccess")
+    Observable<BaseResultEntity<PutAccount>> ConnectSuccess(@Field("mac") String user);
+
+
+    //推送开关
+    @FormUrlEncoded
+    @POST("?service=Wifi.MessagePush")
+    Observable<BaseResultEntity<PutAccount>> MessagePush(@Field("getui") String user,
+                                                         @Field("flag") String flag);
+
+    //第三方登录
+    @FormUrlEncoded
+    @POST("?service=User.UserOAuth")
+    Observable<BaseResultEntity<Login>> UserOAuth(@Field("openid") String openid,
+                                                  @Field("name") String name,
+                                                  @Field("head") String head,
+                                                  @Field("sex") String sex);
+
+    //第三方登录
+    @FormUrlEncoded
+    @POST("?service=Wifi.GetAccountCopy")
+    Observable<BaseResultEntity<List<JsonWifiImp>>> GetAccountCopy(@Field("router") String openid);
+
+
+}

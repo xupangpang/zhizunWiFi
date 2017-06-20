@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/base_actionbar_bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@id/viewHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip"
+        layout="@layout/view_header1" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:textSize="12sp"
+        android:textColor="#999999"
+        android:text="意见反馈"
+        />
+    
+    <EditText
+        android:id="@+id/feedback_edittext"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="150dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+        android:gravity="top"
+        android:textColor="#333333"
+        android:textSize="14sp"
+        android:hint="请写下您想说的话吧"
+        android:maxLength="255"
+        android:background="@drawable/lt_edittext_border_dis"
+        android:text=""
+        />
+
+    <net.qiujuer.genius.ui.widget.Button
+        android:id="@+id/feedback_submit"
+        android:background="@drawable/btn_blue_shape_bg"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="18dp"
+        app:gTouchColor="@color/black_alpha_48"
+        app:gTouchEffect="auto"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="center"
+        android:text="@string/btn_submit"
+        android:textSize="17.0sp"
+        android:visibility="visible" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:textSize="12sp"
+        android:textColor="#999999"
+        android:text="常见问题"
+        />
+
+    <LinearLayout
+        android:id="@+id/feedback_why"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/list_selector"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="25dp"
+            android:layout_gravity="center_vertical"
+            android:text="为什么要进行商家合作？"
+            android:textColor="@color/down_item_name"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/arrow_about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="10.0dip"
+            android:background="@drawable/mine_icon_arrow" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/feedback_cancel"
+        android:layout_width="match_parent"
+        android:layout_marginTop="1dp"
+        android:layout_height="50dp"
+        android:background="@drawable/list_selector"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="25dp"
+            android:layout_gravity="center_vertical"
+            android:text="怎么取消热点分享？"
+            android:textColor="@color/down_item_name"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/arrow_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="10.0dip"
+            android:background="@drawable/mine_icon_arrow" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

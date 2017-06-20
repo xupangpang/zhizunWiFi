@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="map_marker_info_window_width">280.0dip</dimen>
+    <dimen name="speed_margin">40.0dip</dimen>
+    <dimen name="common_font_size_c">19.0sp</dimen>
+    <dimen name="common_font_size_d">17.0sp</dimen>
+    <dimen name="common_font_size_e">15.0sp</dimen>
+    <dimen name="common_font_size_f">13.0sp</dimen>
+    <dimen name="common_font_size_g">11.0sp</dimen>
+    <dimen name="common_titlebar_content_height">56.0dip</dimen>
+    <dimen name="common_btn_bar_height">76.0dip</dimen>
+    <dimen name="common_btn_bar2_height">48.0dip</dimen>
+    <dimen name="common_divider_width">1.0px</dimen>
+    <dimen name="common_dialog_bg_radius">5.0dip</dimen>
+</resources>

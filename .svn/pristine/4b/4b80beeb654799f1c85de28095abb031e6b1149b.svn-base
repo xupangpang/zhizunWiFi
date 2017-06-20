@@ -1,0 +1,790 @@
+[
+    {
+        "outputFile": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-xhdpi-v4\\values-xhdpi-v4.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 53,
+                    "endOffset": 104
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\colors.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 755,
+                        "endColumn": 53,
+                        "endOffset": 804
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 109,
+                    "endColumn": 53,
+                    "endOffset": 158
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\colors.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 810,
+                        "endColumn": 53,
+                        "endOffset": 859
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 163,
+                    "endColumn": 53,
+                    "endOffset": 212
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\colors.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 865,
+                        "endColumn": 53,
+                        "endOffset": 914
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 217,
+                    "endColumn": 51,
+                    "endOffset": 264
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\colors.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 920,
+                        "endColumn": 51,
+                        "endOffset": 967
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 269,
+                    "endColumn": 49,
+                    "endOffset": 314
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\colors.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 973,
+                        "endColumn": 49,
+                        "endOffset": 1018
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 319,
+                    "endColumn": 51,
+                    "endOffset": 366
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\colors.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1024,
+                        "endColumn": 51,
+                        "endOffset": 1071
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 371,
+                    "endColumn": 58,
+                    "endOffset": 425
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\colors.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 1189,
+                        "endColumn": 58,
+                        "endOffset": 1243
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 430,
+                    "endColumn": 55,
+                    "endOffset": 481
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\colors.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 57,
+                        "endColumn": 55,
+                        "endOffset": 108
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 486,
+                    "endColumn": 73,
+                    "endOffset": 555
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\colors.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 530,
+                        "endColumn": 73,
+                        "endOffset": 599
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 560,
+                    "endColumn": 73,
+                    "endOffset": 629
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\colors.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 605,
+                        "endColumn": 73,
+                        "endOffset": 674
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 634,
+                    "endColumn": 73,
+                    "endOffset": 703
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\colors.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 680,
+                        "endColumn": 73,
+                        "endOffset": 749
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 708,
+                    "endColumn": 55,
+                    "endOffset": 759
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\colors.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 114,
+                        "endColumn": 55,
+                        "endOffset": 165
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 764,
+                    "endColumn": 55,
+                    "endOffset": 815
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\colors.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 171,
+                        "endColumn": 55,
+                        "endOffset": 222
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 820,
+                    "endColumn": 55,
+                    "endOffset": 871
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\colors.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 228,
+                        "endColumn": 55,
+                        "endOffset": 279
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 876,
+                    "endColumn": 55,
+                    "endOffset": 927
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\colors.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 285,
+                        "endColumn": 55,
+                        "endOffset": 336
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 932,
+                    "endColumn": 55,
+                    "endOffset": 983
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\colors.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 342,
+                        "endColumn": 55,
+                        "endOffset": 393
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 988,
+                    "endColumn": 55,
+                    "endOffset": 1039
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\colors.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 399,
+                        "endColumn": 55,
+                        "endOffset": 450
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1044,
+                    "endColumn": 72,
+                    "endOffset": 1112
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\colors.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 456,
+                        "endColumn": 72,
+                        "endOffset": 524
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1117,
+                    "endColumn": 54,
+                    "endOffset": 1167
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\colors.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1077,
+                        "endColumn": 54,
+                        "endOffset": 1127
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 1172,
+                    "endColumn": 59,
+                    "endOffset": 1227
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\colors.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 1310,
+                        "endColumn": 59,
+                        "endOffset": 1365
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 1232,
+                    "endColumn": 59,
+                    "endOffset": 1287
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\colors.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 1249,
+                        "endColumn": 59,
+                        "endOffset": 1304
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 1292,
+                    "endColumn": 54,
+                    "endOffset": 1342
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\colors.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1133,
+                        "endColumn": 54,
+                        "endOffset": 1183
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 1347,
+                    "endColumn": 56,
+                    "endOffset": 1399
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\dimens.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 796,
+                        "endColumn": 56,
+                        "endOffset": 848
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 1404,
+                    "endColumn": 55,
+                    "endOffset": 1455
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\dimens.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 739,
+                        "endColumn": 55,
+                        "endOffset": 790
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 1460,
+                    "endColumn": 56,
+                    "endOffset": 1512
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\dimens.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 970,
+                        "endColumn": 56,
+                        "endOffset": 1022
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 1517,
+                    "endColumn": 57,
+                    "endOffset": 1570
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\dimens.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 554,
+                        "endColumn": 57,
+                        "endOffset": 607
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 1575,
+                    "endColumn": 52,
+                    "endOffset": 1623
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\dimens.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 854,
+                        "endColumn": 52,
+                        "endOffset": 902
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 29,
+                    "startColumn": 4,
+                    "startOffset": 1628,
+                    "endColumn": 51,
+                    "endOffset": 1675
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\dimens.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 289,
+                        "endColumn": 51,
+                        "endOffset": 336
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 30,
+                    "startColumn": 4,
+                    "startOffset": 1680,
+                    "endColumn": 51,
+                    "endOffset": 1727
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\dimens.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 342,
+                        "endColumn": 51,
+                        "endOffset": 389
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 31,
+                    "startColumn": 4,
+                    "startOffset": 1732,
+                    "endColumn": 51,
+                    "endOffset": 1779
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\dimens.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 395,
+                        "endColumn": 51,
+                        "endOffset": 442
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 32,
+                    "startColumn": 4,
+                    "startOffset": 1784,
+                    "endColumn": 51,
+                    "endOffset": 1831
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\dimens.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 448,
+                        "endColumn": 51,
+                        "endOffset": 495
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 33,
+                    "startColumn": 4,
+                    "startOffset": 1836,
+                    "endColumn": 51,
+                    "endOffset": 1883
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\dimens.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 501,
+                        "endColumn": 51,
+                        "endOffset": 548
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 34,
+                    "startColumn": 4,
+                    "startOffset": 1888,
+                    "endColumn": 57,
+                    "endOffset": 1941
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\dimens.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 117,
+                        "endColumn": 57,
+                        "endOffset": 170
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 35,
+                    "startColumn": 4,
+                    "startOffset": 1946,
+                    "endColumn": 58,
+                    "endOffset": 2000
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\dimens.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 613,
+                        "endColumn": 58,
+                        "endOffset": 667
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 36,
+                    "startColumn": 4,
+                    "startOffset": 2005,
+                    "endColumn": 58,
+                    "endOffset": 2059
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\dimens.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 57,
+                        "endColumn": 58,
+                        "endOffset": 111
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 37,
+                    "startColumn": 4,
+                    "startOffset": 2064,
+                    "endColumn": 60,
+                    "endOffset": 2120
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\dimens.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 908,
+                        "endColumn": 60,
+                        "endOffset": 964
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 38,
+                    "startColumn": 4,
+                    "startOffset": 2125,
+                    "endColumn": 64,
+                    "endOffset": 2185
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\dimens.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 673,
+                        "endColumn": 64,
+                        "endOffset": 733
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 39,
+                    "startColumn": 4,
+                    "startOffset": 2190,
+                    "endColumn": 63,
+                    "endOffset": 2249
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\dimens.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 176,
+                        "endColumn": 63,
+                        "endOffset": 235
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 40,
+                    "startColumn": 4,
+                    "startOffset": 2254,
+                    "endColumn": 46,
+                    "endOffset": 2296
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\dimens.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 241,
+                        "endColumn": 46,
+                        "endOffset": 283
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 41,
+                    "startColumn": 4,
+                    "startOffset": 2301,
+                    "endLine": 44,
+                    "endColumn": 12,
+                    "endOffset": 2514
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\styles.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 57,
+                        "endLine": 5,
+                        "endColumn": 12,
+                        "endOffset": 273
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 45,
+                    "startColumn": 4,
+                    "startOffset": 2519,
+                    "endLine": 49,
+                    "endColumn": 12,
+                    "endOffset": 2783
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\values-xhdpi-v4\\styles.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 279,
+                        "endLine": 10,
+                        "endColumn": 12,
+                        "endOffset": 547
+                    }
+                }
+            }
+        ]
+    }
+]

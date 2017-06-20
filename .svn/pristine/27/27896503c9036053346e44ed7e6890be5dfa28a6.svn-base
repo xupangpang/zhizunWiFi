@@ -1,0 +1,169 @@
+package com.zhizun.zhizunwifi.fragment;
+
+import android.graphics.Color;
+import android.graphics.Typeface;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
+import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.webkit.WebView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TabHost;
+import android.widget.TabHost.OnTabChangeListener;
+import android.widget.TabWidget;
+import android.widget.TextView;
+
+import com.zhizun.zhizunwifi.R;
+import com.zhizun.zhizunwifi.adapter.AppPagerAdapter;
+
+public class AppWallFragment extends BaseFragment {
+	/** TabHost **/
+	private TabHost tabhost;
+	/** mTabWidget **/
+	private TabWidget mTabWidget;
+	/** ViewPager **/
+	private ViewPager pager;
+	/** tab选项 **/
+	private String[] tags={"编辑推荐","热门游戏","精选应用"};
+	/** PagerAdapter **/
+	private PagerAdapter mPagerAdapter;
+
+	@Override
+	public void onActivityCreated(Bundle savedInstanceState) {
+		super.onActivityCreated(savedInstanceState);
+		tabhost = (TabHost) view.findViewById(android.R.id.tabhost);
+		tabhost.setup();
+		tabhost.addTab(tabhost.newTabSpec("tab1").setIndicator(tags[0]).setContent(android.R.id.tabcontent));
+		tabhost.addTab(tabhost.newTabSpec("tab2").setIndicator(tags[1]).setContent(android.R.id.tabcontent));
+		tabhost.addTab(tabhost.newTabSpec("tab3").setIndicator(tags[2]).setContent(android.R.id.tabcontent));
+		mTabWidget = (TabWidget) view.findViewById(android.R.id.tabs);
+		for (int i = 0; i < mTabWidget.getChildCount(); i++) {
+			TextView tv = (TextView) mTabWidget.getChildAt(i).findViewById(android.R.id.title);
+			tv.setGravity(Gravity.CENTER);
+//			tv.setPadding(10, 10, 10, 10);
+			tv.setTextSize(14);// 设置字体的大小；
+			tv.setTextColor(Color.parseColor("#ff333333"));// 设置字体的颜色；
+			if(i == 0){
+				tv.setTextColor(Color.parseColor("#ff0074d2"));// 设置字体的颜色；
+			}
+//			tv.setTypeface((Typeface.defaultFromStyle(Typeface.NORMAL)));
+			tv.setTypeface((Typeface.DEFAULT));
+			// 获取tabs图片；
+			// ImageView iv=(ImageView)mTabWidget.getChildAt(i).findViewById(android.R.id.icon);
+		}
+
+		pager = (ViewPager) view.findViewById(R.id.pager);
+		mPagerAdapter = new AppPagerAdapter(getFragmentManager(),tags);
+		pager.setAdapter(mPagerAdapter);
+
+		initEvent();
+		initData();
+		pager.setCurrentItem(0);
+	}
+
+	@Override
+	public void onClick(View v) {
+
+	}
+
+	@Override
+	public View initView(LayoutInflater inflater) {
+		view = inflater.inflate(R.layout.fragment_appwall, null);
+		return view;
+	}
+
+	@Override
+	public void initData() {
+//		mTabWidget.setStripEnabled(false);
+
+	}
+
+	@Override
+	public void onResume() {
+		super.onResume();
+	}
+
+	@Override
+	public void initEvent() {
+		tabhost.setOnTabChangedListener(new OnTabChangeListener() {
+			// 第一次打开程序，TabChange时间不会发生，只有点击后才会发生
+			@Override
+			public void onTabChanged(String tabId) {
+				pager.setCurrentItem(tabhost.getCurrentTab());
+				Log.d("AppWallFragment", "currentTab is: " + tabhost.getCurrentTab());
+
+			}
+		});
+
+		pager.setOnPageChangeListener(new OnPageChangeListener() {
+			@Override
+			public void onPageSelected(int index) {
+				tabhost.setCurrentTab(index);
+				for (int i = 0; i < mTabWidget.getChildCount(); i++) {
+					TextView tv = (TextView) mTabWidget.getChildAt(i).findViewById(android.R.id.title);
+					tv.setTextColor(Color.parseColor("#ff333333"));// 设置字体的颜色；
+					if(i == index){
+						tv.setTextColor(Color.parseColor("#ff0074d2"));// 设置字体的颜色；
+					}
+				}
+			}
+
+			@Override
+			public void onPageScrolled(int arg0, float arg1, int arg2) {
+
+			}
+
+			@Override
+			public void onPageScrollStateChanged(int arg0) {
+
+			}
+		});
+	}
+
+	/*private class SlidePagerAdapter extends FragmentStatePagerAdapter {
+		public SlidePagerAdapter(FragmentManager fm) {
+			super(fm);
+		}
+
+		@Override
+		public Fragment getItem(int position) {
+			return SlideFragment.create(tags[position]);
+		}
+
+		@Override
+		public int getCount() {
+			return tags.length;
+		}
+	}
+
+	public static class SlideFragment extends Fragment {
+		public static SlideFragment create(String tag) {
+			SlideFragment f = new SlideFragment();
+			Bundle b = new Bundle();
+			b.putString("tag", tag);
+			f.setArguments(b);
+			return f;
+		}
+
+		@Override
+		public View onCreateView(LayoutInflater inflater, ViewGroup container,
+				Bundle savedInstanceState) {
+
+			View v = inflater.inflate(R.layout.fragment_more,
+					container, false);
+//			TextView t = (TextView) v.findViewById(R.id.text1);
+//			t.setText(getArguments().getString("tag"));
+			return v;
+		}
+	}*/
+
+}

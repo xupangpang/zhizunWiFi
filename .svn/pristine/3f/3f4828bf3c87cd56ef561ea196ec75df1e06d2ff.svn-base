@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/info_window_wrapper"
+    android:layout_width="wrap_content"
+    android:layout_height="48.0dip"
+    android:background="@drawable/bg_map_wifi_detail"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="20.0dip"
+    android:paddingRight="20.0dip" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/icon_map_wifi_detail"
+        android:drawablePadding="2.0dip"
+        android:text="陛下，臣妾在这儿~"
+        android:textColor="#ff00c62f"
+        android:textSize="14.0dip" />
+
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/viewHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip"
+        layout="@layout/view_header1" />
+
+ <RelativeLayout android:layout_width="fill_parent"
+     
+    android:layout_height="fill_parent">
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_guide"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </android.support.v4.view.ViewPager>
+        
+        
+      <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30.0dip"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10.0dip"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <CheckBox
+                android:id="@+id/guide_ux_cb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="3.0dip"
+                android:button="@null"
+                android:checked="true"
+                android:drawableLeft="@drawable/guide_ux_cb_bg"
+                android:drawablePadding="3.0dip"
+                android:paddingLeft="2.0dip"
+                android:text="@string/guide_ux_agreement"
+                android:textColor="@color/gray"
+                android:textSize="12.0dip" />
+
+            <TextView
+                android:id="@+id/guide_ux_agreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="3.0dip"
+                android:paddingTop="3.0dip"
+                android:text="@string/guide_ux_checkbox"
+                android:textColor="@color/storeProtocoltext"
+                android:textSize="12.0dip" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button"
+            style="@style/Button.Orange.Hollow"
+            android:layout_width="250dip"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="立即加入"
+            android:textSize="16.0dip" />
+    </LinearLayout>
+</RelativeLayout>
+</LinearLayout>

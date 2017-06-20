@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="left"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dlg_exit_from_home_msg_primary"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="#ff666666"
+        android:textSize="16.0dip" />
+
+    <TextView
+        android:id="@+id/dlg_exit_from_home_msg_noti_remind"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10.0dip"
+        android:paddingTop="10.0dip"
+        android:text="@string/dlg_exit_from_home_msg_notification_bar"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="#ff666666"
+        android:textSize="16.0dip" />
+
+    <CheckBox
+        android:id="@+id/dlg_exit_from_home_checkbox_cb"
+        style="@style/Lt_CheckBox"
+        android:text="@string/checkbox_no_remindanymore" />
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="common_bg_color_3">#fff0f0f0</color>
+    <color name="common_bg_color_4">#fff5f5f5</color>
+    <color name="common_bg_green">#ff009900</color>
+    <color name="common_bg_white">#ffffffff</color>
+    <color name="common_dlg_bar_divider">#ffd1d5db</color>
+    <color name="common_font_color_1">#ff000000</color>
+    <color name="common_font_color_10">@color/common_font_color_2</color>
+    <color name="common_font_color_2">#ff4d4d4d</color>
+    <color name="common_font_color_3">#ff999999</color>
+    <color name="common_font_color_5">#ff29a600</color>
+    <color name="common_font_color_6">#fff14c0c</color>
+    <color name="common_font_color_7">#ffffffff</color>
+    <color name="common_font_color_9">@color/common_font_color_5</color>
+    <color name="common_font_color_wifi">#ff288dff</color>
+    <color name="common_list_row_divider">#ffdbdbdb</color>
+    <color name="common_transparent">#00000000</color>
+    <dimen name="common_btn_bar2_height">48.0dip</dimen>
+    <dimen name="common_btn_bar_height">76.0dip</dimen>
+    <dimen name="common_dialog_bg_radius">5.0dip</dimen>
+    <dimen name="common_divider_width">1.0px</dimen>
+    <dimen name="common_font_size_c">19.0sp</dimen>
+    <dimen name="common_font_size_d">17.0sp</dimen>
+    <dimen name="common_font_size_e">15.0sp</dimen>
+    <dimen name="common_font_size_f">13.0sp</dimen>
+    <dimen name="common_font_size_g">11.0sp</dimen>
+    <dimen name="common_titlebar_content_height">56.0dip</dimen>
+    <dimen name="map_marker_info_window_width">280.0dip</dimen>
+    <dimen name="speed_margin">40.0dip</dimen>
+    <style name="common_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="common_divider_line">
+        <item name="android:background">@color/common_list_row_divider</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/common_divider_width</item>
+    </style>
+</resources>

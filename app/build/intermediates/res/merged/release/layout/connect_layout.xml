@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff8f8f8"
+    android:orientation="vertical"
+    >
+
+    <!-- title布局 -->
+
+
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <View
+            android:id="@+id/view_lvtop"
+            android:layout_width="fill_parent"
+            android:layout_height="70.0dip"
+            android:visibility="gone" />
+
+        <!-- 显示扫描wifi的listview布局 -->
+        <!-- <com.qihoo.freewifi.view.PinnedHeaderListView -->
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/refreshable_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <com.zhizun.zhizunwifi.view.FadingScrollView
+                android:id="@+id/nac_root"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbarThumbHorizontal="@color/white"
+                android:scrollbars="none"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        >
+                        <!-- 已经连上wifi的布局，进行收缩动画 -->
+                        <LinearLayout
+                            android:id="@id/ll_connected"
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="visible"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true">
+
+                            <FrameLayout
+                                android:id="@+id/fl_connected"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content" >
+
+                                <!-- <com.zhizun.zhizunwifi.view.CustomLoading
+                                     android:id="@+id/connectAnim"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="12.0dip"
+                                     android:layout_marginTop="145dp" />-->
+
+                                <RelativeLayout
+                                    android:id="@+id/rl_connected"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/bg_position"
+                                    >
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:paddingRight="10.0dip"
+                                        android:layout_marginTop="80dp">
+
+                                        <!--<TextView
+                                            android:id="@+id/tv_state_safe"
+                                            style="@style/pref_item_summary"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignLeft="@+id/tv_ap_ssid"
+                                            android:layout_below="@+id/tv_ap_ssid"
+                                            android:drawableLeft="@drawable/icon_status_safe"
+                                            android:text="安全"
+                                            android:textColor="@color/blue_go_text" />-->
+
+                                        <TextView
+                                            android:id="@+id/tv_ap_ssid"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="@android:color/white"
+                                            android:text=""
+                                            android:textSize="22sp"
+                                            android:layout_centerHorizontal="true" />
+
+
+                                        <TextView
+                                            android:id="@+id/tv_ap_state_describe"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="@color/noti_o2o_press"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_below="@id/tv_ap_ssid"
+                                            android:text=""
+                                            android:layout_centerHorizontal="true"
+                                            android:visibility="visible"
+                                            android:textSize="16sp" />
+
+                                        <net.qiujuer.genius.ui.widget.Button
+                                            android:id="@+id/btn_connect"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_marginRight="20dp"
+                                            android:layout_marginTop="20dp"
+                                            android:paddingLeft="20dp"
+                                            android:paddingRight="20dp"
+                                            android:paddingTop="10dp"
+                                            android:paddingBottom="10dp"
+                                            android:background="@drawable/home_btn_connect"
+                                            android:gravity="center"
+                                            android:text="一键安全连接"
+                                            android:layout_below="@id/tv_ap_state_describe"
+                                            android:layout_centerHorizontal="true"
+                                            android:textColor="@color/blue_bg"
+                                            app:gTouchColor="@color/black_alpha_48"
+                                            app:gTouchEffect="auto"
+                                            android:textSize="16sp" />
+
+                                        <LinearLayout
+                                            android:id="@+id/wifi_connected_lay"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@id/btn_connect"
+                                            android:orientation="horizontal"
+                                            android:gravity="center"
+                                            android:layout_marginTop="15dp"
+                                            android:layout_marginBottom="10dp"
+                                            android:visibility="gone"
+                                            >
+                                            <LinearLayout
+                                                android:id="@+id/see_the_share"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="vertical"
+                                                android:layout_marginRight="60dp"
+                                                >
+
+                                                <ImageView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:background="@drawable/ico_share"
+                                                    android:gravity="center"
+                                                    android:layout_gravity="center"
+                                                    />
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="5dp"
+                                                    android:textSize="14sp"
+                                                    android:textColor="@color/white"
+                                                    android:text="查看分享"
+                                                    android:gravity="center"
+                                                    android:layout_gravity="center"
+                                                    />
+
+                                            </LinearLayout>
+
+
+                                            <LinearLayout
+                                                android:layout_width="0.5dp"
+                                                android:layout_height="match_parent"
+                                                android:background="@color/white"
+                                                android:layout_marginTop="5dp"
+                                                android:layout_marginBottom="5dp"
+                                                ></LinearLayout>
+
+                                            <LinearLayout
+                                                android:id="@+id/disconnect"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="vertical"
+                                                android:layout_marginLeft="60dp"
+                                                >
+
+                                                <ImageView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:background="@drawable/ico_disconnect"
+                                                    android:gravity="center"
+                                                    android:layout_gravity="center"
+                                                    />
+
+                                                <TextView
+                                                    android:id="@+id/textView"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center"
+                                                    android:gravity="center"
+                                                    android:layout_marginTop="5dp"
+                                                    android:text="断开连接"
+                                                    android:textColor="@color/white"
+                                                    android:textSize="14sp" />
+
+                                            </LinearLayout>
+
+
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+
+                                </RelativeLayout>
+                            </FrameLayout>
+
+                            <Button
+                                android:id="@+id/btn_oneKeySearchWiFi"
+                                android:layout_width="150dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="20dp"
+                                android:background="@drawable/btn_blue_oval_corner"
+                                android:text="一键查询免费WiFi"
+                                android:textColor="@color/white"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <com.youth.banner.Banner
+                            android:id="@+id/wifi_connect_banner"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+
+                        <LinearLayout
+                            android:id="@+id/wifi_connect_store"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:visibility="gone"
+                            >
+
+                            <TextView
+                                android:id="@+id/connect_store_name"
+                                style="@style/pref_item_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                android:text=""
+                                />
+
+                            <TextView
+                                android:id="@+id/connect_store_poin"
+                                style="@style/pref_item_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:text="•"
+                                />
+
+                            <TextView
+                                android:id="@+id/connect_store_type"
+                                style="@style/pref_item_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                android:text=""
+                                />
+
+                        </LinearLayout>
+
+
+
+                    </RelativeLayout>
+
+                    <com.zhizun.zhizunwifi.view.WiFiListLayout
+                        android:id="@+id/WiFiListLayoutView"
+                        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+                        ptr:isPaint="false"
+                        ptr:color="@color/white"
+                        android:layout_width="match_parent"
+                        android:background="#fff8f8f8"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:id="@+id/ViewFreeWifi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone" >
+
+                            <include layout="@layout/layout_free_wifi"/>
+
+                            <LinearLayout
+                                android:id="@+id/LayoutFreeWifi"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/OpenWifi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="@color/main_list_bg_grey"
+                            android:visibility="gone" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" >
+
+                                <TextView
+                                    android:id="@+id/tv_freeWiFi"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="10dp"
+                                    android:background="@color/main_list_bg_grey"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="15dp"
+                                    android:text="@string/open_wifi"
+                                    android:textColor="#ABACBB"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/OpenWifilay"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ViewLocalWifi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <include layout="@layout/layout_near_wifi"/>
+
+                            <LinearLayout
+                                android:id="@+id/LayoutLocalWifi"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" />
+
+                        </LinearLayout>
+
+                    </com.zhizun.zhizunwifi.view.WiFiListLayout>
+
+                </LinearLayout>
+
+            </com.zhizun.zhizunwifi.view.FadingScrollView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/title_view"
+            android:layout_width="fill_parent"
+            android:layout_height="70dp"
+            android:orientation="vertical"
+            >
+            <View
+                android:id="@+id/nac_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/blue_bg"/>
+
+            <RelativeLayout
+                android:id="@+id/view_header"
+                android:layout_width="fill_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="20dp"
+                >
+                <ImageView
+                    android:id="@+id/headerMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:scaleType="center"
+                    android:src="@drawable/nav_icon_refresh" />
+
+                <TextView
+                    android:id="@+id/connect_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="至尊免费WiFi"
+                    android:textSize="17sp"
+                    android:textColor="@color/white"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/view_wifiswitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/autoConnectEnter"
+                        android:layout_width="@dimen/navbar_height"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="-5.0dip"
+                        android:background="@drawable/bg_nav_button"
+                        android:clickable="true"
+                        android:scaleType="center"
+                        android:src="@drawable/nav_icon_board"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/more_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10.0dip"
+                        android:layout_centerVertical="true"
+                        android:clickable="true"
+                        android:scaleType="center"
+                        android:background="@drawable/btn_more_down" />
+
+                    <!-- <com.zhizun.zhizunwifi.view.SwitchButton -->
+
+                    <com.zhizun.zhizunwifi.view.SlideSwitch
+                        android:id="@+id/headerRightSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10.0dip"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+
+
+
+        <!-- android:listSelector="@drawable/list_selector" -->
+
+
+        <!-- 打开wifi布局 -->
+
+        <LinearLayout
+            android:id="@+id/ap_disabled"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#fff2f2f2"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/ap_disabled_status"
+                    android:layout_width="130dp"
+                    android:layout_height="130.0dp"
+                    android:src="@drawable/icon_ipo_city" />
+
+                <ProgressBar
+                    android:id="@+id/ap_disabled_opening"
+                    style="@style/WifiOpening"
+                    android:layout_width="110.0dip"
+                    android:layout_height="100.0dip"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/ap_disabled_open"
+                    style="@style/Button.Blue.Hollow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20.0dip"
+                    android:text="开启WiFi"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

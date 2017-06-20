@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="false"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:duration="50" android:drawable="@drawable/ico_refresh" />
+	<item android:duration="50" android:drawable="@drawable/ico_refresh01" />
+	<item android:duration="50" android:drawable="@drawable/ico_refresh02" />
+	<item android:duration="50" android:drawable="@drawable/ico_refresh03" />
+	<item android:duration="50" android:drawable="@drawable/ico_refresh04" />
+	<item android:duration="50" android:drawable="@drawable/ico_refresh05" />
+</animation-list>

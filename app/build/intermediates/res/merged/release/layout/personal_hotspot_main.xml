@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_all"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff5f5f5"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <include
+            android:id="@id/viewHeader"
+            android:layout_width="fill_parent"
+            android:layout_height="48.0dip"
+            layout="@layout/view_header1" />
+
+        <RelativeLayout
+            android:id="@+id/layout_head"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/about_top_bg"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="热点名称"
+                android:textColor="#333333"
+                android:textSize="16dip" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/hotspot_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16sp"
+                    android:text=""
+                     />
+
+                <ImageView
+                    android:id="@+id/iv_arraw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/aliwx_arrow" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_nickarraw"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/about_mid_bg"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:maxLines="1"
+                android:text="热点密码"
+                android:textColor="#333333"
+                android:textSize="16dip" />
+
+            <LinearLayout
+                android:id="@+id/tv_nickarraw_lay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/hotspot_psw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dip"
+                    android:textSize="16sp"
+                    android:text=""
+                    android:textColor="@android:color/darker_gray" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/aliwx_arrow" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_set_nick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView1"
+                android:layout_alignBottom="@+id/textView1"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/textView1"
+                android:drawablePadding="10dp"
+                android:textSize="16dp"
+                android:ellipsize="end"
+                android:layout_toLeftOf="@id/tv_nickarraw_lay"
+                android:text=""
+                android:layout_marginRight="10dp"
+                android:textColor="@android:color/darker_gray" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_genderArraw"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/about_mid_bg"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="是否开启热点"
+                android:textColor="#333333"
+                android:textSize="16dip" />
+
+            <LinearLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <CheckBox
+                    android:id="@+id/hotspot_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/check_box_bg"
+                    android:checked="false" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_set_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView3"
+                android:layout_alignBottom="@+id/textView3"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/textView3"
+                android:drawablePadding="10dp"
+                android:textSize="16dp"
+                android:text=""
+                android:textColor="@android:color/darker_gray" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

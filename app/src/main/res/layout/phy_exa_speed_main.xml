@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    >
+
+
+
+    <include
+        android:id="@+id/viewHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip"
+        layout="@layout/view_header1" />
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/speed_top"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:orientation="vertical"
+        android:layout_below="@id/viewHeader"
+        android:background="@drawable/bg_position"
+        >
+
+        <RelativeLayout
+            android:id="@+id/discovery_finsh_lay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+
+            <RelativeLayout
+                android:layout_width="230dp"
+                android:layout_height="230dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/img_score_outerring"
+                >
+                <ImageView
+                    android:layout_width="230dp"
+                    android:layout_height="230dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/img_score_midring"
+                    />
+
+                <ImageView
+                    android:layout_width="230dp"
+                    android:layout_height="230dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/img_score_round"
+                    />
+
+            </RelativeLayout>
+            <com.zhizun.zhizunwifi.view.SnowView
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_centerInParent="true"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerInParent="true"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                <com.zhizun.zhizunwifi.widget.NumberScrollTextView
+                    android:id="@+id/phy_exa_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="60sp"
+                android:textColor="@color/white"
+                android:text=""
+                />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:text="分"
+                    />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="-10dp"
+                    android:text="体检测速完毕"
+                    />
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/discovery_loading_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            >
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.zhizun.zhizunwifi.widget.CircleViewPhy
+                    android:id="@+id/circle_safe"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    app:circleWidth="2dp"
+                    app:firstColor="@color/white"
+                    app:speed="2"
+                    android:visibility="gone"
+                    />
+
+                <ImageView
+                    android:id="@+id/speed_rotating"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/img_scanning"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="gone"
+                    />
+
+                <ImageView
+                    android:id="@+id/speed_icon_safe"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/icon_safe"
+                    android:layout_gravity="center_vertical"
+                    />
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+
+
+                <com.zhizun.zhizunwifi.widget.CircleViewPhy
+                    android:id="@+id/circle_speed"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    app:circleWidth="2dp"
+                    app:firstColor="@color/white"
+                    app:speed="2"
+                    android:visibility="gone"
+                    />
+
+                <ImageView
+                    android:id="@+id/speed_speed"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/img_scanning"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="gone"
+                    />
+
+                <ImageView
+                    android:id="@+id/speed_icon_speed"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/icon_speed"
+                    android:layout_gravity="center_vertical"
+                    />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+
+
+                <com.zhizun.zhizunwifi.widget.CircleViewPhy
+                    android:id="@+id/circle_equipment"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    app:circleWidth="2dp"
+                    app:firstColor="@color/white"
+                    app:speed="2"
+                    android:visibility="gone"
+                    />
+
+                <ImageView
+                    android:id="@+id/speed_equipment"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/img_scanning"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="gone"
+                    />
+
+                <ImageView
+                    android:id="@+id/speed_icon_equipment"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/icon_equipment"
+                    android:layout_gravity="center_vertical"
+                    />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/discovery_loading_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:text="正在检测网络安全"
+            android:visibility="visible"
+            />
+
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/speed_top"
+        android:scrollbars="none"
+        >
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/speed_top"
+     android:orientation="vertical"
+      >
+
+      <RelativeLayout
+          android:id="@+id/online_equipment"
+          android:layout_width="fill_parent"
+          android:background="@drawable/list_selector"
+          android:layout_height="50dp" >
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerVertical="true"
+              android:layout_marginLeft="10dip"
+              android:layout_toRightOf="@id/router_step_im"
+              android:text="在线设备"
+              android:textColor="@color/text_color_828282"
+              android:textSize="16dp" />
+
+          <ImageView
+              android:id="@+id/online_equipment_arrow"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentRight="true"
+              android:layout_centerVertical="true"
+              android:layout_marginRight="10.0dip"
+              android:background="@drawable/icon_loading_speed"
+              android:visibility="gone"
+              />
+
+
+      </RelativeLayout>
+
+      <View
+          android:layout_width="fill_parent"
+          android:layout_height="1.0px"
+          android:background="@color/gray" />
+
+      <LinearLayout
+          android:id="@+id/network_equipment_item"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+         android:paddingTop="15dp"
+          android:paddingBottom="15dp"
+          android:background="@color/white"
+          android:gravity="center"
+          android:visibility="gone"
+          >
+
+          <TextView
+              android:id="@+id/network_equipment_size"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:textColor="@color/down_item_name"
+              android:layout_marginLeft="15dp"
+              android:textSize="16sp"
+              android:text=""
+              />
+
+          <net.qiujuer.genius.ui.widget.Button
+              android:id="@+id/check_the_equipment"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentRight="true"
+              android:layout_marginRight="15dp"
+              android:paddingTop="10dp"
+              android:paddingBottom="10dp"
+              android:paddingLeft="15dp"
+              android:paddingRight="15dp"
+              android:background="#f1f1f1"
+              android:text="查看设备"
+              android:textColor="@color/down_item_name"
+              app:gTouchColor="@color/black_alpha_48"
+              app:gTouchEffect="auto"
+              android:textSize="14sp" />
+
+      </LinearLayout>
+
+      <RelativeLayout
+          android:id="@+id/network_speed"
+          android:layout_width="fill_parent"
+          android:background="@drawable/list_selector"
+          android:layout_marginTop="10dp"
+          android:layout_height="50dp" >
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerVertical="true"
+              android:layout_marginLeft="10dip"
+              android:layout_toRightOf="@id/router_step_im"
+              android:text="网络速度"
+              android:textColor="@color/text_color_828282"
+              android:textSize="16dp" />
+
+          <ImageView
+              android:id="@+id/network_speed_arrow"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentRight="true"
+              android:layout_centerVertical="true"
+              android:layout_marginRight="10.0dip"
+              android:background="@drawable/icon_loading_speed"
+              android:visibility="gone"
+              />
+
+          <TextView
+              android:id="@+id/network_speed_txt"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentRight="true"
+              android:layout_centerVertical="true"
+              android:layout_marginRight="10.0dip"
+              android:textSize="16sp"
+              android:textColor="@color/qp_wallet_font_hint"
+              android:visibility="gone"
+              android:text=""
+              />
+
+
+      </RelativeLayout>
+
+      <include
+          android:id="@+id/network_speed_item"
+          layout="@layout/network_speed_item"/>
+
+      <RelativeLayout
+          android:id="@+id/network_security"
+          android:layout_width="fill_parent"
+          android:background="@drawable/list_selector"
+          android:layout_marginTop="10dp"
+          android:layout_height="50dp" >
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerVertical="true"
+              android:layout_marginLeft="10dip"
+              android:layout_toRightOf="@id/router_step_im"
+              android:text="网络安全"
+              android:textColor="@color/text_color_828282"
+              android:textSize="16dp" />
+
+          <ImageView
+              android:id="@+id/network_security_arrow"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentRight="true"
+              android:layout_centerVertical="true"
+              android:layout_marginRight="10.0dip"
+              android:background="@drawable/icon_loading_speed"
+              android:visibility="gone"
+              />
+
+
+      </RelativeLayout>
+
+      <include
+          android:id="@+id/network_security_item"
+          layout="@layout/network_security_item"/>
+
+      <RelativeLayout
+          android:id="@+id/network_details"
+          android:layout_width="fill_parent"
+          android:background="@drawable/list_selector"
+          android:layout_marginTop="10dp"
+          android:layout_height="50dp" >
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerVertical="true"
+              android:layout_marginLeft="10dip"
+              android:layout_toRightOf="@id/router_step_im"
+              android:text="网络详情"
+              android:textColor="@color/text_color_828282"
+              android:textSize="16dp" />
+
+          <ImageView
+              android:id="@+id/network_details_arrow"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentRight="true"
+              android:layout_centerVertical="true"
+              android:layout_marginRight="10.0dip"
+              android:background="@drawable/icon_loading_speed"
+              android:visibility="gone"
+              />
+
+
+      </RelativeLayout>
+
+      <include
+          android:id="@+id/network_details_item"
+          layout="@layout/network_details_item"/>
+
+
+   </LinearLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

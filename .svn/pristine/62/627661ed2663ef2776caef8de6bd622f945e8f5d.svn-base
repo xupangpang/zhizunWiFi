@@ -1,0 +1,197 @@
+package com.zhizun.zhizunwifi.activity;
+
+
+import android.content.res.TypedArray;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.util.Log;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.LinearLayout.LayoutParams;
+import android.widget.TextView;
+
+import com.zhizun.zhizunwifi.bean.NetWorkSpeedInfo;
+import com.zhizun.zhizunwifi.R;
+import com.zhizun.zhizunwifi.utils.ReadFile;
+import com.zhizun.zhizunwifi.view.RoundProgressBar;
+
+public class NetSpeedActivity extends BaseActivity {
+	//	private String url = "http://app.anzhuo.com/appdown/yeyuetongchengjiaoyou_1.5.7_cpa_anzhuowang_02_20151102.apk";
+	private String url = "http://dp.anzhuo.com/zzwifi/zzwifi.apk ";
+
+	byte[] imageData = null;
+	NetWorkSpeedInfo netWorkSpeedInfo = null;
+	private final int UPDATE_SPEED = 1;// 进行中
+	private final int UPDATE_DNOE = 0;// 完成下载
+	private final int INIT_DNOE = -1;// 初始化状态
+
+	private TextView tv_network_speed;
+	private Button startButton;
+	private RoundProgressBar roundProgressBar;
+	private TextView netSpeedDes;
+
+	private int testTime = 10 *1000; // 测试时间
+
+	ReadFile mReadFile;
+	boolean isStart = false;
+	private ImageView headerLeft;
+	private TextView headerTitle;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.wifitools_speed_test);
+		initView();
+
+		netWorkSpeedInfo = new NetWorkSpeedInfo();
+		handler.sendEmptyMessage(INIT_DNOE);
+
+		startButton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+				isStart = !isStart;
+				if(!isStart){
+					if (mReadFile != null)
+					mReadFile.isStop = true;
+
+					startButton.setBackgroundResource(R.drawable.btn_tspeed_p);
+				}else{
+					startButton.setBackgroundResource(R.drawable.btn_tspeed_stop);
+					startTest();
+				}
+			}
+		});
+	}
+
+	private void startTest() {
+		netSpeedDes.setText("测速中");
+		final long clickTime = System.currentTimeMillis();
+
+		new Thread() {
+			@Override
+			public void run() {
+				Log.i("开始", "**********开始  ReadFile*******");
+				mReadFile = new ReadFile();
+				imageData = mReadFile.getFileFromUrl(url, netWorkSpeedInfo, testTime);
+			}
+		}.start();
+
+		new Thread() {
+			@Override
+			public void run() {
+				int i = 0;
+//				while (netWorkSpeedInfo.hadFinishedBytes < netWorkSpeedInfo.totalBytes) {
+				while (isStart && (System.currentTimeMillis() - clickTime) <= testTime) { // 测试10秒
+					i++;
+					Log.i("NetSpeedActivity","测试第" + i + "次");
+					handler.sendEmptyMessage(UPDATE_SPEED);
+					try {
+						sleep(1000);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				}
+
+				Log.i("NetSpeedActivity","完成测试");
+				handler.sendEmptyMessage(UPDATE_DNOE);
+
+			}
+		}.start();
+	}
+
+	private void initView() {
+		headerLeft = (ImageView)findViewById(R.id.headerLeft);
+		headerLeft.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				finish();
+			}
+		});
+		headerTitle = (TextView)findViewById(R.id.headerTitle);
+		headerTitle.setText("测速");
+		tv_network_speed = (TextView) findViewById(R.id.tv_network_speed);
+		startButton = (Button) findViewById(R.id.startButton);
+		roundProgressBar = (RoundProgressBar) findViewById(R.id.roundProgressBar);
+		netSpeedDes = (TextView) findViewById(R.id.netSpeedDes);
+
+		TypedArray actionbarSizeTypedArray = obtainStyledAttributes(new int[] {
+				android.R.attr.actionBarSize
+		});
+
+//        float h = actionbarSizeTypedArray.getDimension(0, 0);
+//        FrameLayout.LayoutParams  layoutParams = (FrameLayout.LayoutParams) findViewById(R.id.netspeedLayout).getLayoutParams();
+//        layoutParams.topMargin = (int)h + 50;
+
+		// 设置左侧自定义图标不可点击，出现系统自带的返回箭头，点击可finish
+		//getActionBar().setDisplayHomeAsUpEnabled(true);
+
+		// 隐藏logo和icon
+		//getActionBar().setDisplayShowHomeEnabled(false);
+
+	}
+
+	private Handler handler = new Handler() {
+
+		@Override
+		public void handleMessage(Message msg) {
+			int value = msg.what;
+			switch (value) {
+				case UPDATE_SPEED:
+//				startButton.setClickable(false);
+//				startButton.setText("正在测速");
+//				startButton.setBackgroundResource(R.drawable.speed_test_btn_start);
+
+					roundProgressBar.setCurNetSpeedValue(netWorkSpeedInfo.speed);
+
+					float speedK = netWorkSpeedInfo.speed / 1024;
+					String speedValue = speedK < 1024 ? speedK +" Kb/s" : (speedK / 1024) +" Mb/s";
+					tv_network_speed.setText(speedValue);
+
+					break;
+
+				case UPDATE_DNOE:
+//				startButton.setClickable(true);
+//				startButton.setText("重新测速");
+					isStart = false;
+					startButton.setBackgroundResource(R.drawable.btn_tspeed_p);
+					roundProgressBar.setCurNetSpeedValue(0);
+					setNetSpeedDes(netWorkSpeedInfo.speed / 1024);
+					break;
+				case INIT_DNOE:
+//				startButton.setClickable(true);
+//				startButton.setText("开始测速");
+					isStart = false;
+					startButton.setBackgroundResource(R.drawable.btn_tspeed_p);
+			}
+		}
+	};
+
+	public void setNetSpeedDes(float speedK){
+		if(speedK > 500)
+			netSpeedDes.setText("网速雕堡了,能够流畅跑各种app应用");
+		else if(speedK > 200)
+			netSpeedDes.setText("网速挺快,能够流畅跑大多数app应用");
+		else if(speedK > 50)
+			netSpeedDes.setText("网速一般,当前网速可正常打开网页");
+		else if(speedK > 20)
+			netSpeedDes.setText("网速挺低，当前网速可正常打开网页");
+		else
+			netSpeedDes.setText("哇！当前网速龟速，比较影响上网访问");
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+			case android.R.id.home:
+				finish();
+				return true;
+
+		}
+		return false;
+	}
+}

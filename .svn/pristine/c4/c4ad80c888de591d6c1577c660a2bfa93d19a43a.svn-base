@@ -1,0 +1,10 @@
+package com.zhizun.zhizunwifi.bean;  
+  
+public class wifiinfo {  
+    public String Ssid="";  
+    public String Password="";  
+    public String Address="";  
+    public String MacAddress="";  
+    public String Priority="";  
+    public String Key_mgmt="";  
+}  

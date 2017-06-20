@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pop_wifistate_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dip"
+        android:background="@color/white"
+        android:clickable="true" >
+
+        <TextView
+            android:id="@+id/tv_pop_wifistate_title"
+            style="@style/text_pop_wifistate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dip"
+            android:text="@string/pop_title_wifistate" />
+
+        <Button
+            android:id="@+id/pop_wifistate_btn"
+            style="@style/Button.Orange"
+            android:layout_width="150dip"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/pop_btn_wifistate" />
+        
+        <Button
+            android:id="@+id/pop_wifistate_btn_disconnect"
+            style="@style/Button.Grey.Hollow2"
+            android:layout_width="100dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pop_wifistate_btn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dip"
+            android:text="@string/pop_btn2_wifistate" />
+
+ <!--        <LinearLayout
+            android:id="@+id/module_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pop_wifistate_btn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dip"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/hint_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone" >
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:background="#f1f1f1"
+                android:clickable="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:clickable="true"
+                android:padding="10dip"
+                android:text="@string/pop_wifistate_hint_text" >
+            </TextView>
+        </RelativeLayout> -->
+    </RelativeLayout>
+
+    <include
+        android:id="@id/viewHeader"
+        layout="@layout/item_portal_footer" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/slide" />
+
+</LinearLayout>

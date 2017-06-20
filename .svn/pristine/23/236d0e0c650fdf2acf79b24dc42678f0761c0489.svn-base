@@ -1,0 +1,50 @@
+package com.zhizun.zhizunwifi.adapter;
+
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentStatePagerAdapter;
+import android.view.View;
+
+import com.zhizun.zhizunwifi.fragment.App_V_Fragment;
+import com.zhizun.zhizunwifi.fragment.App_honly_Fragment;
+import com.zhizun.zhizunwifi.fragment.SecurityFragment;
+
+public class AppPagerAdapter extends FragmentStatePagerAdapter {
+
+	/** tab选项 **/
+	private String[] tags={};
+
+	public AppPagerAdapter(FragmentManager fm, String[] tags) {
+		super(fm);
+		this.tags = tags;
+	}
+
+	@Override
+	public Fragment getItem(int position) {
+		if(position == 0){
+			return new App_V_Fragment();
+		}else if(position == 1){
+			return new App_honly_Fragment();
+		}else if(position == 2){
+			return new App_honly_Fragment();
+		}
+		return null;
+	}
+
+	@Override
+	public int getCount() {
+		return tags.length;
+	}
+
+	@Override
+	public Object instantiateItem(View container, int position) {
+
+		return super.instantiateItem(container, position);
+	}
+
+	@Override
+	public void destroyItem(View container, int position, Object object) {
+		super.destroyItem(container, position, object);
+	}
+
+}

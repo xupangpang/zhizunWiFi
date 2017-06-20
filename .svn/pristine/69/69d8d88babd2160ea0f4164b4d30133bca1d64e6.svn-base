@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi-v4\\push.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-ldpi\\push.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\exploded-aar\\ZhizunWIFI\\zhizunWIFI_dhroid3\\unspecified\\res\\drawable-ldpi-v4\\ic_launcher.png"
+    }
+]

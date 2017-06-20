@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#88000000"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:background="@color/white"
+        >
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/store_yl"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@drawable/store_type_textcolor"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:text="娱乐"
+                    />
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:background="@color/line_cache_olor_hint"
+                    />
+                <TextView
+                    android:id="@+id/store_lv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:textColor="@drawable/store_type_textcolor"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:text="旅游"
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_gravity="center"
+                android:background="@color/line_cache_olor_hint"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/store_jd"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@drawable/store_type_textcolor"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:text="酒店"
+                    />
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:background="@color/line_cache_olor_hint"
+                    />
+                <TextView
+                    android:id="@+id/store_ms"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:button="@null"
+                    android:layout_weight="1"
+                    android:textColor="@drawable/store_type_textcolor"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:text="美食"
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_gravity="center"
+                android:background="@color/line_cache_olor_hint"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/store_mrbj"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@drawable/store_type_textcolor"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:text="美容保健"
+                    />
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:background="@color/line_cache_olor_hint"
+                    />
+                <TextView
+                    android:id="@+id/store_shfw"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@drawable/store_type_textcolor"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:text="生活服务"
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_gravity="center"
+                android:background="@color/line_cache_olor_hint"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/store_dy"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@drawable/store_type_textcolor"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:text="电影"
+                    />
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:background="@color/line_cache_olor_hint"
+                    />
+                <TextView
+                    android:id="@+id/store_qt"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:button="@null"
+                    android:layout_weight="1"
+                    android:textColor="@drawable/store_type_textcolor"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:text="其它"
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_gravity="center"
+                android:background="@color/line_cache_olor_hint"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                >
+
+                <net.qiujuer.genius.ui.widget.Button
+                    android:id="@+id/store_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="#f3f3f3"
+                    app:gTouchColor="@color/black_alpha_48"
+                    app:gTouchEffect="auto"
+                    android:layout_weight="1"
+                    android:textColor="#333333"
+                    android:gravity="center"
+                    android:textSize="17sp"
+                    android:text="取消"
+                    />
+
+                <net.qiujuer.genius.ui.widget.Button
+                    android:id="@+id/store_OK"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:gTouchColor="@color/black_alpha_48"
+                    app:gTouchEffect="auto"
+                    android:layout_weight="1"
+                    android:background="@color/blue"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="17sp"
+                    android:text="确定"
+                    />
+
+            </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

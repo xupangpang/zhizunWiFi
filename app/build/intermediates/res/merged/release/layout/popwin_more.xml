@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/more_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/main_more_wifi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="@drawable/list_selector"
+        >
+
+        <ImageView
+            android:id="@+id/wifi_switch"
+            android:layout_marginLeft="7dp"
+            style="@style/wrap"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ico_wifi_on" />
+
+        <TextView
+            android:id="@+id/wifi_switch_text"
+            style="@style/fillall"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            android:layout_marginLeft="5dp"
+            android:gravity="left|center_vertical"
+            android:layout_gravity="center_vertical"
+            android:text="关闭WiFi" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/alertdialog_line"
+        ></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/main_more_hotspot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/list_selector"
+        android:padding="10dp"
+        >
+
+        <ImageView
+            android:layout_marginLeft="7dp"
+            style="@style/wrap"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ico_hotspot" />
+
+        <TextView
+            style="@style/fillall"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            android:gravity="left|center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center_vertical"
+            android:text="个人热点管理" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/alertdialog_line"
+        ></LinearLayout>
+
+    <LinearLayout
+    android:id="@+id/main_more_router"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/list_selector"
+        android:padding="10dp"
+    >
+
+    <ImageView
+        android:layout_marginLeft="7dp"
+        style="@style/wrap"
+        android:scaleType="fitCenter"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ico_router" />
+
+        <TextView
+            android:id="@+id/textView4"
+            style="@style/fillall"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:gravity="left|center_vertical"
+            android:text="路由器管理"
+            android:textColor="@color/text_color"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

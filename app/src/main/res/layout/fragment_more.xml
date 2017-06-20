@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/pop_window_bg_normal"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="200.0dip"
+        android:layout_marginTop="-2.0dip"
+        android:layout_weight="1.0"
+        android:fadingEdge="none"
+        android:overScrollMode="never" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/pop_window_bg_normal"
+            android:orientation="vertical" >
+			
+            <include
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/group_my_homepage_header"
+                android:visibility="gone" />
+            
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/line_cache_olor_hint" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_marginTop="20.0dip"
+                android:background="@color/line_cache_olor_hint" />
+            
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" >
+
+                <TextView
+                    android:id="@+id/act_more_pref_settings"
+                    style="@style/sliding_menu_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/pref_secury_item_bg"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/pref_item_height"
+                    android:paddingLeft="15.0dip"
+                    android:text="@string/act_more_pref_title_settings"
+                    android:textColor="@color/down_item_name" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="15.0dip"
+                    android:src="@drawable/act_more_pref_left" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/line_cache_olor_hint" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_marginTop="20.0dip"
+                android:background="@color/line_cache_olor_hint" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/pref_secury_item_bg" >
+
+                <TextView
+                    android:id="@+id/act_more_pref_sendto"
+                    style="@style/sliding_menu_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/pref_secury_item_bg"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/pref_item_height"
+                    android:paddingLeft="15.0dip"
+                    android:text="@string/act_more_pref_title_sendto"
+                    android:textColor="@color/down_item_name" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="15.0dip"
+                    android:src="@drawable/act_more_pref_left" />
+            </RelativeLayout>
+   <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/line_cache_olor_hint" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

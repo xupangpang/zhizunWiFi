@@ -1,0 +1,533 @@
+package com.zhizun.zhizunwifi.fragment;
+
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Intent;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
+import android.os.Environment;
+import android.os.Handler;
+import android.os.Message;
+import android.support.v7.app.NotificationCompat;
+import android.text.Html;
+import android.text.TextUtils;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.lidroid.xutils.HttpUtils;
+import com.lidroid.xutils.exception.HttpException;
+import com.lidroid.xutils.http.ResponseInfo;
+import com.lidroid.xutils.http.callback.RequestCallBack;
+import com.umeng.socialize.ShareAction;
+import com.umeng.socialize.UMShareListener;
+import com.umeng.socialize.bean.SHARE_MEDIA;
+import com.umeng.socialize.media.UMImage;
+import com.umeng.socialize.media.UMWeb;
+import com.zhizun.zhizunwifi.MainApplication;
+import com.zhizun.zhizunwifi.activity.AboutMeActivity;
+import com.zhizun.zhizunwifi.activity.MainTabActivity;
+import com.zhizun.zhizunwifi.activity.PersonalHotspotActivity;
+import com.zhizun.zhizunwifi.activity.PhysicalExaminationSpeedActivity;
+import com.zhizun.zhizunwifi.activity.WelcomeActivity;
+import com.zhizun.zhizunwifi.bean.MyUser;
+import com.zhizun.zhizunwifi.R;
+import com.zhizun.zhizunwifi.activity.NewLoginActivity;
+import com.zhizun.zhizunwifi.activity.SetMyInfoActivity;
+import com.zhizun.zhizunwifi.activity.SettingActivityOld;
+import com.zhizun.zhizunwifi.bean.UserSign;
+import com.zhizun.zhizunwifi.bean.Vendor;
+import com.zhizun.zhizunwifi.bean.Version;
+import com.zhizun.zhizunwifi.dialog.AlertDialog;
+import com.zhizun.zhizunwifi.http.BaseResultEntity;
+import com.zhizun.zhizunwifi.http.HttpManager;
+import com.zhizun.zhizunwifi.http.HttpService;
+import com.zhizun.zhizunwifi.utils.BaseUtils;
+import com.zhizun.zhizunwifi.utils.CircleImageView;
+import com.zhizun.zhizunwifi.utils.DeviceUtil;
+import com.zhizun.zhizunwifi.utils.ImageLoaderOptions;
+import com.zhizun.zhizunwifi.utils.MarketAPI;
+import com.zhizun.zhizunwifi.utils.SystemUtil;
+import com.zhizun.zhizunwifi.utils.router.ActivityDiscovery;
+
+import org.litepal.crud.DataSupport;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+import java.text.DecimalFormat;
+import java.util.List;
+
+import rx.Subscriber;
+import rx.Subscription;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
+import rx.subscriptions.CompositeSubscription;
+
+/**
+ */
+public class UserPanelFragment extends BaseFragment {
+	MyUser user;
+	private CircleImageView my_image;
+	private TextView my_username,my_account,tv_check_tip,arrow_upgrade;
+	private Button btn_account;
+	private RelativeLayout share_userpanel,share_userpanel_step,my_introduce,root_avatar,about_userpanel_lay,upgrade_userpanel_lay,router_step,share_hot;
+	private String userName;
+	private boolean isCheckin = false;
+	private HttpService apiService;
+	protected CompositeSubscription mCompositeSubscription;
+	AlertDialog alertDialog;
+	private NotificationManager mNotificationManager;
+	private NotificationCompat.Builder mBuilder;
+	private final int  DOWNLOAD = 1000;
+	private ImageView headerLeft;
+	private TextView headerTitle;
+
+	@Override
+	public void onClick(View v) {
+		switch (v.getId()) {
+			case R.id.btn_account:
+				if (isCheckin){
+					if (userName.length() == 11)
+					    userSign(userName,"");
+					else
+						userSign("",userName);
+				}else {
+					Intent intent4 = new Intent(getActivity(), NewLoginActivity.class);
+					startActivity(intent4);
+				}
+				break;
+			// 分享
+			case R.id.share_userpanel:
+				//os.mController.openShare(getActivity(), false);
+				UMWeb web = new UMWeb(MarketAPI.QQ_web);
+				web.setTitle(MarketAPI.shareTitle);//标题
+				web.setThumb(new UMImage(UserPanelFragment.this.getActivity(), R.drawable.ico));  //缩略图
+				web.setDescription(MarketAPI.shareContents);//描述
+
+				new ShareAction(UserPanelFragment.this.getActivity())
+						.withText(MarketAPI.shareTitle)
+						.withMedia(web)
+						.setDisplayList(SHARE_MEDIA.QQ,SHARE_MEDIA.QZONE,SHARE_MEDIA.WEIXIN,SHARE_MEDIA.WEIXIN_CIRCLE,SHARE_MEDIA.SINA)
+						.setCallback(umShareListener).open();
+
+				break;
+
+			// 设置按钮
+			case R.id.share_userpanel_step:
+				Intent intent61 = new Intent(getActivity(),
+						SettingActivityOld.class);
+				startActivity(intent61);
+				break;
+			case R.id.root_avatar:
+				/*Intent intent5 = new Intent(getActivity(), SetMyInfoActivity.class);
+				startActivity(intent5);*/
+				if (!TextUtils.isEmpty(userName)) {
+					Intent intent5 = new Intent(getActivity(), SetMyInfoActivity.class);
+					startActivity(intent5);
+				}else {
+					Toast.makeText(UserPanelFragment.this.getActivity(),"登录后才能进行修改",Toast.LENGTH_SHORT).show();
+				}
+				break;
+			case R.id.about_userpanel_lay:
+				Intent intent6 = new Intent(getActivity(), AboutMeActivity.class);
+				startActivity(intent6);
+				break;
+			case R.id.upgrade_userpanel_lay:
+				checkVersion();
+				break;
+			case R.id.router_step:
+
+				if (BaseUtils.isWifiConnected(getContext())) {
+
+					Intent intent7 = new Intent(getActivity(), ActivityDiscovery.class);
+					startActivity(intent7);
+				}else {
+					Toast.makeText(getContext(),"连接上WiFi才能使用",Toast.LENGTH_SHORT).show();
+				}
+
+				break;
+			case R.id.share_hot:
+				//个人热点
+				Intent intent8 = new Intent(getActivity(), PersonalHotspotActivity.class);
+				startActivity(intent8);
+
+
+				break;
+			default:
+				break;
+		}
+
+	}
+
+	private Handler handler = new Handler(){
+		@Override
+		public void handleMessage(Message msg) {
+			basehideProgressDialog();
+			Intent intent7 = new Intent(getActivity(), ActivityDiscovery.class);
+			startActivity(intent7);
+		}
+	};
+
+
+
+
+
+
+	private void  userSign(String userName,String oid){
+		//签到
+		Subscription subscription = apiService.UserSign(userName,oid).subscribeOn(Schedulers.io())
+				.unsubscribeOn(Schedulers.io())
+				.observeOn(AndroidSchedulers.mainThread())
+				.subscribe(
+						new Subscriber<BaseResultEntity<UserSign>>() {
+							@Override
+							public void onCompleted() {
+
+							}
+							@Override
+							public void onError(Throwable e) {
+								Toast.makeText(UserPanelFragment.this.getActivity(),"签到失败，请重试！",Toast.LENGTH_SHORT).show();
+							}
+							@Override
+							public void onNext(BaseResultEntity<UserSign> baseResultEntity) {
+								if (!baseResultEntity.data.result.equals("success")){
+									if (TextUtils.isEmpty(baseResultEntity.data.msg))
+										Toast.makeText(UserPanelFragment.this.getActivity(),"签到失败，请重试！",Toast.LENGTH_SHORT).show();
+									else{
+										Toast.makeText(UserPanelFragment.this.getActivity(),baseResultEntity.data.msg,Toast.LENGTH_SHORT).show();
+										BaseUtils.setSharedPreferences("money",String.valueOf(baseResultEntity.data.points), UserPanelFragment.this.getActivity());
+										BaseUtils.setSharedPreferences("sign", String.valueOf(System.currentTimeMillis()), UserPanelFragment.this.getActivity());
+										qiandao();
+									}
+								}else {
+									BaseUtils.setSharedPreferences("money",String.valueOf(baseResultEntity.data.points), UserPanelFragment.this.getActivity());
+									BaseUtils.setSharedPreferences("sign", String.valueOf(System.currentTimeMillis()), UserPanelFragment.this.getActivity());
+									qiandao();
+								}
+							}
+							@Override
+							public void onStart() {
+								super.onStart();
+							}
+						}
+
+				);
+		mCompositeSubscription.add(subscription);
+	}
+
+	private UMShareListener umShareListener = new UMShareListener() {
+		@Override
+		public void onStart(SHARE_MEDIA share_media) {
+
+		}
+
+		@Override
+		public void onResult(SHARE_MEDIA platform) {
+		}
+
+		@Override
+		public void onError(SHARE_MEDIA platform, Throwable t) {
+
+		}
+
+		@Override
+		public void onCancel(SHARE_MEDIA platform) {
+		}
+	};
+
+
+
+	@Override
+	public View initView(LayoutInflater inflater) {
+		View view = View.inflate(getActivity(), R.layout.fragment_userpanel_new,
+				null);
+		apiService = HttpManager.getService();
+		mCompositeSubscription = new CompositeSubscription();
+		my_image = (CircleImageView)view.findViewById(R.id.my_image);
+		my_username = (TextView)view.findViewById(R.id.my_username);
+		my_account = (TextView)view.findViewById(R.id.my_account);
+		tv_check_tip = (TextView)view.findViewById(R.id.tv_check_tip);
+		root_avatar = (RelativeLayout) view.findViewById(R.id.root_avatar);
+		btn_account = (Button)view.findViewById(R.id.btn_account);
+		share_userpanel = (RelativeLayout)view.findViewById(R.id.share_userpanel);
+		share_userpanel_step = (RelativeLayout)view.findViewById(R.id.share_userpanel_step);
+		my_introduce = (RelativeLayout)view.findViewById(R.id.my_introduce);
+		about_userpanel_lay = (RelativeLayout)view.findViewById(R.id.about_userpanel_lay);
+		upgrade_userpanel_lay = (RelativeLayout)view.findViewById(R.id.upgrade_userpanel_lay);
+		arrow_upgrade = (TextView)view.findViewById(R.id.arrow_upgrade);
+		router_step = (RelativeLayout)view.findViewById(R.id.router_step);
+		share_hot = (RelativeLayout)view.findViewById(R.id.share_hot);
+		share_hot.setOnClickListener(this);
+
+		headerLeft = (ImageView)view.findViewById(R.id.headerLeft);
+		headerLeft.setVisibility(View.GONE);
+
+		headerTitle = (TextView)view.findViewById(R.id.headerTitle);
+		headerTitle.setText("我的");
+
+
+		initEvent();
+		return view;
+	}
+	@Override
+	public void initData() {
+	}
+
+	@Override
+	public void onResume() {
+		super.onResume();
+		String nickName = BaseUtils.getSharedPreferences("nickName",
+				getActivity());
+		String iconPath = BaseUtils.getSharedPreferences("userIcon",
+				getActivity());
+		String userIconlocal = BaseUtils.getSharedPreferences("userIconlocal",
+				getActivity());
+		userName = BaseUtils.getSharedPreferences("userName",getActivity());
+		String sex = BaseUtils.getSharedPreferences("sex", getActivity());
+		if (TextUtils.isEmpty(userName)){
+			btn_account.setBackgroundResource(R.drawable.btn_blue_retangle);
+			btn_account.setText(getString(R.string.account_login));
+			tv_check_tip.setText(getString(R.string.account_login_bind_tip));
+			isCheckin = false;
+			my_username.setText("未登录");
+			my_username.setCompoundDrawables(null,null,null,null);
+			my_account.setText("登录赚积分");
+			my_image.setImageResource(R.drawable.icon_default_portal);
+			btn_account.setEnabled(true);
+		}else {
+			isCheckin = true;
+			qiandao();
+			if (!TextUtils.isEmpty(nickName))
+			my_username.setText(nickName);
+			if (!TextUtils.isEmpty(userIconlocal)) {
+				MainApplication.getInstance().imageLoader().displayImage("file://" + userIconlocal, my_image, ImageLoaderOptions.getBaseOptions());
+			}else {
+				MainApplication.getInstance().imageLoader().displayImage(iconPath, my_image, ImageLoaderOptions.getBaseOptions());
+			}
+			if (!TextUtils.isEmpty(sex)){
+				if (sex.equals("1")){
+					Drawable drawable = getResources().getDrawable(R.drawable.male);
+					drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());//必须设置图片大小，否则不显示
+					my_username.setCompoundDrawables(null,null,drawable,null);
+				} else{
+					Drawable drawable = getResources().getDrawable(R.drawable.women);
+					drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());//必须设置图片大小，否则不显示
+					my_username.setCompoundDrawables(null,null,drawable,null);
+				}
+			}
+				if(!TextUtils.isEmpty(userName) && userName.length() > 6 ){
+					StringBuilder sb  =new StringBuilder();
+					for (int i = 0; i < userName.length(); i++) {
+						char c = userName.charAt(i);
+						if (i >= 3 && i <= 6) {
+							sb.append('*');
+						} else {
+							sb.append(c);
+						}
+					}
+					my_account.setText("账号： "+sb.toString());
+				}
+			}
+	};
+
+	/**
+	 * 判断签到状态
+	 */
+	private void qiandao() {
+		long localTimeStamp = System.currentTimeMillis();
+		// 获取上次签到的时间
+		String lastSignTimeStamp = BaseUtils.getSharedPreferences("sign",
+				getActivity());
+		if (!TextUtils.isEmpty(lastSignTimeStamp)) {
+			long last = Long.parseLong(lastSignTimeStamp);
+			// 比对本地时间是否比上次签到时间晚
+			if (localTimeStamp - last  < 86400000) {
+				// 不可签到
+				String money = BaseUtils.getSharedPreferences("money",
+						getActivity());
+				tv_check_tip.setText("今日已签到，您当前拥有" + money + "个金币！");
+				btn_account.setEnabled(false);
+				btn_account.setBackgroundResource(R.drawable.btn_blue_retangle);
+				btn_account.setText(getString(R.string.account_checkin_on));
+			} else {
+				// 可签到
+				tv_check_tip.setText("今日签到，可赚取金币");
+				btn_account.setEnabled(true);
+				btn_account.setBackgroundResource(R.drawable.checkin_orange_btn_bg);
+				btn_account.setText(getString(R.string.account_checkin));
+			}
+		}else {
+			tv_check_tip.setText("今日签到，可赚取金币");
+			btn_account.setEnabled(true);
+			btn_account.setBackgroundResource(R.drawable.checkin_orange_btn_bg);
+			btn_account.setText(getString(R.string.account_checkin));
+		}
+	}
+
+
+
+	@Override
+	public void initEvent() {
+		share_userpanel.setOnClickListener(this);
+		share_userpanel_step.setOnClickListener(this);
+		root_avatar.setOnClickListener(this);
+		btn_account.setOnClickListener(this);
+		about_userpanel_lay.setOnClickListener(this);
+		upgrade_userpanel_lay.setOnClickListener(this);
+		arrow_upgrade.setOnClickListener(this);
+		arrow_upgrade.setText("V"+DeviceUtil.getVersionName(this.getActivity()));
+		router_step.setOnClickListener(this);
+
+		Intent intent = new Intent(this.getActivity(),MainTabActivity.class);
+		PendingIntent pIntent = PendingIntent.getActivity(this.getActivity(),1,intent,0);
+
+		mNotificationManager = (NotificationManager) this.getActivity().getSystemService(this.getActivity().NOTIFICATION_SERVICE);
+		mBuilder = new NotificationCompat.Builder(this.getActivity());
+		mBuilder.setContentTitle("至尊WiFi正在准备更新...")//设置通知栏标题
+				.setProgress(0,0,true)
+				.setTicker("至尊WiFi正在更新")
+				.setPriority(Notification.PRIORITY_MAX) //设置该通知优先级
+				.setOngoing(false)//ture，设置他为一个正在进行的通知。他们通常是用来表示一个后台任务,用户积极参与(如播放音乐)或以某种方式正在等待,因此占用设备(如一个文件下载,同步操作,主动网络连接)
+				.setDefaults(Notification.DEFAULT_ALL)//默认通知声音和震动
+				.setContentIntent(pIntent)
+				.setFullScreenIntent(pIntent,true)
+				.setSmallIcon(R.drawable.ic_launcher);//设置通知小ICON
+	}
+
+	/**
+	 * 连接服务器,检查版本信息.
+	 */
+	private void checkVersion() {
+		baseShowProgressDialog("检查更新...",false);
+		HttpService apiService =  HttpManager.getService();
+		Subscription subscription = apiService.Version("至尊免费WiFi", String.valueOf(DeviceUtil.getVersionCode(UserPanelFragment.this.getActivity())),"zhizunwifi").subscribeOn(Schedulers.io())
+				.unsubscribeOn(Schedulers.io())
+				.observeOn(AndroidSchedulers.mainThread())
+				.subscribe(
+						new Subscriber<BaseResultEntity<Version>>() {
+							@Override
+							public void onCompleted() {
+
+							}
+
+							@Override
+							public void onError(Throwable e) {
+								basehideProgressDialog();
+								//Log.e("updateError------>",e.getMessage());
+								Toast.makeText(UserPanelFragment.this.getActivity(),"获取版本信息失败",Toast.LENGTH_SHORT).show();
+							}
+
+							@Override
+							public void onNext(BaseResultEntity<Version> baseResultEntity) {
+								basehideProgressDialog();
+								if (baseResultEntity.ret == 200){
+									//Log.e("update--->",baseResultEntity.data.app_version+"     "+baseResultEntity.data.app_url);
+									if (Integer.parseInt(baseResultEntity.data.app_version) > DeviceUtil.getVersionCode(UserPanelFragment.this.getActivity())) {
+										showUpdateDialog(baseResultEntity.data.desc, baseResultEntity.data.app_name, baseResultEntity.data.app_url, baseResultEntity.data.update);
+									}else {
+										Toast.makeText(UserPanelFragment.this.getActivity(),"当前已是最新版本",Toast.LENGTH_SHORT).show();
+									}
+								}else {
+									//Log.e("update---->","获取更新信息失败");
+								}
+
+							}
+
+							@Override
+							public void onStart() {
+								super.onStart();
+							}
+						}
+
+				);
+		mCompositeSubscription.add(subscription);
+	}
+
+	/**
+	 * 显示升级提醒的对话框
+	 *
+	 */
+	private void showUpdateDialog(final String updataMsg,final String apkname,final String downloadurl,final String isMandatory) {
+		if (alertDialog != null) {
+			alertDialog.dismiss();
+			alertDialog = null;
+		}
+		alertDialog = new AlertDialog(UserPanelFragment.this.getActivity(), null).builder()
+				.setCancelable(true)
+				.setTitle("版本更新")
+				.setMsg(Html.fromHtml(updataMsg).toString())
+				.setNegativeButton("下次再说", new View.OnClickListener() {
+					@Override
+					public void onClick(View v) {
+						if (isMandatory.equals("2")){
+							alertDialog.dismiss();
+						}else {
+							alertDialog.dismiss();
+						}
+					}
+				})
+				.setPositiveButton("马上更新", new View.OnClickListener() {
+					@Override
+					public void onClick(View arg0) {
+						mNotificationManager.notify(DOWNLOAD, mBuilder.build());
+						Toast.makeText(UserPanelFragment.this.getActivity(),"至尊WiFi正在更新中，更新进度请查看通知栏！",Toast.LENGTH_SHORT).show();
+						// 下载新版本的apk , 替换安装
+						HttpUtils httputils = new HttpUtils();
+						final File file = new File(Environment
+								.getExternalStorageDirectory(), apkname);
+						httputils.download(downloadurl, file.getAbsolutePath(),
+								false, new RequestCallBack<File>() {
+									@Override
+									public void onSuccess(ResponseInfo<File> arg0) {
+										// 替换安装apk
+										Intent intent = new Intent();
+										intent.setAction("android.intent.action.VIEW");
+										intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+										intent.addCategory("android.intent.category.DEFAULT");
+										intent.setDataAndType(Uri.fromFile(file),
+												"application/vnd.android.package-archive");
+										startActivity(intent);
+
+										mNotificationManager.cancel(DOWNLOAD);
+									}
+
+									@Override
+									public void onFailure(HttpException arg0,
+														  String arg1) {
+									}
+
+									@Override
+									public void onLoading(long total, long current, boolean isUploading) {
+										super.onLoading(total, current, isUploading);
+										double x_double = current * 1.0;
+										double tempresult = x_double / total;
+										DecimalFormat df1 = new DecimalFormat("0.00"); // ##.00%
+										// 百分比格式，后面不足2位的用0补齐
+										String result = df1.format(tempresult);
+
+										NotificationCompat.Builder mBuilder02 = new NotificationCompat.Builder(UserPanelFragment.this.getActivity());
+										mBuilder02.setContentTitle("至尊WiFi正在下载中...")//设置通知栏标题
+												.setProgress(100,(int)(Float.parseFloat(result) * 100),false)
+												.setTicker("至尊WiFi正在更新")
+												.setPriority(Notification.PRIORITY_MAX) //设置该通知优先级
+												.setOngoing(false)//ture，设置他为一个正在进行的通知。他们通常是用来表示一个后台任务,用户积极参与(如播放音乐)或以某种方式正在等待,因此占用设备(如一个文件下载,同步操作,主动网络连接)
+												.setSmallIcon(R.drawable.ic_launcher);//设置通知小ICON
+										mNotificationManager.notify(DOWNLOAD,mBuilder02.build());
+									}
+								});
+					}
+				});
+		alertDialog.show();
+	}
+
+}

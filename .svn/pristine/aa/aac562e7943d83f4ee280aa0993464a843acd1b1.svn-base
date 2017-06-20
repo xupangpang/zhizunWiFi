@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="15.0dip"
+    android:minHeight="@dimen/pref_item_height"
+    android:background="@drawable/wifi_list_item_bg" >
+
+    <!-- android:background="@drawable/app_item_bg" -->
+
+    <CheckBox
+        android:id="@+id/cb_ap_check"
+        style="@style/Lt_CheckBox_block"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:checked="false"
+        android:drawablePadding="10.0dip"
+        android:focusable="false"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/signal"
+        android:layout_width="34.5dp"
+        android:layout_height="19.5dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="4.0sp"
+        android:layout_toRightOf="@+id/cb_ap_check"
+        android:src="@drawable/wifi_signal" />
+
+    <RelativeLayout
+        android:id="@+id/line1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/signal"
+        android:layout_centerVertical="true" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginRight="5.0dip"
+            android:layout_toLeftOf="@+id/unlock_pb"
+            android:paddingRight="10.0dip" >
+
+            <TextView
+                android:id="@+id/tv_ap_ssid"
+                style="@style/pref_item_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_state_safe"
+                style="@style/pref_item_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tv_ap_ssid"
+                android:layout_below="@+id/tv_ap_ssid"
+                android:drawableLeft="@drawable/icon_status_safe"
+                android:textColor="@color/blue_go_text"
+                android:text="安全" />
+            
+            <TextView
+                android:id="@+id/ap_state_value"
+                style="@style/pref_item_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:layout_marginLeft="5dp"
+                android:drawablePadding="3dp"
+                android:layout_toRightOf="@id/tv_state_safe"
+                android:layout_alignTop="@id/tv_state_safe"
+                android:layout_alignBottom="@id/tv_state_safe" />
+            
+            <TextView
+                android:id="@+id/tv_unlock_summary"
+                style="@style/pref_item_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tv_ap_ssid"
+                android:layout_below="@+id/tv_ap_ssid"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_unlock_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@+id/tv_unlock_progress"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15.0dip"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/unlock_pb"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5.0dip"
+            android:layout_toLeftOf="@+id/tv_unlock_progress"
+            android:indeterminateBehavior="repeat"
+            android:indeterminateDrawable="@drawable/lt_bg_progressbar_rotate"
+            android:indeterminateOnly="true"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_unlock_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="3.0dip" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_unlock_progress"
+        android:layout_width="fill_parent"
+        android:layout_height="3.0dip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="1.0dip"
+        android:indeterminateOnly="false"
+        android:max="100"
+        android:maxHeight="2.0dip"
+        android:minHeight="2.0dip"
+        android:progressDrawable="@drawable/unlock_progress_horizontal"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/connected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10.0sp"
+        android:src="@drawable/ic_ap_connected"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_crackStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10.0sp"
+        android:text="挖掘中..."
+        android:textColor="#238BFF"
+        android:visibility="gone" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/signal"
+        android:background="#05000000" />
+
+</RelativeLayout>

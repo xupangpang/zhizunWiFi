@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff0f0f0"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/viewHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip"
+        layout="@layout/view_header1" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20.0dip" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+           android:gravity="center">
+           
+            <ImageView
+                android:id="@+id/icon_account"
+                android:layout_width="30.0dip"
+                android:layout_height="30.0dip"
+                 android:layout_centerVertical="true"
+                android:background="@drawable/icon_account_" />
+            <TextView
+                android:id="@+id/tv_am_account"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="5.0dip"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="120"
+                android:layout_toRightOf="@id/icon_account"
+                android:textColor="#ffffffff"
+                android:textSize="35.0dip" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            android:text="可用金币长期有效"
+            android:textColor="#ccffffff"
+            android:textSize="12.0dip" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10.0dip"
+        android:text="赚金币"
+        android:textColor="#ff888999"
+        android:textSize="12.0dip" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:background="#fff0f0f0" />
+
+            <!--
+                  <com.qihoo.freewifi.widget.ScoreOptionItem
+                android:id="@+id/scoreItemRegister"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <com.qihoo.freewifi.widget.ScoreOptionItem
+                android:id="@+id/scoreItemLottery"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <com.qihoo.freewifi.widget.ScoreOptionItem
+                android:id="@+id/scoreItemCapture"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <com.qihoo.freewifi.widget.ScoreOptionItem
+                android:id="@+id/scoreItemBindPhone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <com.qihoo.freewifi.widget.ScoreOptionItem
+                android:id="@+id/scoreItemFriend"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible" />
+
+            <com.qihoo.freewifi.widget.ScoreOptionItem
+                android:id="@+id/scoreItemInvite"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <com.qihoo.freewifi.widget.ScoreOptionItem
+                android:id="@+id/scoreItemPublic"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <com.qihoo.freewifi.widget.ScoreOptionItem
+                android:id="@+id/scoreItemAppraise"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />-->
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

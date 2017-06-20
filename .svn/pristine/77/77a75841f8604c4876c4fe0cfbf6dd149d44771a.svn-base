@@ -1,0 +1,88 @@
+package com.zhizun.zhizunwifi.activity;
+
+import net.duohuo.dhroid.ioc.annotation.InjectView;
+import android.content.Context;
+import android.os.Bundle;
+import android.text.ClipboardManager;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.zhizun.zhizunwifi.R;
+
+public class FeedBackActivity extends BaseActivity {
+
+	@InjectView(id = R.id.act_feedback_btn_submit, click = "click")
+	Button act_feedback_btn_submit;
+	@InjectView(id = R.id.Btn_copy_qq, click = "click")
+	Button Btn_copy_qq;
+	@InjectView(id = R.id.act_feedback_msg)
+	EditText act_feedback_msg;
+	@InjectView(id = R.id.act_feedback_contact)
+	EditText act_feedback_contact;
+
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.act_feedback);
+		initView();
+	}
+
+	private void initView() {
+		// 设置左侧自定义图标不可点击，出现系统自带的返回箭头，点击可finish
+		getActionBar().setDisplayHomeAsUpEnabled(true);
+
+		// 隐藏logo和icon
+		getActionBar().setDisplayShowHomeEnabled(false);
+
+	}
+
+	public void click(View v){
+		switch (v.getId()) {
+			case  R.id.act_feedback_btn_submit:
+				// 提交
+				int msg = act_feedback_msg.getText().toString().length();
+				int contact = act_feedback_contact.getText().toString().length();
+
+				System.out.println("反馈内容= " + act_feedback_msg.getText() + "-----------");
+				System.out.println("联系方式= " + act_feedback_contact.getText() + "-----------");
+
+				if(msg == 0 && contact == 0){
+					Toast.makeText(FeedBackActivity.this, "请填写反馈内容和一种联系方式！", Toast.LENGTH_SHORT).show();
+				}else if(msg != 0 && contact == 0){
+					Toast.makeText(FeedBackActivity.this, "请填写一种联系方式！", Toast.LENGTH_SHORT).show();
+				}else if(msg == 0 && contact != 0){
+					Toast.makeText(FeedBackActivity.this, "请填写反馈内容！", Toast.LENGTH_SHORT).show();
+				}else if(msg != 0 && contact != 0){
+					Toast.makeText(FeedBackActivity.this, R.string.act_feedback_submit_successfully, Toast.LENGTH_SHORT).show();
+					act_feedback_msg.setText("");
+					act_feedback_contact.setText("");
+				}
+				break;
+
+			case  R.id.Btn_copy_qq:
+				// 复制QQ
+				ClipboardManager clip = (ClipboardManager)getSystemService(Context.CLIPBOARD_SERVICE);
+//			clip.getText(); // 粘贴
+				clip.setText("281406222"); // 复制
+
+				Toast.makeText(FeedBackActivity.this, R.string.act_feedback_copy_qq_toast, Toast.LENGTH_SHORT).show();
+
+				break;
+		}
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+			case android.R.id.home:
+				finish();
+				return true;
+
+		}
+		return false;
+	}
+}

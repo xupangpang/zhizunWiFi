@@ -1,0 +1,50 @@
+package com.zhizun.zhizunwifi.http;
+
+
+
+import java.util.concurrent.TimeUnit;
+
+import okhttp3.OkHttpClient;
+import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
+import retrofit2.converter.gson.GsonConverterFactory;
+import rx.Observable;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
+
+/**
+ * http交互处理类
+ * Created by xupp on 2016/7/16.
+ */
+public class HttpManager {
+    //是否是测试环境
+    public static final boolean debug = false;
+
+    /*基础url*/
+    public static final String BASE_URL_DEBUG = "http://tapi.wifi.anzhuo.com";
+    public static final String BASE_URL_RELEASE = "http://api.wifi.anzhuo.com/";
+    public static final String BASE_URL = debug ? BASE_URL_DEBUG : BASE_URL_RELEASE;
+    /*超时设置*/
+    private static final int DEFAULT_TIMEOUT = 30;
+    private static HttpService httpService;
+
+
+    public static HttpService getService() {
+        if (httpService == null) {
+            //手动创建一个OkHttpClient并设置超时时间
+            OkHttpClient.Builder httpClientBuilder = new OkHttpClient.Builder();
+            httpClientBuilder.connectTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS);
+
+            httpService = new Retrofit.Builder()
+                    .client(httpClientBuilder.build())
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                    .baseUrl(BASE_URL)
+                    .build().create(HttpService.class);
+        }
+        return httpService;
+    }
+
+
+
+}

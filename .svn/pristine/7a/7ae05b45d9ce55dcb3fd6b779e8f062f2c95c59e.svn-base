@@ -1,0 +1,124 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@color/white" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dip"
+                android:layout_marginTop="20dip"
+                android:text="手动添加位置"
+                android:textColor="@color/blue"
+                android:textSize="20dip" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:background="#f1f1f1" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:background="@color/white" >
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20.0dip"
+                    android:text="@string/store_name"
+                    android:textColor="#AAABBB"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/dialog_item_store_name"
+                    android:layout_width="180dip"
+                    android:layout_height="30.0dip"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_toRightOf="@id/tv1"
+                    android:background="@null"
+                    android:hint="@string/store_name_hint"
+                    android:inputType="text"
+                    android:textColor="@color/blue" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:background="#f1f1f1" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:background="@color/white" >
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20.0dip"
+                    android:text="@string/store_site"
+                    android:textColor="#AAABBB"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/dialog_item_store_site"
+                    android:layout_width="180dip"
+                    android:layout_height="40.0dip"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_toRightOf="@id/tv2"
+                    android:background="@null"
+                    android:hint="@string/store_site_hint"
+                    android:inputType="text"
+                    android:textColor="@color/blue" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:background="#f1f1f1" />
+
+            <Button
+                android:id="@+id/dialog_confirm"
+                style="@style/Button.Blue.Hollow"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:layout_marginTop="30dip"
+                android:text="确定" />
+
+            <Button
+                android:id="@+id/dialog_abolish"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:layout_marginBottom="20dip"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:layout_marginTop="15dip"
+                android:background="@drawable/btn_grey_hollow_corner"
+                android:text="取消"
+                android:textColor="#AAABBB" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

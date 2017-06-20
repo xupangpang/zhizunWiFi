@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff5f5f5"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@id/viewHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip"
+        layout="@layout/view_header1" />
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="15.0dip"
+        layout="@layout/view_split_bottom" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:background="@drawable/btn_list_cell" >
+
+            <ImageView
+                android:id="@+id/iv1"
+                android:layout_width="25.0dip"
+                android:layout_height="25.0dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dip"
+                android:background="@drawable/setting_icon_notice" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@id/iv1"
+                android:text="通知栏消息提示"
+                android:textColor="#ff333333"
+                android:textSize="15dip" />
+
+            <com.zhizun.zhizunwifi.view.SwitchButtonBlue
+                android:id="@+id/switch_notification_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10.0dip"
+                android:visibility="visible" />
+               />
+        
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="2.0px"
+            android:layout_marginLeft="46.0dip"
+            android:background="#fff0f0f0"
+            android:contentDescription="@string/empty" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:background="@drawable/btn_list_cell" >
+
+            <ImageView
+                android:id="@+id/iv2"
+                android:layout_width="25.0dip"
+                android:layout_height="25.0dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dip"
+                android:background="@drawable/setting_icon_notice_float_bar" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@id/iv2"
+                android:text="顶部通知提示"
+                android:textColor="#ff333333"
+                android:textSize="15dip" />
+
+            <com.zhizun.zhizunwifi.view.SwitchButtonBlue
+                android:id="@+id/switch_top_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10.0dip"
+                android:visibility="visible" />
+               
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="15.0dip"
+        layout="@layout/view_split_both" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:background="@drawable/btn_list_cell" >
+
+            <ImageView
+                android:id="@+id/iv3"
+                android:layout_width="25.0dip"
+                android:layout_height="25.0dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dip"
+                android:background="@drawable/setting_icon_auto_connect" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@id/iv3"
+                android:text="发现免费WiFi提示"
+                android:textColor="#ff333333"
+                android:textSize="15dip" />
+
+            <com.zhizun.zhizunwifi.view.SwitchButtonBlue
+                android:id="@+id/switch_wifi_discover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10.0dip"
+                android:visibility="visible" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="15.0dip"
+        layout="@layout/view_split_top" />
+
+</LinearLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="210dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+ >
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:layout_gravity="center_horizontal|center"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:gravity="center_horizontal|center"
+        android:minHeight="0dp"
+        android:orientation="vertical" >
+
+     <!--    <TextView
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|left"
+            android:gravity="center_vertical|left"
+            android:singleLine="true"
+            android:textColor="#323232"
+            android:textSize="18sp" 
+            android:text="[独家] 易信260分钟免费打"
+            android:textStyle="bold"/> -->
+        
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|left"
+            android:gravity="center_vertical|left"
+            android:singleLine="true"
+            android:textColor="#AFAFAF"
+            android:textSize="12sp"
+            android:text="国内外免费电话，通话不耗流量"
+        />
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="3dp"
+            >
+        
+	        <TextView
+	            android:id="@+id/discount_money"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_vertical|left"
+	            android:gravity="center_vertical|left"
+	            android:singleLine="true"
+	            android:textColor="#C83C29"
+	            android:textSize="20sp"
+	            android:text="￥0.10" />
+	        
+	        <TextView
+	            android:id="@+id/money"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_vertical|left|bottom"
+	            android:gravity="center_vertical|left"
+	            android:singleLine="true"
+	            android:textColor="#AFAFAF"
+	            android:textSize="12sp"
+	            android:text="50.00"
+	            android:layout_marginLeft="10dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

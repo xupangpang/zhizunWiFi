@@ -1,0 +1,179 @@
+package com.zhizun.zhizunwifi.utils;
+
+
+import android.app.Activity;
+import android.content.Context;
+
+import com.umeng.socialize.bean.SHARE_MEDIA;
+import com.umeng.socialize.controller.UMServiceFactory;
+import com.umeng.socialize.controller.UMSocialService;
+import com.umeng.socialize.media.QQShareContent;
+import com.umeng.socialize.media.QZoneShareContent;
+import com.umeng.socialize.media.UMImage;
+import com.umeng.socialize.sso.QZoneSsoHandler;
+import com.umeng.socialize.sso.UMQQSsoHandler;
+import com.umeng.socialize.weixin.controller.UMWXHandler;
+import com.umeng.socialize.weixin.media.CircleShareContent;
+import com.umeng.socialize.weixin.media.WeiXinShareContent;
+import com.zhizun.zhizunwifi.R;
+
+/**
+ * @OtherShere 描述： 第三方分享
+ * @author 浩子
+ * @2015年4月14日 @下午4:19:56
+ */
+public class OtherShere {
+	/**
+	 * @param mController
+	 * @param shareContents
+	 *            :分享内容
+	 * @param context
+	 *            描述： 初始化友盟
+	 */
+	public UMSocialService mController;
+
+	public OtherShere(UMSocialService mController) {
+		this.mController = mController;
+	}
+
+	public void initialUM(String shareContents, Context context) {
+		// 添加微信平台
+		UMWXHandler wxHandler = new UMWXHandler(context, "wxd4a1900b8b9f9880",
+				"da2125f842d582d67961e7039195f232");
+		wxHandler.addToSocialSDK();
+		// 支持微信朋友圈
+		UMWXHandler wxCircleHandler = new UMWXHandler(context,
+				"wxd4a1900b8b9f9880",
+				"da2125f842d582d67961e7039195f232");
+		wxCircleHandler.setToCircle(true);
+		wxCircleHandler.addToSocialSDK();
+		mController = UMServiceFactory.getUMSocialService("com.umeng.share");
+		// // 设置分享内容
+		mController.setShareContent(shareContents);
+		// // 设置分享图片, 参数2为图片的url地址
+		mController
+				.setShareMedia(new UMImage(context, R.drawable.ico));
+		mController.getConfig().removePlatform(SHARE_MEDIA.SINA,
+				SHARE_MEDIA.TENCENT);
+		// 添加短信
+		// SmsHandler smsHandler = new SmsHandler();
+		// smsHandler.addToSocialSDK();
+
+	}
+
+	/**
+	 * @param shareTitle
+	 *            :分享标题
+	 * @param shareContents
+	 *            分享内容
+	 * @param context
+	 *            描述： 微信朋友圈分享
+	 */
+	public void Circleshare(String shareTitle, String shareContents,
+							final Context context, String url) {
+		// 设置微信朋友圈分享内容
+		CircleShareContent circleMedia = new CircleShareContent();
+		circleMedia.setShareContent(shareContents);
+		// 设置朋友圈title
+		circleMedia.setTitle(shareTitle);
+		circleMedia.setShareImage(new UMImage(context, R.drawable.ico));
+		circleMedia.setTargetUrl(url);
+		mController.setShareMedia(circleMedia);
+		// mController.directShare(context, SHARE_MEDIA.SINA,
+		// new SnsPostListener() {
+		// @Override
+		// public void onStart() {
+		// // Toast.makeText(context, "分享开始",Toast.LENGTH_SHORT).show();
+		// }
+		// @Override
+		// public void onComplete(SHARE_MEDIA platform,int eCode,
+		// SocializeEntity entity) {
+		// if(eCode == StatusCode.ST_CODE_SUCCESSED){
+		// Toast.makeText(context, "分享成功",Toast.LENGTH_SHORT).show();
+		// }else{
+		// Toast.makeText(context, "分享失败",Toast.LENGTH_SHORT).show();
+		// }
+		// }
+		// });
+	}
+
+	/**
+	 * @param shareTitle
+	 *            :分享标题
+	 * @param shareContents
+	 *            分享内容
+	 * @param context
+	 *            描述： 微信好友分享
+	 */
+	public void WXshare(String shareTitle, String shareContents,
+						Context context, String url) {
+		// 设置微信好友分享内容
+		WeiXinShareContent weixinContent = new WeiXinShareContent();
+		// 设置分享文字
+		weixinContent.setShareContent(shareContents);
+		// 设置title
+		weixinContent.setTitle(shareTitle);
+		// 设置分享内容跳转URL
+		weixinContent.setTargetUrl(url);
+		// 设置分享图片
+		weixinContent
+				.setShareImage(new UMImage(context, R.drawable.ico));
+		mController.setShareMedia(weixinContent);
+
+	}
+
+	/**
+	 * @param shareTitle
+	 *            :分享标题
+	 * @param shareContents
+	 *            分享内容
+	 * @param context
+	 *            描述： QQ空间分享
+	 */
+	public void QQzoneshare(String shareTitle, String shareContents,
+							Context context, String url) {
+		// 参数1为当前Activity， 参数2为开发者在QQ互联申请的APP ID，参数3为开发者在QQ互联申请的APP kEY.
+		QZoneSsoHandler qZoneSsoHandler = new QZoneSsoHandler(
+				(Activity) context, "1105170697", "bQ3TMyyd60SyTBDX");
+		qZoneSsoHandler.addToSocialSDK();
+		QZoneShareContent qzone = new QZoneShareContent();
+		// 设置分享文字
+		qzone.setShareContent(shareContents);
+		// 设置点击消息的跳转URL
+		qzone.setTargetUrl(url);
+		// 设置分享内容的标题
+		qzone.setTitle(shareTitle);
+		// 设置分享图片
+		qzone.setShareImage(new UMImage(context,
+				R.drawable.ico));
+		mController.setShareMedia(qzone);
+	}
+
+	/**
+	 * @param shareTitle
+	 *            :分享标题
+	 * @param shareContents
+	 *            分享内容
+	 * @param context
+	 *            描述：
+	 */
+	public void QQshare(String shareTitle, String shareContents,
+						Context context, String url) {
+		// 添加QQ
+		UMQQSsoHandler qqSsoHandler = new UMQQSsoHandler((Activity) context,
+				"1105170697", "bQ3TMyyd60SyTBDX");
+		qqSsoHandler.addToSocialSDK();
+		QQShareContent qqShareContent = new QQShareContent();
+		// 设置分享文字
+		qqShareContent.setShareContent(shareContents);
+		// 设置分享title
+		qqShareContent.setTitle(shareTitle);
+		// 设置分享图片
+		qqShareContent.setShareImage(new UMImage(context,
+				R.drawable.ico));
+		// 设置点击分享内容的跳转链接
+		qqShareContent.setTargetUrl(url);
+		mController.setShareMedia(qqShareContent);
+	}
+
+}

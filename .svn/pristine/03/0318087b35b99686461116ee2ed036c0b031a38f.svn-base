@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/activity_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="15.0dip" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="200.0dip"
+        android:layout_weight="1.0"
+        android:fadingEdge="none"
+        android:overScrollMode="never" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/act_feedback_msg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:gravity="top"
+                android:hint="@string/act_feedback_msg_hint"
+                android:inputType="textMultiLine"
+                android:lines="4"
+                android:padding="5.0dip"
+                android:textColorHint="@color/get_vercode_pressed_clolr"
+                android:textSize="16.0sp" />
+
+            <EditText
+                android:id="@+id/act_feedback_contact"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:background="@drawable/app_user_register_edit"
+                android:hint="@string/act_feedback_contact_hint"
+                android:lines="2"
+                android:padding="5.0dip"
+                android:textColorHint="@color/get_vercode_pressed_clolr"
+                android:textSize="16.0dip" />
+
+            <Button
+                android:id="@+id/act_feedback_btn_submit"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_marginTop="10.0dip"
+                android:background="@drawable/app_wall_btn_bg"
+                android:onClick="btnSubmit"
+                android:text="@string/btn_submit"
+                android:textColor="@color/white" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16.0dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_toLeftOf="@+id/Btn_copy_qq"
+                    android:singleLine="true"
+                    android:text="@string/act_feedback_connect_qq_hint"
+                    android:textColor="#ffb4b4b4"
+                    android:textSize="14.0sp" />
+
+                <Button
+                    android:id="@+id/Btn_copy_qq"
+                    android:layout_width="98.0dip"
+                    android:layout_height="27.0dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10.0dip"
+                    android:text="@string/act_feedback_click_to_copy_qq_hint"
+                    android:textColor="#ffb4b4b4"
+                    android:textSize="14.0sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20.0dip"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_alert" />
+
+                <TextView
+                    android:id="@+id/act_feedback_tv_cancel_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10.0dip"
+                    android:text="@string/act_feedback_cancel_share"
+                    android:textColor="#ff545454"
+                    android:textSize="17.0sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

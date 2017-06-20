@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/header"
+    android:layout_width="fill_parent"
+    android:layout_height="48.0dip"
+    android:background="@drawable/nav_background" >
+
+    <ImageView
+        android:id="@+id/headerLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="5.0dip"
+        android:paddingRight="5.0dip"
+        android:src="@drawable/btn_nav_back" />
+
+    <TextView
+        android:id="@+id/headerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="5.0dip"
+        android:paddingRight="5.0dip"
+        android:text=" "
+        android:textColor="#ffffffff"
+        android:textSize="18.0dip" />
+
+    <ImageView
+        android:id="@id/divider"
+        android:layout_width="2.0dip"
+        android:layout_height="20.0dip"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/headerLeft"
+        android:background="#ff000000"
+        android:contentDescription="@string/empty"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@id/headerTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+        android:paddingLeft="50.0dip"
+        android:paddingRight="50.0dip"
+        android:text=""
+        android:textColor="#ffffffff"
+        android:textSize="18.0dip" />
+
+    <TextView
+        android:id="@id/headerRightText"
+        style="@style/Button.Grey.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10.0dip"
+        android:clickable="true"
+        android:gravity="center"
+        android:paddingLeft="20.0dip"
+        android:paddingRight="20.0dip"
+        android:text=""
+        android:textSize="14.0dip"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_mymessage_icon"
+        android:layout_width="35dip"
+        android:layout_height="35dip"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/nav_icon_mymessage"
+        android:padding="10dip"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@id/headerRightTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10.0dip"
+        android:clickable="true"
+        android:gravity="center"
+        android:paddingLeft="20.0dip"
+        android:paddingRight="10.0dip"
+        android:text="1111"
+        android:textColor="#ffffffff"
+        android:textSize="14.0dip"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@id/shareBut"
+        android:layout_width="wrap_content"
+        android:layout_height="80.0dip"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/divider"
+        android:layout_marginRight="16.0dip"
+        android:paddingTop="5.0dip"
+        android:src="@drawable/btn_nav_back_share"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_mine_icon"
+        android:layout_width="35dip"
+        android:layout_height="35dip"
+        android:layout_alignBottom="@+id/headerLeft"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/nav_icon_mine"
+        android:visibility="gone" />
+
+</RelativeLayout>

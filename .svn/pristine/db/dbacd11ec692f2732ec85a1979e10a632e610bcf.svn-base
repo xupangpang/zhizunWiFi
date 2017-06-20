@@ -1,0 +1,64 @@
+package com.zhizun.zhizunwifi.activity;
+
+
+import cn.bmob.v3.BmobUser;
+
+import com.zhizun.zhizunwifi.bean.MyUser;
+import com.zhizun.zhizunwifi.R;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+
+/**
+ * 
+ * @��Ŀ��:	ZhizunWIFI
+ * @����:	com.zhizun.zhizunwifi.activity
+ * @����:	ScoreActivity
+ * @������:	����
+ * @����ʱ��:	2016��3��16�� ����11:15:03
+ * @����:	TODO
+ *
+ * @SVN�汾:	$Rev: 771 $
+ * @������:	$Author: xunfeng $
+ * @����ʱ��:	$Date: 2016-05-31 10:34:31 +0800 (Tue, 31 May 2016) $
+ * @��������:	TODO
+ */
+public class ScoreActivity extends BaseActivity implements OnClickListener{
+	
+	private ImageView back;
+	
+	private TextView title;
+	private TextView tv_am_account;
+	MyUser user;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_myscore);
+		
+		back = (ImageView) findViewById(R.id.headerLeft);
+		title = (TextView) findViewById(R.id.headerTitle);
+		tv_am_account = (TextView) findViewById(R.id.tv_am_account);
+		
+		back.setOnClickListener(this);
+		user = BmobUser.getCurrentUser(ScoreActivity.this, MyUser.class);
+		title.setText("�ҵĽ��");
+		if(user != null)
+		tv_am_account.setText(user.getMoney()+"");
+	}
+
+
+	@Override
+	public void onClick(View v) {
+		
+		if (v == back) {
+			finish();
+		}
+		
+	}
+
+}

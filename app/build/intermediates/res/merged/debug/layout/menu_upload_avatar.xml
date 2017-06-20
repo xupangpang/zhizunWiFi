@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical"
+    android:paddingLeft="10.0dip"
+    android:paddingRight="10.0dip" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/pop_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_menu"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_lm_camera"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:background="@drawable/selector_shape_menu"
+                android:gravity="center"
+                android:text="拍张照片"
+                android:textColor="@color/blue" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:background="#ffebebeb" />
+
+            <TextView
+                android:id="@+id/tv_lm_picture"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:background="@drawable/selector_shape_menu"
+                android:gravity="center"
+                android:text="从相册选择"
+                android:textColor="@color/blue" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_lm_cancle"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layout_marginBottom="15.0dip"
+            android:layout_marginTop="15.0dip"
+            android:background="@drawable/selector_shape_menu"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,1496 @@
+package com.zhizun.zhizunwifi.fragment;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.litepal.crud.DataSupport;
+
+import android.annotation.SuppressLint;
+import android.app.Dialog;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.content.ServiceConnection;
+import android.net.NetworkInfo.State;
+import android.net.wifi.ScanResult;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.IBinder;
+import android.os.Message;
+import android.text.TextUtils;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.View.OnLongClickListener;
+import android.view.ViewTreeObserver.OnGlobalLayoutListener;
+import android.view.Window;
+import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import rx.Subscriber;
+import rx.Subscription;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
+import rx.subscriptions.CompositeSubscription;
+
+import com.baidu.location.BDLocation;
+import com.baidu.location.BDLocationListener;
+import com.google.gson.Gson;
+import com.umeng.analytics.MobclickAgent;
+import com.zhizun.zhizunwifi.bean.FreeWifi;
+import com.zhizun.zhizunwifi.bean.FreeWifi.FreeWiFiType;
+import com.zhizun.zhizunwifi.bean.JsonWifi;
+import com.zhizun.zhizunwifi.bean.JsonWifiImp;
+import com.zhizun.zhizunwifi.bean.PutAccount;
+import com.zhizun.zhizunwifi.dialog.AlertDialog;
+import com.zhizun.zhizunwifi.dialog.CrackSuccessDialog;
+import com.zhizun.zhizunwifi.dialog.CurrentConnectWiFiDialog;
+import com.zhizun.zhizunwifi.dialog.PasswordConnectDialog;
+import com.zhizun.zhizunwifi.R;
+import com.zhizun.zhizunwifi.activity.MainTabActivity;
+import com.zhizun.zhizunwifi.activity.NetSpeedActivity;
+import com.zhizun.zhizunwifi.activity.SafetyInspectActivity;
+import com.zhizun.zhizunwifi.activity.WiFiDetailActivity;
+import com.zhizun.zhizunwifi.activity.WiFiMapActivity;
+import com.zhizun.zhizunwifi.http.BaseResultEntity;
+import com.zhizun.zhizunwifi.http.HttpManager;
+import com.zhizun.zhizunwifi.http.HttpService;
+import com.zhizun.zhizunwifi.service.ListenNetStateService;
+import com.zhizun.zhizunwifi.service.ListenNetStateService.NetBind;
+import com.zhizun.zhizunwifi.service.ListenNetStateService.WifiConnectStateListener;
+import com.zhizun.zhizunwifi.service.ListenNetStateService.WifiStateChangedListener;
+import com.zhizun.zhizunwifi.service.LocationService;
+import com.zhizun.zhizunwifi.utils.BaseUtils;
+import com.zhizun.zhizunwifi.utils.JmTools;
+import com.zhizun.zhizunwifi.utils.L;
+import com.zhizun.zhizunwifi.utils.WifiUtils;
+import com.zhizun.zhizunwifi.utils.mkQuerypwd;
+import com.zhizun.zhizunwifi.view.CustomLoading;
+import com.zhizun.zhizunwifi.view.RefreshableView;
+import com.zhizun.zhizunwifi.view.RefreshableView.PullToRefreshListener;
+import com.zhizun.zhizunwifi.view.SlideSwitch;
+import com.zhizun.zhizunwifi.view.SlideSwitch.OnSwitchChangedListener;
+import com.zhizun.zhizunwifi.view.WiFiListLayout;
+import com.zhizun.zhizunwifi.view.WiFiListLayout.OnItemListener;
+import com.zhizun.zhizunwifi.widget.WiFiStaterPop;
+import com.zhizun.zhizunwifi.widget.WiFiStaterPop.WifiStateResult;
+
+@SuppressLint("ValidFragment") public class ConnectFragment2 extends BaseFragment implements OnCheckedChangeListener {
+	/** 未开启WIFI 布局 **/
+	private RelativeLayout frag_wifilist_wifi_disable_container;
+	/** 开启wifi **/
+	private Button frag_wifilist_wifi_disable_open;
+	/** wifi列表ListView **/
+	private WiFiListLayout WiFiListLayoutView;
+
+	/** 正在打开wifi 布局 **/
+	LinearLayout ap_disabled;
+	/** 未开启的图片 **/
+	ImageView ap_disabled_status;
+	/** 打开中的图片 **/
+	ProgressBar ap_disabled_opening;
+	/** 打开按钮 **/
+	Button ap_disabled_open;
+	/** 打开、关闭按钮 **/
+	SlideSwitch sb;
+	/** 下拉刷新 **/
+	RefreshableView refreshableView;
+	/** 已经连接上的Wifi对象 **/
+	FreeWifi currentConnectWiFi = new FreeWifi();
+	/** 已经连接上的wifi名称TextView **/
+	TextView tv_ap_ssid;
+	/** 连接状态描述 **/
+	TextView tv_ap_state_describe;
+
+	/** 已经连接上的wifi名称布局 **/
+	FrameLayout fl_connected;
+	TextView tv_state_safe;
+	/** 已经连接上的wifi后弹出的pop**/
+	FrameLayout fl_wifi_pop;
+
+	/** 已经连接上的wifi名称布局 **/
+	RelativeLayout rl_connected;
+	/** 已经连接上的wifi打钩 **/
+	ImageView connected;
+	ImageView connected_share;
+	/** 已经连接上的wifi名称布局 **/
+	Button btn_oneKeySearchWiFi;
+	/** 连接wifi动画 **/
+	CustomLoading connectAnim;
+	/** 地图 **/
+	ImageView headerMenu;
+
+	RadioGroup main_radio;
+
+	private LocationService locationService;
+
+	/** WifiUtils工具类 **/
+	private WifiUtils localWifiUtils;
+	/** 扫描wifi消息 **/
+	private static final int ScanWiFi = 0x100;
+
+	/** wifi身份认证中 **/
+	public static final int Authenticating = 0x110;
+	/** wifi身份认证通过，正在获取IP中 **/
+	public static final int GetIP = 0x111;
+	/** 连接wifi中 **/
+	public static final int Connceting = 0x112;
+	/** 连接wifi成功消息 **/
+	public static final int ConncetSuccess = 0x113;
+	/** wifi身份认证失败--连接wifi密码错误消息  **/
+	public static final int AuthenticatError = 0x114;
+	/** wifi断开 **/
+	public static final int disconnect = 0x116;
+	/** 关闭加载框 **/
+	public static final int closeLoadDialog = 0x117;
+	/** 密码连接 **/
+	private static final int PasswordConnect = 0x3;
+	/** 自动连接 **/
+	private static final int AutoConnect = 0x4;
+
+	private WiFiStaterPop wifiPop;
+
+	/**
+	 * 当前过滤后的免费WiFi
+	 */
+	private List<FreeWifi> mCurFreeWifiList = new ArrayList<FreeWifi>();
+	/**
+	 * 过滤后的扫描wifi列表
+	 */
+	private List<ScanResult> scanWiFiResults;
+
+
+	private Map<String, Object> netParams;
+	private JSONObject postData;
+
+	private double latitude = 0; // 纬度坐标
+	private double longitude = 0; // 经度坐标
+
+	/** 开始下拉刷新 **/
+	private boolean startRefresh;
+
+	/**
+	 * 是否分享
+	 */
+	private boolean isShareWiFi;
+	/**
+	 * 需分享的SSID
+	 */
+	private String curShareSSID;
+
+	private String curShareBSSID;
+	/**
+	 * 需分享的SSID--对应的密码
+	 */
+	private String curShareSSID_pwd;
+
+	private Intent NetStateService;
+	private String curConnectSSID = null;;
+	private final  int WIFIPWD = 900;
+
+	private boolean isShare = false;
+	private  HttpService apiService;
+	protected CompositeSubscription mCompositeSubscription;
+	private boolean isFirst = true;
+
+	private boolean isError = false;
+	private List<JsonWifi> jsonWifis;
+	private boolean isSharePwd = false;
+
+	@SuppressLint("ValidFragment")
+	@Override
+	public void onActivityCreated(Bundle savedInstanceState) {
+		super.onActivityCreated(savedInstanceState);
+
+		//retrofit  初始化
+		apiService =  HttpManager.getService();
+		mCompositeSubscription = new CompositeSubscription();
+
+		//wifi刷新视图
+		refreshableView = (RefreshableView) view.findViewById(R.id.refreshable_view);
+		refreshableView.getViewTreeObserver().addOnGlobalLayoutListener(new OnGlobalLayoutListener() {
+			@SuppressWarnings("deprecation")
+			@Override
+			public void onGlobalLayout() {
+				refreshableView.getViewTreeObserver().removeGlobalOnLayoutListener(this);
+				WiFiListLayoutView.setMinimumHeight(refreshableView.getHeight());
+			}
+		});
+		refreshableView.setOnRefreshListener(new PullToRefreshListener() {
+			@Override
+			public void onRefresh() {
+				handler.postDelayed(new Runnable() {
+					public void run() {
+						startRefresh = true;
+						scanWiFi();
+					}
+				}, 1000);
+			}
+		}, 0);
+
+		//已连接的wifi名称
+		tv_ap_ssid = (TextView) view.findViewById(R.id.tv_ap_ssid);
+        //已连接wifi 状态
+		tv_ap_state_describe = (TextView) view.findViewById(R.id.tv_ap_state_describe);
+
+		//获取的wifi布局
+		WiFiListLayoutView = (WiFiListLayout) view.findViewById(R.id.WiFiListLayoutView);
+		WiFiListLayoutView.initView(view);
+		WiFiListLayoutView.setOnItemListener(new OnItemListener() {
+		@Override
+			public void onItemLongClick(View parentView, View view, FreeWifi mFreeWifi,
+										ScanResult mScanResult) {
+				// TODO Auto-generated method stub
+				if(mFreeWifi != null){
+					showcurrentConnectWiFiDialog(view, false, mFreeWifi, null);
+				}
+			}
+
+			@Override
+			public void onItemClick(View parentView, View view, FreeWifi mFreeWifi,
+									ScanResult mScanResult) {
+				isError = true;
+				// TODO Auto-generated method stub
+				if(mFreeWifi != null){
+					if(!localWifiUtils.isWifiConnected(ConnectFragment2.this.getActivity())){
+
+						    startConnect(mFreeWifi.netId, mFreeWifi.getWifiName(), mFreeWifi.wifi_psw, mFreeWifi.getWifi_mac_address(), false);
+
+						connectAnim.start();
+						String[] strs = {curConnectSSID, ""};
+						setSSIDView(strs);
+					} else{
+						showDialog(view, mFreeWifi);
+					}
+				} else if(mScanResult != null){
+					isShare = true;
+					if (jsonWifis != null && jsonWifis.size() > 0){
+						//不能破解的对话框
+						showPasswordConnectDialog(view, mScanResult.SSID, mScanResult.BSSID, null, false,false);
+						for (int i = 0; i < jsonWifis.size(); i++) {
+							if (mScanResult.SSID.equals(jsonWifis.get(i).getSsid())){
+								//能破解的对话框
+								showPasswordConnectDialog(view, mScanResult.SSID, mScanResult.BSSID, null, false,true);
+							}else {
+								//showPasswordConnectDialog(view, mScanResult.SSID, mScanResult.BSSID, null, false,false);
+							}
+						}
+
+					}else {
+						//系统保存的已连接的对话框
+						showPasswordConnectDialog(view, mScanResult.SSID, mScanResult.BSSID, null, false,false);
+					}
+
+
+				}
+			}
+		});
+		ap_disabled = (LinearLayout) view.findViewById(R.id.ap_disabled); //
+
+		fl_connected = (FrameLayout) view.findViewById(R.id.fl_connected);
+		tv_state_safe = (TextView) view.findViewById(R.id.tv_state_safe);
+
+		rl_connected = (RelativeLayout) view.findViewById(R.id.rl_connected); //
+		fl_wifi_pop = (FrameLayout) view.findViewById(R.id.wifi_pop); //
+		connected = (ImageView) view.findViewById(R.id.connected); //
+		connected_share = (ImageView) view.findViewById(R.id.connected_share);
+		btn_oneKeySearchWiFi = (Button) view.findViewById(R.id.btn_oneKeySearchWiFi); //
+		rl_connected.setOnLongClickListener(new OnLongClickListener() {
+			@Override
+			public boolean onLongClick(View arg0) {
+				if(!wifiPop.isShow())
+					showcurrentConnectWiFiDialog(null, true, null, localWifiUtils.getConnectedSSID(localWifiUtils.getConnectionInfo()));
+				return false;
+			}
+		});
+		ap_disabled_status = (ImageView) view.findViewById(R.id.ap_disabled_status); //
+		ap_disabled_opening = (ProgressBar) view.findViewById(R.id.ap_disabled_opening); //
+		ap_disabled_open = (Button) view.findViewById(R.id.ap_disabled_open); //
+		headerMenu = (ImageView) view.findViewById(R.id.headerMenu); //
+		//wifi 开关
+		sb = (SlideSwitch) view.findViewById(R.id.headerRightSwitch);
+		sb.setStatus(true);
+		sb.setClickable(true);
+		sb.setOnSwitchChangedListener(new OnSwitchChangedListener() {
+			@Override
+			public void onSwitchChanged(SlideSwitch obj, int status) {
+				if(status == SlideSwitch.SWITCH_ON){
+					System.out.println("SWITCH_ON-------------------");
+					localWifiUtils.WifiOpen();
+					sb.setClickable(false);
+				}else if(status == SlideSwitch.SWITCH_OFF){
+					System.out.println("SWITCH_OFF-------------------");
+					localWifiUtils.WifiClose();
+					sb.setClickable(false);
+				}
+			}
+		});
+
+		connectAnim = (CustomLoading) view.findViewById(R.id.connectAnim);
+
+		int wifiCheckState = localWifiUtils.WifiCheckState();
+		if(wifiCheckState == WifiManager.WIFI_STATE_DISABLED || wifiCheckState == WifiManager.WIFI_STATE_DISABLING
+				|| wifiCheckState == WifiManager.WIFI_STATE_UNKNOWN){ // Wi-Fi is disabled.
+
+		}else if(wifiCheckState == WifiManager.WIFI_STATE_ENABLED){ // Wi-Fi is disabled.
+		}else if(wifiCheckState == WifiManager.WIFI_STATE_ENABLING){ // WIFI_STATE_ENABLING
+			// 显示开启动画
+			ap_disabled_status.setVisibility(View.GONE);
+			ap_disabled_opening.setVisibility(View.VISIBLE);
+			ap_disabled_open.setVisibility(View.GONE);
+		}
+		initEvent();
+
+		if (!localWifiUtils.isWifiOpen()){
+			sb.setStatus(false);
+			refreshableView.setVisibility(View.INVISIBLE);
+			ap_disabled.setVisibility(View.VISIBLE);
+			fl_connected.setVisibility(View.GONE);
+			btn_oneKeySearchWiFi.setVisibility(View.GONE);
+		}
+		//初始化wifi连接成功后弹出的pop窗口
+		wifiPop = new WiFiStaterPop(getActivity(), fl_wifi_pop);
+
+	}
+
+	@Override
+	public void onResume() {
+		MobclickAgent.onPageStart("MainScreen");
+		super.onResume();
+		String connectedSSID = localWifiUtils.getConnectedSSID(localWifiUtils.getConnectionInfo());
+		if (!TextUtils.isEmpty(connectedSSID)) {
+			String[] strs = {connectedSSID, ""};
+			setSSIDView(strs);
+		}
+		if(!isCallBack){
+			// <unknown ssid> 未知的wifi
+			if(localWifiUtils.isWifiConnected(this.getActivity())){
+				mWifiConnectStateListener.onConnected(connectedSSID);
+			} else {
+				State curState = localWifiUtils.getWifiConnectState(getActivity());
+				if(curState == State.CONNECTING)
+					mWifiConnectStateListener.onConnecting(connectedSSID);
+				else if(curState == State.DISCONNECTED)
+					handler.sendEmptyMessage(disconnect);
+			}
+		}
+		scanWiFi();
+	}
+
+	@Override
+	public void onPause() {
+		// TODO Auto-generated method stub
+		super.onPause();
+		MobclickAgent.onPageEnd("MainScreen");
+	}
+
+	@Override
+	public void onClick(View v) {
+		Intent intent;
+		switch (v.getId()) {
+			case R.id.rl_connected: // 已连接WiFi布局下拉
+
+				final FreeWifi freeWiFi = getconnWiFi_FreeWifi(null);
+				if(freeWiFi == null) {
+					return;
+				}
+
+				if(!localWifiUtils.isWifiConnected(getActivity())){
+					showcurrentConnectWiFiDialog(null, true, null, freeWiFi.getWifiName());
+				} else{
+					wifiPop.setCheckClick(new OnClickListener() {
+						@Override
+						public void onClick(View arg0) {
+							Intent intent = new Intent(getActivity(), SafetyInspectActivity.class);
+							intent.putExtra("wifiName", freeWiFi.getWifiName());
+							getActivity().startActivityForResult(intent, MainTabActivity.SafetyInspectRequsetCode);
+						}
+					});
+					wifiPop.setSpeedClick(new OnClickListener() {
+						@Override
+						public void onClick(View arg0) {
+							Intent intent = new Intent(getActivity(), NetSpeedActivity.class);
+							startActivity(intent);
+						}
+					});
+
+					boolean isShared = false;
+					if(freeWiFi.getmFreeWiFiType() == FreeWiFiType.NetWifi)
+						isShared = true;
+					String shareStr = isShared ? "已分享" : "分享";
+
+					wifiPop.setShareClick(shareStr, new OnClickListener() {
+						@Override
+						public void onClick(View view) {
+//						showDialog(SHARE_HOTSPOT_DIALOG);
+							if(latitude != 0)
+								//Toast.makeText(getActivity(), "分享成功！", Toast.LENGTH_LONG).show();
+							    //密码分享对话框
+								showPasswordShareDialog(freeWiFi.getWifiName(),freeWiFi.getWifi_mac_address(),null);
+								//showPasswordConnectDialog(null, freeWiFi.getWifiName(), freeWiFi.getWifi_mac_address(), null, true);
+							else
+								Toast.makeText(getActivity(), "分享wifi要先开启定位服务\n当前定位信息获取不到，请先确保定位服务开启状态", Toast.LENGTH_LONG).show();
+						}
+					});
+					wifiPop.setReportClick(new OnClickListener() {
+						@Override
+						public void onClick(View arg0) {
+							showReportToFishingDialog();
+						}
+					});
+					wifiPop.setStartInternetClick(new OnClickListener() {
+						@Override
+						public void onClick(View arg0) {
+							// 跳转到百宝箱页面
+							main_radio = ((MainTabActivity)getActivity()).getMain_radio();
+							((RadioButton) ((MainTabActivity)getActivity()).findViewById(R.id.tab_news)).setChecked(true);
+						}
+					})
+							.setDisconnectBtnInternetClick(new OnClickListener() {
+								//断开网络
+								@Override
+								public void onClick(View arg0) {
+									// TODO Auto-generated method stub
+									mWifiConnectStateListener.startDisconnect(true);
+									wifiPop.closePop();
+								}
+							}).startPop(WifiStateResult.SUCCESSLOGIN);
+				}
+				break;
+			case R.id.btn_oneKeySearchWiFi: // 一键查询免费WiFi
+				System.out.println("一键查询免费WiFi---------");
+				refreshableView.setTitle("WiFi查找中");
+				refreshableView.animateTopTo(0, true);
+				btn_oneKeySearchWiFi.setVisibility(View.GONE);
+				break;
+			case R.id.ap_disabled_open: // 开启WiFi
+				localWifiUtils.WifiOpen();
+				ap_disabled_status.setVisibility(View.GONE);
+				ap_disabled_opening.setVisibility(View.VISIBLE);
+				ap_disabled_open.setVisibility(View.GONE);
+				sb.setStatus(true);
+				sb.setClickable(false);
+				break;
+			case R.id.headerMenu:
+				intent = new Intent(getActivity(), WiFiMapActivity.class);
+				getActivity().startActivity(intent);
+				break;
+		}
+	}
+
+	@Override
+	public View initView(LayoutInflater inflater) {
+		view = inflater.inflate(R.layout.connect_layout, null);
+		return view;
+	}
+
+	@Override
+	public void initData() {
+		if(localWifiUtils == null){
+			localWifiUtils = new WifiUtils(getActivity());
+		}
+	}
+
+
+	private boolean scanWiFi(){
+		if(localWifiUtils.isWifiOpen()){
+			handler.sendEmptyMessage(ScanWiFi);
+			return true;
+		}
+		return false;
+	}
+
+	@Override
+	public void initEvent() {
+		rl_connected.setOnClickListener(this);
+		ap_disabled_open.setOnClickListener(this);
+		btn_oneKeySearchWiFi.setOnClickListener(this);
+		headerMenu.setOnClickListener(this);
+		Intent NetStateService = new Intent(getActivity(), ListenNetStateService.class);
+		getActivity().bindService( NetStateService, conn, Context.BIND_AUTO_CREATE);
+	}
+
+	@Override
+	public void onHiddenChanged(boolean hidden) {
+		super.onHiddenChanged(hidden);
+
+	}
+
+	private void getwifipsw(){
+
+		StringBuilder bssid = new StringBuilder();
+		WifiUtils wifiList = new WifiUtils(this.getContext());
+		for (ScanResult scanResult : wifiList.getScanResults()) {
+			bssid.append(scanResult.BSSID).append(",");
+		}
+		String Bssid = "";
+
+		if (!TextUtils.isEmpty(bssid)) {
+			Bssid = bssid.toString().substring(0, bssid.length() - 1);
+		}
+
+		HttpService apiService =  HttpManager.getService();
+		Subscription subscription = apiService.GetAccountCopy(Bssid).subscribeOn(Schedulers.io())
+				.unsubscribeOn(Schedulers.io())
+				.observeOn(AndroidSchedulers.mainThread())
+				.subscribe(
+						new Subscriber<BaseResultEntity<List<JsonWifiImp>>>() {
+							@Override
+							public void onCompleted() {
+
+							}
+
+							@Override
+							public void onError(Throwable e) {
+								e.printStackTrace();
+
+							}
+
+							@Override
+							public void onNext(BaseResultEntity<List<JsonWifiImp>> baseResultEntity) {
+								if (baseResultEntity.ret == 200){
+									List<JsonWifi>  jsonWifiList = new ArrayList<JsonWifi>();
+									for (int i = 0; i < baseResultEntity.data.size(); i++) {
+										JsonWifi jsonWifi = new JsonWifi();
+										jsonWifi.setRouter(baseResultEntity.data.get(i).router);
+										jsonWifi.setSsid(baseResultEntity.data.get(i).ssid);
+										jsonWifi.setPasswd(baseResultEntity.data.get(i).passwd);
+										jsonWifi.setLon(baseResultEntity.data.get(i).lon);
+										jsonWifi.setLat(baseResultEntity.data.get(i).lat);
+										jsonWifiList.add(jsonWifi);
+									}
+									List<JsonWifi>  jsonWifit = BaseUtils.getDiffrent(jsonWifiList,DataSupport.findAll(JsonWifi.class));
+									for (JsonWifi jsonWifi : jsonWifit) {
+										jsonWifi.save();
+									}
+								}
+							}
+							@Override
+							public void onStart() {
+								super.onStart();
+							}
+						}
+
+				);
+
+		mCompositeSubscription.add(subscription);
+	}
+
+	private Handler handler = new Handler() {
+		public void handleMessage(android.os.Message msg) {
+			switch (msg.what) {
+				case ScanWiFi:
+					$Log("DetailedState","扫描加载-handler");
+					updateListView();
+					break;
+				case Authenticating:
+				case GetIP:
+				case Connceting:
+					$Log("DetailedState","连接中-handler");
+					connectAnim.start();
+					setSSIDView(msg.obj);
+					fl_connected.setVisibility(View.VISIBLE);
+					tv_state_safe.setVisibility(View.GONE);
+
+					btn_oneKeySearchWiFi.setVisibility(View.GONE);
+					connected.setVisibility(View.GONE);
+					connected_share.setVisibility(View.GONE);
+					dismissAllDialog();
+					break;
+				case ConncetSuccess:
+					Log.e("DetailedState","连接成功-handler");
+					connectAnim.stop();
+					// 显示已连接上的wifi布局,隐藏一键查询按钮
+					fl_connected.setVisibility(View.VISIBLE);
+					tv_state_safe.setVisibility(View.VISIBLE);
+
+					connected.setVisibility(View.VISIBLE);
+					connected_share.setVisibility(View.VISIBLE);
+					btn_oneKeySearchWiFi.setVisibility(View.GONE);
+//				String ssid = localWifiUtils.getConnectedSSID(localWifiUtils.getConnectionInfo());
+
+
+						MainTabActivity parentActivity = (MainTabActivity) getActivity();
+						parentActivity.transformCheckFrament();
+
+
+
+
+					setSSIDView(msg.obj);
+					scanWiFi();
+					dismissAllDialog();
+
+					if (isSharePwd){
+						Toast.makeText(ConnectFragment2.this.getActivity(),"分享热点成功!",Toast.LENGTH_SHORT).show();
+						isSharePwd = false;
+					}
+
+					//成功连接后上传服务器统计连接次数
+					putConnectSuccess();
+
+					// 连接成功，上传密码
+					if (isShare){
+						if (!TextUtils.isEmpty(curShareSSID_pwd) && !curShareSSID_pwd.equals("*")){
+							JsonWifi jsonWifi = new JsonWifi();
+							jsonWifi.setRouter(curShareBSSID);
+							jsonWifi.setSsid(curShareSSID);
+							jsonWifi.setPasswd(curShareSSID_pwd);
+							jsonWifi.setLat(BaseUtils.getSharedPreferences("lat",ConnectFragment2.this.getActivity()));
+							jsonWifi.setLon(BaseUtils.getSharedPreferences("lon",ConnectFragment2.this.getActivity()));
+							jsonWifi.save();
+						}
+						//uploadSinglePsw(curShareBSSID, curShareSSID, curShareSSID_pwd);
+						isShare = false;
+
+
+
+					}
+					break;
+				case AuthenticatError:
+					$Log("DetailedState","身份认证失败-handler");
+					String[] strs = (String[])msg.obj;
+					if(strs[0] != null){
+						int netId = localWifiUtils.IsConfiguration(strs[0] );
+						if(netId != -1) {
+							localWifiUtils.removeNetwork(netId);
+						}
+
+						showPasswordConnectDialog(null, strs[0] , strs[1] , "密码错误", false,false);
+
+						if (isSharePwd){
+							Toast.makeText(ConnectFragment2.this.getActivity(),"密码错误,分享失败!",Toast.LENGTH_SHORT).show();
+							isSharePwd = false;
+						}
+
+
+					}
+
+					// 结束连接动画
+					connectAnim.stop();
+					fl_connected.setVisibility(View.GONE);
+					connected.setVisibility(View.GONE);
+					connected_share.setVisibility(View.GONE);
+					btn_oneKeySearchWiFi.setVisibility(View.GONE);
+					scanWiFi();
+					break;
+				case disconnect:
+					$Log("DetailedState","断开或失败-handler");
+					if(fl_connected.getVisibility() == View.VISIBLE && localWifiUtils.isWifiOpen()){
+						scanWiFi();
+						fl_connected.setVisibility(View.GONE);
+						connected.setVisibility(View.GONE);
+						connected_share.setVisibility(View.GONE);
+						btn_oneKeySearchWiFi.setVisibility(View.GONE);
+					}
+
+					break;
+				case closeLoadDialog:
+					basehideProgressDialog();
+					break;
+				case WIFIPWD:
+					if (msg.obj != null){
+						//获取万能wifi库里的密码并保存到数据库中
+						List<JsonWifi>  Wifis = (List<JsonWifi>)msg.obj;
+						List<JsonWifi>  jsonWifit = BaseUtils.getDiffrent(Wifis,DataSupport.findAll(JsonWifi.class));
+						for (JsonWifi jsonWifi : jsonWifit) {
+							jsonWifi.save();
+						}
+						List<JsonWifi>  wifiList = DataSupport.findAll(JsonWifi.class);
+						Gson gson = new Gson();
+						String aa = gson.toJson(wifiList).toString();
+						JSONObject jsonObject = new JSONObject();
+						try {
+							jsonObject.put("data",aa);
+						} catch (JSONException e) {
+							e.printStackTrace();
+						}
+						scanWiFi();
+
+						String time = System.currentTimeMillis()+"";
+
+						Subscription subscription = apiService.putAccount(JmTools.encryptionEnhanced(time,jsonObject.toString()),time).subscribeOn(Schedulers.io())
+								.unsubscribeOn(Schedulers.io())
+								.observeOn(AndroidSchedulers.mainThread())
+								.subscribe(
+										new Subscriber<BaseResultEntity<PutAccount>>() {
+											@Override
+											public void onCompleted() {
+
+											}
+
+											@Override
+											public void onError(Throwable e) {
+												e.printStackTrace();
+
+											}
+
+											@Override
+											public void onNext(BaseResultEntity<PutAccount> baseResultEntity) {
+												if (!baseResultEntity.data.result.equals("success")){
+													$Log("JsonResult","上传服务器失败");
+												}else {
+													$Log("JsonResult","上传服务器成功");
+												}
+
+											}
+											@Override
+											public void onStart() {
+												super.onStart();
+											}
+										}
+
+								);
+						mCompositeSubscription.add(subscription);
+					}
+
+
+				default:
+					break;
+			}
+		};
+	};
+
+	/**
+	 * 设置WiFi名称，连接状态描述
+	 * @param obj==String[2]   WiFi名称    连接状态
+	 */
+	private void setSSIDView(Object obj){
+		if(obj != null){
+			String[] strs = (String[])obj;
+			tv_ap_ssid.setText(strs[0]);
+			tv_ap_state_describe.setText(strs[1]);
+		}
+	}
+
+	private void dismissAllDialog(){
+		if(passwordConnectDialog != null){
+			passwordConnectDialog.dismiss();
+			passwordConnectDialog = null;
+		}
+		if(currentConnectWiFiDialog != null){
+			currentConnectWiFiDialog.dismiss();
+			currentConnectWiFiDialog = null;
+		}
+		if(alertDialog != null){
+			alertDialog.dismiss();
+			alertDialog = null;
+		}
+	}
+
+
+
+	private void updateListView(){
+      //wifi布局刷新
+		if(curRefreshWiFiListView == null){
+			curRefreshWiFiListView = new RefreshWiFiListView();
+		} else{
+			curRefreshWiFiListView.cancel(true);
+			curRefreshWiFiListView = new RefreshWiFiListView();
+		}
+		curRefreshWiFiListView.execute();
+
+
+	}
+	RefreshWiFiListView curRefreshWiFiListView;
+	class RefreshWiFiListView extends AsyncTask<Void, Void, Void>{
+
+		String curConnSSID;
+
+		@Override
+		protected Void doInBackground(Void... params) {
+			// TODO Auto-generated method stub
+			mCurFreeWifiList = new ArrayList<FreeWifi>();
+			if (scanWiFiResults != null)
+				scanWiFiResults.clear();
+
+			scanWiFiResults = localWifiUtils.getWiFiResult(mCurFreeWifiList);
+
+
+			return null;
+		}
+		@Override
+		protected void onPostExecute(Void result) {
+			// TODO Auto-generated method stub
+			super.onPostExecute(result);
+
+			curConnSSID = localWifiUtils.getConnectedSSID(localWifiUtils.getConnectionInfo());
+			if(curConnSSID == null){
+				if(fl_connected.getVisibility() == View.VISIBLE){
+					curConnSSID = tv_ap_ssid.getText().toString();
+				}
+			}
+
+			if(refreshableView.getVisibility() != View.VISIBLE)
+				refreshableView.setVisibility(View.VISIBLE);
+			if(ap_disabled.getVisibility() != View.GONE){
+				ap_disabled.setVisibility(View.GONE);
+				ap_disabled_status.setVisibility(View.VISIBLE);
+				ap_disabled_opening.setVisibility(View.GONE);
+				ap_disabled_open.setVisibility(View.VISIBLE);
+			}
+
+
+			jsonWifis = DataSupport.findAll(JsonWifi.class);
+			WiFiListLayoutView.refreshData(mCurFreeWifiList, scanWiFiResults, curConnSSID,jsonWifis);
+
+			// 下拉刷新完成
+			if(startRefresh){
+				refreshableView.finishRefreshing();
+				startRefresh = false;
+			}
+		}
+	}
+
+
+	/**
+	 *
+	 * @param netId
+	 * @param SSID
+	 * @param password
+	 * @param BSSID
+	 * @param isInitConn
+	 */
+	public void startConnect(final int netId, final String SSID,final String password, final String BSSID, final boolean isInitConn){
+		new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				int curNetId = localWifiUtils.IsConfiguration(netId, SSID);
+			    if(isInitConn || curNetId == -1){
+					if(password != null){
+						curNetId = localWifiUtils.AddWifiConfig(curNetId, SSID, password, BSSID);
+					}
+				}
+
+				if (curNetId != -1) {
+					localWifiUtils.enableNetwork(curNetId, true);
+					// 得到Wifi配置好的信息
+					isShareWiFi = isShare;
+					curShareBSSID = BSSID;
+					curShareSSID = SSID;
+					curShareSSID_pwd = password;
+
+					localWifiUtils.disconnectWifi(false);
+					if (localWifiUtils.ConnectWifi(curNetId, true)) {//建立连接成功--开始验证身份
+						L.d("WifiUtils","建立连接成功--开始验证身份:  "+curNetId);
+					} else{
+						isShareWiFi = false;
+						curShareSSID = null;
+						curShareSSID_pwd = null;
+					}
+				}
+				$Log("curNetId",curNetId+"");
+			}
+		}).start();
+	}
+
+	//举报功能
+	private void showReportToFishingDialog() {
+		final Dialog dialog = new Dialog(getActivity(),R.style.Dialog);
+		dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+		dialog.setContentView(R.layout.dlg_repor_to_go_fishingt);
+
+		TextView tv_content = (TextView)dialog.findViewById(R.id.dlg_exit_from_home_msg_noti_remind);
+		tv_content.setText(String.format(getResources().getString(R.string.act_wifilist_dlg_report_phishing_wifi_body), localWifiUtils.getConnectedSSID(localWifiUtils.getConnectionInfo())));
+
+		Button btn_ok = (Button)dialog.findViewById(R.id.btn_ok);
+		Button btn_cancel = (Button)dialog.findViewById(R.id.btn_cancel);
+		btn_ok.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Toast.makeText(getActivity(), "举报成功，我们将会进行排查!", Toast.LENGTH_SHORT).show();
+				dialog.dismiss();
+			}
+		});
+		btn_cancel.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				dialog.dismiss();
+			}
+		});
+
+		dialog.show();
+
+	}
+
+	WifiConnectStateListener mWifiConnectStateListener = new WifiConnectStateListener() {
+
+		@Override
+		public void startDisconnect(boolean isToast){
+			localWifiUtils.setCurDealState(-1);
+			localWifiUtils.disconnectWifi(isToast);
+		}
+
+		@Override
+		public void onDisconnect(String SSID) {
+			// TODO Auto-generated method stub  断开上一个连接，准备连接下一个
+			L.d("DetailedState","断开当前连接        "+SSID);
+			if(curConnectSSID != null){
+				curConnectSSID = null;
+			}
+			localWifiUtils.setCurDealState(0);
+			Message msg = new Message();
+			msg.what = disconnect;
+			msg.obj = SSID;
+			handler.sendMessage(msg);
+		}
+
+		@Override
+		public void onConnecting(String SSID) {
+			// TODO Auto-generated method stub  正在连接
+			L.d("DetailedState","正在连接        "+SSID);
+			curConnectSSID = SSID;
+			Message msg = new Message();
+			msg.what = Connceting;
+			String[] strs = {SSID, "正在连接"};
+			msg.obj = strs;
+			handler.sendMessage(msg);
+		}
+
+		@Override
+		public void onConnected(String SSID) {
+			// TODO Auto-generated method stub  已连接
+			L.d("DetailedState","已连接        "+SSID);
+			localWifiUtils.setCurDealState(0);
+
+			if (TextUtils.isEmpty(SSID)) {
+				SSID = localWifiUtils.getConnectedSSID(localWifiUtils.getConnectionInfo());
+			}
+
+
+			curConnectSSID = SSID;
+			Message msg = new Message();
+			msg.what = ConncetSuccess;
+			String[] strs = {SSID, ""};
+			msg.obj = strs;
+			handler.sendMessage(msg);
+
+		}
+
+		@Override
+		public void onAuthenticating(String SSID) {
+			// TODO Auto-generated method stub   身份验证
+			L.d("DetailedState","身份验证        "+SSID);
+			curConnectSSID = SSID;
+			Message msg = new Message();
+			msg.what = Authenticating;
+			String[] strs = {SSID, "身份验证"};
+			msg.obj = strs;
+			handler.sendMessage(msg);
+			WiFiListLayoutView.setVisibility(SSID);
+		}
+
+		@Override
+		public void onAuthenticatError(String SSID, String BSSID) {
+			// TODO Auto-generated method stub
+			L.d("DetailedState","身份验证错误        "+SSID);
+			curConnectSSID = SSID;
+
+
+			Message msg = new Message();
+			msg.what = AuthenticatError;
+			String[] strs = {SSID, BSSID};
+			msg.obj = strs;
+
+			localWifiUtils.setCurDealState(0);
+
+			handler.sendMessage(msg);
+			//dealShareWiFi(false, SSID);
+		}
+
+		@Override
+		public void onGetIP(String SSID) {
+			// TODO Auto-generated method stub   获取IP
+			L.d("DetailedState","获取IP        "+SSID);
+			curConnectSSID = SSID;
+			Message msg = new Message();
+			msg.what = GetIP;
+			String[] strs = {SSID, "获取IP"};
+			msg.obj = strs;
+			handler.sendMessage(msg);
+		}
+
+		@Override
+		public void onScanning() {
+			// TODO Auto-generated method stub
+			boolean isScan = false;
+			if(ap_disabled.getVisibility() != View.GONE){
+				ap_disabled.setVisibility(View.GONE);
+				isScan = true;
+			}
+			if(refreshableView.getVisibility() != View.VISIBLE){
+				refreshableView.setVisibility(View.VISIBLE);
+				isScan = true;
+			}
+			if(isScan){
+				refreshableView.animateTopTo(0, true);
+//				handler.sendEmptyMessage(ScanWiFi);
+			}
+		}
+
+		public void dealShareWiFi(boolean isConnWiFied, String curConnSSID){
+			if(isShareWiFi){
+				if(isConnWiFied){
+					if(curShareSSID != null && curShareSSID.equals(curConnSSID)){
+						FreeWifi freeWiFi = getconnWiFi_FreeWifi(curConnSSID);
+						if(freeWiFi == null)
+							return;
+						freeWiFi.setWifi_psw(curShareSSID_pwd);
+					}
+				} else{
+					isShareWiFi = false;
+					curShareSSID = null;
+					curShareSSID_pwd = null;
+				}
+			}
+		}
+	};
+
+	WifiStateChangedListener mWifiStateChangedListener = new WifiStateChangedListener() {
+
+		@Override
+		public void enabling() {
+			// TODO Auto-generated method stub
+			L.d("WifiUtils","正在打开WiFi");
+			ap_disabled.setVisibility(View.VISIBLE);
+			ap_disabled_status.setVisibility(View.GONE);
+			ap_disabled_opening.setVisibility(View.VISIBLE);
+			ap_disabled_open.setVisibility(View.GONE);
+			sb.setClickable(false);
+		}
+
+		@Override
+		public void enabled() {
+			// TODO Auto-generated method stub
+			L.d("WifiUtils","已打开WiFi");
+			sb.setClickable(true);
+			handler.postDelayed(new Runnable() {
+				@Override
+			public void run() {
+					// TODO Auto-generated method stub
+					handler.sendEmptyMessage(ScanWiFi);
+
+				}
+			}, 100);
+		}
+
+		@Override
+		public void disabling() {
+			// TODO Auto-generated method stub
+			L.d("WifiUtils","正在关闭WiFi");
+			ap_disabled_status.setVisibility(View.GONE);
+			ap_disabled_opening.setVisibility(View.VISIBLE);
+			ap_disabled_open.setVisibility(View.GONE);
+			sb.setClickable(false);
+		}
+
+		@Override
+		public void disabled() {
+			// TODO Auto-generated method stub
+			L.d("WifiUtils","已关闭WiFi");
+
+			ap_disabled.setVisibility(View.VISIBLE);
+			ap_disabled_status.setVisibility(View.VISIBLE);
+			ap_disabled_open.setVisibility(View.VISIBLE);
+			ap_disabled_opening.setVisibility(View.GONE);
+
+			refreshableView.setVisibility(View.INVISIBLE);
+
+			fl_connected.setVisibility(View.GONE);
+			btn_oneKeySearchWiFi.setVisibility(View.GONE);
+			sb.setClickable(true);
+		}
+	};
+
+	private boolean isCallBack = false;
+	private ServiceConnection conn = new ServiceConnection() {
+		@Override
+		public void onServiceDisconnected(ComponentName name) {
+		}
+
+		@Override
+		public void onServiceConnected(ComponentName name, IBinder service) {
+
+			NetBind bind = (NetBind) service;
+			ListenNetStateService netService = bind.getNetService();
+			netService.setOnWifiConnectStateListener(mWifiConnectStateListener);
+			netService.setOnWifiStateChangedListener(mWifiStateChangedListener);
+			isCallBack = true;
+		}
+	};
+
+	@Override
+	public void onDestroy() {
+		super.onDestroy();
+		if (conn != null) {
+			getActivity().unbindService(conn);
+		}
+		mCompositeSubscription.unsubscribe();
+		handler.removeCallbacksAndMessages(null);
+	}
+
+	@Override
+	public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+		if(isChecked){
+			frag_wifilist_wifi_disable_container.setVisibility(View.GONE);
+		}else {
+			localWifiUtils.WifiClose();
+			frag_wifilist_wifi_disable_container.setVisibility(View.VISIBLE);
+		}
+	}
+
+   //连接成功数统计
+	private void putConnectSuccess(){
+		Subscription subscription = apiService.ConnectSuccess(BaseUtils.getMacAddress(ConnectFragment2.this.getActivity())).subscribeOn(Schedulers.io())
+				.unsubscribeOn(Schedulers.io())
+				.observeOn(AndroidSchedulers.mainThread())
+				.subscribe(
+						new Subscriber<BaseResultEntity<PutAccount>>() {
+							@Override
+							public void onCompleted() {
+
+							}
+
+							@Override
+							public void onError(Throwable e) {
+							}
+
+							@Override
+							public void onNext(BaseResultEntity<PutAccount> baseResultEntity) {
+								if (!baseResultEntity.data.result.equals("success")){
+									$Log("JsonResult","上传服务器失败(统计连接次数)");
+								}else {
+									$Log("JsonResult","上传服务器成功(统计连接次数)");
+								}
+							}
+							@Override
+							public void onStart() {
+								super.onStart();
+							}
+						}
+
+				);
+		mCompositeSubscription.add(subscription);
+	}
+
+	// TODO: 2016/11/7 xupp 上传万能钥匙WIFI密码信息到服务器
+	public void uploadPhonePswwk() {
+		new Thread(new Runnable(){
+			@Override
+			public void run() {
+				try {
+					Message msg = new Message();
+					msg.what = WIFIPWD;
+					msg.obj =  new mkQuerypwd().getpwd(ConnectFragment2.this.getActivity(),String.valueOf(latitude),String.valueOf(longitude));
+					handler.sendMessage(msg);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		}).start();
+	}
+
+	/**
+	 * return 已连接的对应的freewifi对象
+	 */
+	public FreeWifi getconnWiFi_FreeWifi(String curConnSSID){
+		if (mCurFreeWifiList == null || scanWiFiResults == null)
+			return  null;
+		if(mCurFreeWifiList.size() == 0 && scanWiFiResults.size() == 0)
+			return null;
+		if(curConnSSID == null || curConnSSID.equals("")){
+			final WifiInfo mcurWifiInfo = localWifiUtils.getConnectionInfo();
+			curConnSSID = localWifiUtils.getConnectedSSID(mcurWifiInfo);
+		}
+
+		if(curConnSSID == null){
+			L.d("WifiUtils","getconnWiFi_FreeWifi---- curConnSSID == null");
+			return null;
+		}
+
+		L.d("WifiUtils","getconnWiFi_FreeWifi---- curConnSSID ="+curConnSSID);
+		for(int i = 0; i < mCurFreeWifiList.size(); i++){
+			L.d("WifiUtils","mCurFreeWifiList.get("+i+").getWifi_mac_address()= "+mCurFreeWifiList.get(i).getWifi_mac_address());
+			if(curConnSSID.equals(mCurFreeWifiList.get(i).getWifiName())){
+				return mCurFreeWifiList.get(i);
+			}
+		}
+
+		for(int i = 0; i < scanWiFiResults.size(); i++){
+			L.d("WifiUtils","scanWiFiResults.get("+i+").getWifi_mac_address()= "+scanWiFiResults.get(i).BSSID);
+			if(curConnSSID.equals(scanWiFiResults.get(i).SSID)){
+				return new FreeWifi(curConnSSID, "", scanWiFiResults.get(i).BSSID, scanWiFiResults.get(i).level, -1,false);
+			}
+		}
+
+		return null;
+	}
+
+	private long getNetFreeWiFiTime = -1;
+	/**
+	 * 更新时间间隔
+	 */
+	private long getNetFreeWiFiTimeSpace = 5000;
+
+	PasswordConnectDialog passwordConnectDialog;
+	/**
+	 *
+	 * @param view
+	 * @param wifiSSID
+	 * @param wifiBSSID
+	 * @param alertStr
+	 * @param isForceShare
+	 */
+	private void showPasswordConnectDialog(final View view, final String wifiSSID, final String wifiBSSID, final String alertStr, boolean isForceShare,final  boolean isPJ) {
+		if(passwordConnectDialog != null){
+			passwordConnectDialog.dismiss();
+			passwordConnectDialog = null;
+		}
+		passwordConnectDialog = new PasswordConnectDialog(getActivity(), scanWiFiResults,isPJ).builder()
+				.setTitle(wifiSSID)
+				.setAlertText(alertStr)
+				.setPositiveButton("连接", new OnClickListener() {
+					@Override
+					public void onClick(View v) {
+						// 进行连接
+						startConnect(-1, wifiSSID, passwordConnectDialog.getPassword(), wifiBSSID, true);
+					}
+				})
+				.setNegativeButton("取消", new OnClickListener() {
+					@Override
+					public void onClick(View arg0) {
+					}
+				});
+		passwordConnectDialog.show();
+	}
+
+	//已连接的想分享对话框
+	PasswordConnectDialog passwordShareDialog;
+	private void showPasswordShareDialog(final String wifiSSID, final String wifiBSSID, final String alertStr) {
+		isSharePwd = true;
+		if(passwordShareDialog != null){
+			passwordShareDialog.dismiss();
+			passwordShareDialog = null;
+		}
+		passwordShareDialog = new PasswordConnectDialog(getActivity(), scanWiFiResults,false).builder()
+				.setTitle("分享   "+wifiSSID)
+				.setAlertText(alertStr)
+				.setShare(true)
+				.setPositiveButton("分享热点", new OnClickListener() {
+					@Override
+					public void onClick(View v) {
+						// 进行连接
+						baseShowProgressDialog("分享中...",true);
+						startConnect(-1, wifiSSID, passwordShareDialog.getPassword(), wifiBSSID, true);
+					}
+				})
+				.setNegativeButton("取消", new OnClickListener() {
+					@Override
+					public void onClick(View arg0) {
+					}
+				});
+		passwordShareDialog.show();
+	}
+
+	CurrentConnectWiFiDialog currentConnectWiFiDialog;
+	private void showcurrentConnectWiFiDialog(final View view, final boolean isConnect, final FreeWifi mFreeWifi, String SSID) {
+
+		if(currentConnectWiFiDialog != null){
+			currentConnectWiFiDialog.dismiss();
+			currentConnectWiFiDialog = null;
+		}
+		if(!isConnect)
+			SSID = mFreeWifi.getWifiName();
+
+		currentConnectWiFiDialog = new CurrentConnectWiFiDialog(getActivity()).builder()
+				.initData(SSID, isConnect)
+				.setDetailClick(new OnClickListener() {
+					@Override
+					public void onClick(View v) {
+						Intent intent = new Intent(getActivity(), WiFiDetailActivity.class);
+						intent.putExtra("WiFiInfo", currentConnectWiFi);
+						getActivity().startActivity(intent);
+					}
+				})
+				.setConnectWiFiClick(new OnClickListener() {
+					@Override
+					public void onClick(View v) {
+						showDialog(view, mFreeWifi);
+					}
+				})
+				.setCancelSavePswClick(new OnClickListener() {
+					@Override
+					public void onClick(View arg0) {
+						if(isConnect){
+							localWifiUtils.removeNetwork(localWifiUtils.getConnectedID(localWifiUtils.getConnectionInfo()));
+							mWifiConnectStateListener.startDisconnect(true);
+							//防止UI更新失败
+							handler.sendEmptyMessage(disconnect);
+						} else{
+							int correlationNetId = localWifiUtils.IsConfiguration(mFreeWifi.netId, mFreeWifi.getWifiName());
+							if(correlationNetId == -1)
+								correlationNetId = mFreeWifi.netId;
+
+							if(correlationNetId != -1){
+								localWifiUtils.removeNetwork(correlationNetId);
+								if(view != null && view.getVisibility() != View.GONE){
+//							view.setVisibility(View.GONE);
+									scanWiFi();
+								}
+							}
+
+						}
+					}
+				})
+				.setDisconnectClick(new OnClickListener() {
+					@Override
+					public void onClick(View arg0) {
+						System.out.println("断开连接");
+						mWifiConnectStateListener.startDisconnect(true);
+						//防止UI更新失败
+						handler.sendEmptyMessage(disconnect);
+					}
+				});
+		currentConnectWiFiDialog.show();
+	}
+
+	CrackSuccessDialog crackSuccessDialog;
+	private void crackSuccess() {
+		BaseUtils.setSharedPreferences("CrackSuccess", "false", getActivity());
+		crackSuccessDialog = new CrackSuccessDialog(getActivity()).builder()
+//		.setTitle(title)
+				.setPositiveButton("确定", new OnClickListener() {
+					@Override
+					public void onClick(View v) {
+						//uploadSinglePsw(curShareBSSID, curShareSSID, curShareSSID_pwd);
+						crackSuccessDialog.dismiss();
+					}
+				})
+				.setNegativeButton("取消", new OnClickListener() {
+					@Override
+					public void onClick(View arg0) {
+						//uploadSinglePsw(curShareBSSID, curShareSSID, curShareSSID_pwd);
+						crackSuccessDialog.dismiss();
+					}
+				});
+		crackSuccessDialog.show();
+	}
+
+
+	/***
+	 * Stop location service
+	 */
+	@Override
+	public void onStop() {
+		// TODO Auto-generated method stub
+		System.out.println("onStop()");
+		locationService.unregisterListener(mListener); //注销掉监听
+		locationService.stop(); //停止定位服务
+		super.onStop();
+	}
+
+	@Override
+	public void onStart() {
+		// TODO Auto-generated method stub
+		System.out.println("onStart()");
+		super.onStart();
+		// -----------location config ------------
+		if(locationService == null){
+			locationService = new LocationService(getActivity());
+			//获取locationservice实例，建议应用中只初始化1个location实例，然后使用，可以参考其他示例的activity，都是通过此种方式获取locationservice实例的
+			//注册监听
+			int type = getActivity().getIntent().getIntExtra("from", 0);
+			if (type == 0) {
+				locationService.setLocationOption(locationService.getDefaultLocationClientOption());
+			} else if (type == 1) {
+				locationService.setLocationOption(locationService.getOption());
+			}
+		}
+		locationService.registerListener(mListener);
+		if(!locationService.isStart())
+			locationService.start();// 定位SDK start之后会默认发起一次定位请求，开发者无须判断isstart并主动调用request
+
+	}
+
+
+	/*****
+	 * 定位结果回调，重写onReceiveLocation方法，可以直接拷贝如下代码到自己工程中修改
+	 */
+	private BDLocationListener mListener = new BDLocationListener() {
+
+		@Override
+		public void onReceiveLocation(BDLocation location) {
+			// TODO Auto-generated method stub
+			if (null != location && location.getLocType() != BDLocation.TypeServerError) {
+
+				latitude = location.getLatitude(); // 获取纬度坐标
+				longitude = location.getLongitude(); // 获取经度坐标
+				$Log("BaiduLocationApiDem", "latitude= " + latitude);
+				$Log("BaiduLocationApiDem", "longitude= " + longitude);
+
+				BaseUtils.setSharedPreferences("lat",latitude+"",ConnectFragment2.this.getActivity());
+				BaseUtils.setSharedPreferences("lon",longitude+"",ConnectFragment2.this.getActivity());
+
+
+				// TODO: 获取经纬度后上传获得的密码信息
+				if (BaseUtils.isConnect(ConnectFragment2.this.getActivity())){
+					if (isFirst){
+						//uploadPhonePswqh();
+						uploadPhonePswwk();
+							getwifipsw();
+						isFirst = false;
+					}
+				}
+			} else{
+				latitude = 0; // 获取纬度坐标
+				longitude = 0; // 获取经度坐标
+			}
+		}
+
+	};
+
+	AlertDialog alertDialog;
+	private void showDialog(final View view, final FreeWifi mFreeWifi) {
+		if(alertDialog != null){
+			alertDialog.dismiss();
+			alertDialog = null;
+		}
+		alertDialog = new AlertDialog(getActivity(), null).builder()
+				.setTitle(mFreeWifi.getWifiName())
+				.setMsg(localWifiUtils.isWifiConnected(getActivity()) ?
+						"您当前已连接WiFi，确认要连接其他WiFi？" : "是否连接" + mFreeWifi.getWifiName())
+				.setPositiveButton("确定", new OnClickListener() {
+					@Override
+					public void onClick(View v) {
+						// 进行连接
+						startConnect(mFreeWifi.netId, mFreeWifi.getWifiName(), mFreeWifi.wifi_psw, mFreeWifi.getWifi_mac_address(), false);
+//				if(isStartConn && view != null && view.getVisibility() != View.GONE)
+//					view.setVisibility(View.GONE);
+					}
+				})
+				.setNegativeButton("取消", new OnClickListener() {
+					@Override
+					public void onClick(View arg0) {
+					}
+				});
+		alertDialog.show();
+	}
+}

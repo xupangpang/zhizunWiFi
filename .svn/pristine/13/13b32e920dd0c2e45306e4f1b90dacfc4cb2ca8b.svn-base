@@ -1,0 +1,351 @@
+package com.zhizun.zhizunwifi.activity;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import net.duohuo.dhroid.ioc.annotation.InjectView;
+import android.net.wifi.ScanResult;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.util.Log;
+import android.view.MenuItem;
+import android.view.animation.Animation;
+import android.view.animation.Animation.AnimationListener;
+import android.view.animation.RotateAnimation;
+import android.widget.TextView;
+
+import com.zhizun.zhizunwifi.R;
+import com.zhizun.zhizunwifi.utils.WifiUtils;
+import com.zhizun.zhizunwifi.view.TestCanvasRotateView;
+
+public class SignalStrengthActivity extends BaseActivity implements AnimationListener{
+
+	@InjectView(id = R.id.tv_ap_name)
+	TextView tv_ap_name;
+	@InjectView(id = R.id.tv_signal_value)
+	TextView tv_signal_value;
+//	@InjectView(id = R.id.signalPoint)
+//	ImageView signalPoint;
+	/** 无线列表集合 **/
+	private List<ScanResult> wifiResultList;
+	/** WifiUtils工具类 **/
+	private WifiUtils localWifiUtils;
+	private String wifiSSID;
+	private int signalStrength; // 信号强度
+	private final int UPDATE_SIGNAL = 1;// 进行中
+	private long begin = 0;
+	private long end = 0; //  结束时的角度
+	private RotateAnimation rotateAnimation;
+	//	private int test[] = new int[]{100/*,80,60,50,60,80,110*/};
+	private int test[] = new int[]{50/*,80,60,50,60,80,110*/};
+	private int index = 0;
+
+	TestCanvasRotateView rotateView;
+	private float rotateAngle;
+	private float maxAngle = 264;
+	private boolean Scan = true;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.wifitools_signal_detector);
+		rotateView = (TestCanvasRotateView) findViewById(R.id.rotateView);
+		wifiSSID = getIntent().getStringExtra("wifiSSID");
+		wifiResultList = (List<ScanResult>) getIntent().getSerializableExtra("scanList");
+		localWifiUtils = new WifiUtils(this);
+		initView();
+		Scan();
+		if(wifiResultList != null){
+			for(ScanResult result : wifiResultList){
+				if(wifiSSID != null && wifiSSID.equals(result.SSID)){
+					signalStrength = Math.abs(result.level);
+					getEndAngel(signalStrength);
+//					handler.sendEmptyMessage(UPDATE_SIGNAL);
+					// 情况信号信息
+					wifiResultList = null;
+					break;
+				}
+			}
+		}
+
+//		test();
+	}
+
+	// 进来先用原来扫描好的数据，进行第一次旋转，
+	// 然后开始扫描，获得扫描好的数据，进行第二次旋转，
+	// 无限进行扫描，把扫描的值存好，继续扫描，把扫描的值在3秒内进行旋转动画
+	private void doWhileScan(){
+//		localWifiUtils.WifiStartScan();
+//		wifiResultList = localWifiUtils.getScanResults();
+
+		new Handler().postDelayed(new Runnable() {
+			@Override
+			public void run() {
+				do {
+					// dosomething
+					wifiResultList = localWifiUtils.getScanResults();
+					Log.i("NetSpeedActivity", "wifiResultList: " + (wifiResultList == null));
+					try {
+						Thread.sleep(6000);
+						if(wifiResultList != null){
+							for(ScanResult result : wifiResultList){
+								if(wifiSSID != null && wifiSSID.equals(result.SSID)){
+									signalStrength = Math.abs(result.level);
+//									signalStrength = test[index];
+//									index++;
+//									if(index == test.length){
+//										index = 0;
+//									}
+									handler.sendEmptyMessage(UPDATE_SIGNAL);
+
+									break;
+								}
+							}
+						}
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				} while (wifiResultList == null);
+			}
+		}, 0);
+
+	}
+
+	private void Scan(){
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				while(Scan){
+					try {
+						Thread.sleep(6000);
+
+						wifiResultList = localWifiUtils.getScanResults();
+						Log.i("NetSpeedActivity", "wifiResultList: " + (wifiResultList == null));
+						if(wifiResultList != null){
+							for(ScanResult result : wifiResultList){
+								if(wifiSSID != null && wifiSSID.equals(result.SSID)){
+									signalStrength = Math.abs(result.level);
+									getEndAngel(signalStrength);
+//									handler.sendEmptyMessage(UPDATE_SIGNAL);
+									// 情况信号信息
+									wifiResultList = null;
+									break;
+								}
+							}
+						}
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				}
+			}
+		}).start();
+	}
+
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		Scan = false; // 退出后结束线程
+	}
+	private void initView() {
+		// 设置左侧自定义图标不可点击，出现系统自带的返回箭头，点击可finish
+		getActionBar().setDisplayHomeAsUpEnabled(true);
+
+		// 隐藏logo和icon
+		getActionBar().setDisplayShowHomeEnabled(false);
+		tv_ap_name.setText(wifiSSID);
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+			case android.R.id.home:
+				finish();
+				return true;
+
+		}
+		return false;
+	}
+
+	private Handler handler = new Handler() {
+		long tem = 0;
+		long falg = 0;
+		long numberTotal = 0;
+		List<Long> list = new ArrayList<Long>();
+
+		@Override
+		public void handleMessage(Message msg) {
+			int value = msg.what;
+			switch (value) {
+				case UPDATE_SIGNAL:
+
+					Log.i("NetSpeedActivity", "handler接受到signalStrength: " + signalStrength);
+//				startAnimation(Double.parseDouble(signalStrength+""));
+//				tv_signal_value.setText(signalStrength + "%");
+//				setText(signalStrength);
+					break;
+
+			}
+		}
+	};
+
+	private void setText(int signalStrength){
+		if (signalStrength > 100) {
+			tv_signal_value.setText(0 + "%");
+		} else if (signalStrength > 80) {
+			tv_signal_value.setText(signalStrength + "%");
+		} else if (signalStrength > 70) {
+			tv_signal_value.setText(signalStrength + "%");
+		} else if (signalStrength > 60) {
+			tv_signal_value.setText(signalStrength + "%");
+		} else if (signalStrength > 50) {
+			tv_signal_value.setText(100 + "%");
+		}
+	}
+
+	/*protected void startAnimation(double d) {
+		AnimationSet animationSet = new AnimationSet(true);
+		animationSet.setFillAfter(true);
+		end = getEndAngel(d);
+
+		Log.i("NetSpeedActivity", "begin:" + begin + "***end:" + end);
+		rotateAnimation = new RotateAnimation(begin, end, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+		rotateAnimation.setAnimationListener(this);
+		rotateAnimation.setDuration(2000);
+		if((end - begin) > 200){
+			rotateAnimation.setDuration(5000);
+		}else if((end - begin) > 100){
+			rotateAnimation.setDuration(3000);
+		}
+		rotateAnimation.setFillAfter(true);//是指动画结束是画面停留在此动画的最后一帧。
+		animationSet.addAnimation(rotateAnimation);
+		signalPoint.startAnimation(animationSet);
+
+		begin = end;
+
+		// 清空信号信息
+//		wifiResultList = null;
+//		scan();
+	}*/
+
+	private void getEndAngel(float number) {
+		float angel = (float) (Math.abs((number - 100)))/50 * maxAngle;
+		Invalidate(angel);
+		Log.i("NetSpeedActivity", "信号强度: " + number);
+		Log.i("NetSpeedActivity", "旋转角度: " + angel);
+//		double angel = 0;
+//		number = number -100;
+		/*if (number >= 100) {
+			angel = 0; //无信号
+		}else if (number >= 70 && number < 100) {
+			angel = 78.3333; //弱信号
+		} else if (number >= 60 &&  number <70) {
+			angel = 156.666666; //良信号
+		} else if (number >= 50 &&  number <60) {
+//			angel = 235 * number / 100; // 强
+			angel = 265; // 强
+		}
+		return angel;*/
+	}
+
+	// 旋转动画
+	/*void test(){
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				while(true){
+					signalStrength = test[index];
+					index++;
+					if(index == test.length){
+						index = 0;
+					}
+					handler.sendEmptyMessage(UPDATE_SIGNAL);
+					try {
+						Thread.sleep(3000);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				}
+			}
+		}).start();
+	}*/
+
+	void updateText(){
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				while(true){
+					signalStrength = test[index];
+					index++;
+					if(index == test.length){
+						index = 0;
+					}
+					handler.sendEmptyMessage(UPDATE_SIGNAL);
+					try {
+						Thread.sleep(3000);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				}
+			}
+		}).start();
+	}
+
+	@Override
+	public void onAnimationStart(Animation animation) {
+
+	}
+
+	@Override
+	public void onAnimationEnd(Animation animation) {
+
+	}
+
+	@Override
+	public void onAnimationRepeat(Animation animation) {
+
+	}
+
+	// 旋转画布
+	void Invalidate(final float Angle){
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				// 信号增强
+				if(rotateAngle < Angle){
+					Log.i("NetSpeedActivity", "信号增强----- " + "rotateAngle= " + rotateAngle);
+					while(rotateAngle <= Angle){
+						rotateAngle += 5;
+						rotateView.setAngle(rotateAngle);
+
+						// 信号减弱
+//				while(maxAngle > rotateAngle){
+//					maxAngle -= 4;
+//					rotateView.setAngle(maxAngle);
+
+						System.out.println(rotateAngle);
+						try {
+							Thread.sleep(100);
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
+					}
+				} else if (rotateAngle > Angle) {
+					Log.i("NetSpeedActivity", "信号减弱----- " + "rotateAngle= " + rotateAngle);
+					while (rotateAngle > Angle) {
+						rotateAngle -= 2;
+						rotateView.setAngle(rotateAngle);
+
+						System.out.println(rotateAngle);
+						try {
+							Thread.sleep(100);
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
+					}
+				}
+
+			}
+		}).start();
+	}
+}

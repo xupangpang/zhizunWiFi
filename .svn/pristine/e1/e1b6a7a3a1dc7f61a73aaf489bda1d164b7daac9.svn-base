@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/push_sdk_ic_dlg_border_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|center"
+        android:padding="12.0dip" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="10.0dip"
+            android:text="连接 CXMX-AAA"
+            android:textColor="#ff0285f0"
+            android:textSize="18.0dip" />
+    </LinearLayout>
+
+    <!-- <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:background="#ff8ac4f3" /> -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|center"
+        android:orientation="vertical"
+        android:padding="12.0dip" >
+
+       <EditText
+	        android:id="@+id/password"
+	        style="@style/Lt_EditText"
+	        android:layout_marginBottom="10.0dip"
+	        android:layout_marginTop="7.0dip"
+	        android:hint="@string/frg_wifilist_dlg_hint_pwd"
+	        android:inputType="textPassword"
+	        android:singleLine="true" />
+       
+       <CheckBox
+	        android:id="@+id/dlg_exit_from_home_checkbox_cb"
+	        style="@style/Lt_CheckBox"
+	        android:text="显示密码" />
+       
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="#ff666666" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_cancel"
+            style="@style/Lt_Dlg_Button"
+            android:background="@drawable/push_sdk_lt_bg_dlg_btn_left"
+            android:text="@string/push_dlg_btn_cancel"
+            android:textColor="@color/push_sdk_lt_dlg_btn_cancel" />
+
+        <View
+            android:layout_width="1.0px"
+            android:layout_height="fill_parent"
+            android:background="#ff666666" />
+
+        <Button
+            android:id="@+id/btn_ok"
+            style="@style/Lt_Dlg_Button"
+            android:background="@drawable/push_sdk_lt_bg_dlg_btn_right"
+            android:text="@string/push_dlg_btn_ok"
+            android:textColor="@color/push_sdk_lt_dlg_btn_ok" />
+    </LinearLayout>
+
+</LinearLayout>

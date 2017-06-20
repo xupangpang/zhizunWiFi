@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="res-2.0.0-beta2">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/1664790aa81332359dba3932be8c213955b63919/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/1664790aa81332359dba3932be8c213955b63919/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.qiujuer.genius/res/2.0.0-beta2/24c73ef095fdbcbf0d4c124c945ac455f7df3eb5/res-2.0.0-beta2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="20.0dip"
+    android:paddingLeft="20.0dip"
+    android:paddingRight="20.0dip"
+    android:paddingTop="10.0dip" >
+
+    <TextView
+        android:id="@+id/alertText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5.0dip"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#fd2846"
+        android:textSize="13dp"
+        android:text="ssssssss"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:id="@+id/password_panel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:addStatesFromChildren="true"
+        android:background="#ededed"
+         >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/password_ico"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center_vertical"
+            android:background="#cecdcd" />
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="12.0dip"
+            android:layout_weight="3.0"
+            android:addStatesFromChildren="true" >
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="0.0dip"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.0"
+                android:background="@android:color/transparent"
+                android:password="true"
+                android:singleLine="true"
+                android:textColor="@color/blue"
+                android:textSize="14.0dp" />
+
+            <CheckBox
+                android:id="@+id/show_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center_vertical"
+                android:button="@drawable/password_icon" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/bt_capdl_try"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="left"
+        android:button="@drawable/share_checkbox_selector"
+        android:textSize="15dp"
+        android:checked="false"
+        android:textColor="#999999"
+        android:text="  分享为公共WiFi"
+        android:visibility="gone"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_capdl_try"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        android:background="@drawable/btn_list_cell"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:id="@+id/share_wifi_warning"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/detail_icon"
+            android:visibility="visible"
+            />
+
+        <TextView
+            android:id="@+id/share_wifi_warning_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10.0dip"
+            android:drawablePadding="5.0dip"
+            android:textSize="12dp"
+            android:textColor="#999999"
+            android:visibility="visible"
+            android:text="非热点主人或未经热点主人同意请勿使用分享热点功能；密码将通过128位高度不对称加密算法传输，确保密码安全。"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        >
+
+        <net.qiujuer.genius.ui.widget.Button
+            android:id="@+id/btn_cancel"
+            android:background="@drawable/btn_grey_hollow_corner"
+            app:gTouchColor="@color/black_alpha_48"
+            app:gTouchEffect="auto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#666666"
+            android:textSize="16dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="取 消"
+            android:layout_marginRight="20dp"
+            />
+
+        <net.qiujuer.genius.ui.widget.Button
+            android:id="@+id/bt_capdl_connect"
+            android:layout_width="0dp"
+            android:background="@drawable/btn_blue_corner"
+            app:gTouchColor="@color/black_alpha_48"
+            app:gTouchEffect="auto"
+            app:gTouchDurationRate="0.7"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="连 接" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/connect_ispsw_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="用密码登录"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="15dp"
+        android:textColor="#288efd"
+        android:visibility="gone"
+        />
+
+
+
+</LinearLayout>

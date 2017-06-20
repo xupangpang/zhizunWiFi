@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "E:\\Android\\ZZwifi\\ZhizunWIFI\\app\\build\\intermediates\\res\\merged\\release\\drawable-zh-hdpi-v4\\obtaining_vcd.png",
+        "source": "E:\\Android\\ZZwifi\\ZhizunWIFI\\app\\src\\main\\res\\drawable-zh-hdpi\\obtaining_vcd.png"
+    },
+    {
+        "merged": "E:\\Android\\ZZwifi\\ZhizunWIFI\\app\\build\\intermediates\\res\\merged\\release\\drawable-zh-hdpi-v4\\setupguide_appname.png",
+        "source": "E:\\Android\\ZZwifi\\ZhizunWIFI\\app\\src\\main\\res\\drawable-zh-hdpi\\setupguide_appname.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\build\\intermediates\\res\\merged\\release\\drawable-zh-hdpi-v4\\setupguide_appname.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\zhizunwifi\\app\\src\\main\\res\\drawable-zh-hdpi\\setupguide_appname.png"
+    }
+]

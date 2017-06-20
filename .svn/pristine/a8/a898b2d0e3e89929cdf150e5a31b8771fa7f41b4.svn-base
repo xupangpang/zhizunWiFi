@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#fffafafa" >
+
+        <TextView
+            android:id="@+id/status_check"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/btn_list_cell"
+            android:drawablePadding="3.0dip"
+            android:drawableTop="@drawable/btn_portal_check_by_user"
+            android:gravity="center"
+            android:paddingBottom="10.0dip"
+            android:paddingTop="10.0dip"
+            android:text="安全"
+            android:textColor="#ffaaabbb"
+            android:textSize="12.0dip" 
+            android:clickable="true" />
+
+        <View
+            android:layout_width="1.0dip"
+            android:layout_height="30.0dip"
+            android:layout_gravity="center"
+            android:background="#fff0f0f0"
+            android:contentDescription="@string/empty" />
+
+        <TextView
+            android:id="@+id/status_speed"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/btn_list_cell"
+            android:drawablePadding="3.0dip"
+            android:drawableTop="@drawable/btn_portal_newcheck"
+            android:gravity="center"
+            android:paddingBottom="10.0dip"
+            android:paddingTop="10.0dip"
+            android:text="测速"
+            android:textColor="#ffaaabbb"
+            android:textSize="12.0dip" 
+            android:clickable="true" />
+
+        <View
+            android:layout_width="1.0dip"
+            android:layout_height="30.0dip"
+            android:layout_gravity="center"
+            android:background="#fff0f0f0"
+            android:contentDescription="@string/empty" />
+
+        <TextView
+            android:id="@+id/status_share"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/btn_list_cell"
+            android:drawablePadding="3.0dip"
+            android:drawableTop="@drawable/btn_portal_newshare_default"
+            android:gravity="center"
+            android:paddingBottom="10.0dip"
+            android:paddingTop="10.0dip"
+            android:text="分享"
+            android:textColor="#ffaaabbb"
+            android:textSize="12.0dip" 
+            android:clickable="true" />
+
+        <View
+            android:layout_width="1.0dip"
+            android:layout_height="30.0dip"
+            android:layout_gravity="center"
+            android:background="#fff0f0f0"
+            android:contentDescription="@string/empty" />
+
+        <TextView
+            android:id="@+id/status_report"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/btn_list_cell"
+            android:drawablePadding="3.0dip"
+            android:drawableTop="@drawable/btn_portal_report"
+            android:gravity="center"
+            android:paddingBottom="10.0dip"
+            android:paddingTop="10.0dip"
+            android:text="举报"
+            android:textColor="#ffaaabbb"
+            android:textSize="12.0dip" 
+            android:clickable="true" />
+    </LinearLayout>
+
+</LinearLayout>

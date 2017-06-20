@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.qiujuer.genius.res"
+    android:versionCode="1605031030"
+    android:versionName="2.0.0-beta2" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="23" />
+
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true" />
+
+</manifest>

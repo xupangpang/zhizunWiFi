@@ -1,0 +1,16 @@
+package com.zhizun.zhizunwifi.utils;  
+
+import android.content.Context;
+  
+public class SystemUtil {  
+  
+	/**
+	 *
+	 */
+	public static int dpTurnPx(Context context, int padding_in_dp){
+	    final float scale = context.getResources().getDisplayMetrics().density;
+	    int padding_in_px = (int) (padding_in_dp * scale + 0.5f);
+	    return padding_in_px;
+	}
+  
+}  
