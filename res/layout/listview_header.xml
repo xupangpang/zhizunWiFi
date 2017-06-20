@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:durian="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/listview_header_img"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:scaleType="center" />
+
+    <RelativeLayout
+        android:id="@+id/listview_header_content"
+        android:layout_width="fill_parent"
+        android:layout_height="100.0dip" >
+
+        <LinearLayout
+            android:id="@+id/listview_header_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/listview_header_hint_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下拉扫描免费WiFi"
+                android:textColor="#50000000" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/listview_header_text"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="-35.0dip"
+            android:contentDescription="@null"
+            android:src="@drawable/listview_arrow" />
+
+        <!-- <com.qihoo.freewifi.view.Loading
+            android:id="@+id/loading_pl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/listview_header_text"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="-40.0dip"
+            android:visibility="invisible"
+            durian:duration="1000"
+            durian:src="@drawable/loading" /> -->
+            
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignLeft="@+id/listview_header_text"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="-40.0dip"
+                android:indeterminateDrawable="@drawable/loading_pb"
+                android:visibility="invisible" />
+
+    </RelativeLayout>
+
+</FrameLayout>

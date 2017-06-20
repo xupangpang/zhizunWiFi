@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="200" android:drawable="@drawable/crack_gif_1" />
+    <item android:duration="200" android:drawable="@drawable/crack_gif_2" />
+    <item android:duration="200" android:drawable="@drawable/crack_gif_3" />
+    <item android:duration="200" android:drawable="@drawable/crack_gif_4" />
+    <item android:duration="200" android:drawable="@drawable/crack_gif_5" />
+    <item android:duration="200" android:drawable="@drawable/crack_gif_6" />
+    <item android:duration="200" android:drawable="@drawable/crack_gif_7" />
+    <item android:duration="200" android:drawable="@drawable/crack_gif_8" />
+    <item android:duration="200" android:drawable="@drawable/crack_gif_9" />
+    <item android:duration="200" android:drawable="@drawable/crack_gif_10" />
+    <item android:duration="200" android:drawable="@drawable/crack_gif_11" />
+    <item android:duration="200" android:drawable="@drawable/crack_gif_12" />
+    <item android:duration="200" android:drawable="@drawable/crack_gif_13" />
+    <item android:duration="200" android:drawable="@drawable/crack_gif_14" />
+    <item android:duration="200" android:drawable="@drawable/crack_gif_15" />
+    <item android:duration="200" android:drawable="@drawable/crack_gif_16" />
+</animation-list>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <include
+                    android:id="@+id/titleLayout"
+                    layout="@layout/actionbar_bg" />
+
+                <ImageView
+                    android:id="@+id/img_ad"
+                    android:layout_width="fill_parent"
+                    android:layout_height="280dp"
+                    android:scaleType="fitXY" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="3.5"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/title"
+                            android:layout_width="fill_parent"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical|left"
+                            android:gravity="center_vertical|left"
+                            android:singleLine="true"
+                            android:text="[独家] 易信260分钟免费打"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/inventory"
+                            android:layout_width="fill_parent"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical|left"
+                            android:gravity="center_vertical|left"
+                            android:singleLine="true"
+                            android:text="库存4976件"
+                            android:textColor="#323232"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/discount_money"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_vertical|left"
+                        android:layout_weight="2.5"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="￥0.1"
+                        android:textColor="@color/red_error"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="#323232" />
+
+                <WebView
+                    android:id="@+id/inventory_introduction"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="10dp"
+                    android:text="商品介绍"
+                    android:textColor="#323232"
+                    android:textSize="14sp" />
+
+                <WebView
+                    android:id="@+id/inventory_explain"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="10dp"
+                    android:text="商品说明"
+                    android:textColor="#323232"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btn_buy"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:background="#EDF3EE"
+            android:gravity="center"
+            android:text="立即购买"
+            android:textColor="@color/red_error"
+            android:textSize="17sp"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</RelativeLayout>

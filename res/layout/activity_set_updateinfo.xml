@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff5f5f5"
+    android:orientation="vertical" 
+    android:fitsSystemWindows="true">
+
+    <include
+        android:id="@id/viewHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip"
+        layout="@layout/view_header1" />
+
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/input_bg"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/Smile.TextView._Black"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:text="昵称"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/edit_nick"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:singleLine="true"
+            android:maxLength="10"
+            android:background="@color/transparent"
+            android:gravity="center_vertical"
+            android:hint="请输入昵称···" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/button_set_updateinfo"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            android:drawableBottom="@drawable/base_action_bar_true_bg_selector"
+            android:gravity="center" />
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>
+

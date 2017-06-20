@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/nav_background"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/viewHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip"
+        layout="@layout/view_header1" />
+
+    <TextView
+        android:id="@+id/txtVersion"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30.0dip"
+        android:layout_marginTop="30.0dip"
+        android:drawablePadding="20.0dip"
+        android:drawableTop="@drawable/icon"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="13.0sp" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/about_bg_block"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/viewAboutFunction"
+                    android:layout_width="fill_parent"
+                    android:layout_height="48.0dip"
+                    android:background="@drawable/btn_list_cell"
+                    android:paddingLeft="20.0dip"
+                    android:paddingRight="18.0dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@drawable/about_icon_function"
+                        android:drawablePadding="10.0dip"
+                        android:gravity="center_vertical"
+                        android:text="@string/about_function"
+                        android:textColor="#ff888999"
+                        android:textSize="14.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@null"
+                        android:src="@drawable/mine_icon_arrow" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="2.0px"
+                    android:layout_marginLeft="37.0dip"
+                    android:background="#fff0f0f0" />
+
+                <RelativeLayout
+                    android:id="@+id/viewAboutService"
+                    android:layout_width="fill_parent"
+                    android:layout_height="48.0dip"
+                    android:background="@drawable/btn_list_cell"
+                    android:clickable="true"
+                    android:paddingLeft="18.0dip"
+                    android:paddingRight="18.0dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@drawable/about_icon_service"
+                        android:drawablePadding="10.0dip"
+                        android:gravity="center_vertical"
+                        android:text="@string/about_service"
+                        android:textColor="#ff888999"
+                        android:textSize="14.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@null"
+                        android:src="@drawable/mine_icon_arrow" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="2.0px"
+                    android:layout_marginLeft="37.0dip"
+                    android:background="#fff0f0f0" />
+
+                <RelativeLayout
+                    android:id="@+id/viewAboutPrivacy"
+                    android:layout_width="fill_parent"
+                    android:layout_height="48.0dip"
+                    android:background="@drawable/btn_list_cell"
+                    android:clickable="true"
+                    android:paddingLeft="18.0dip"
+                    android:paddingRight="18.0dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@drawable/about_icon_privacy"
+                        android:drawablePadding="10.0dip"
+                        android:gravity="center_vertical"
+                        android:text="@string/about_privacy"
+                        android:textColor="#ff888999"
+                        android:textSize="14.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@null"
+                        android:src="@drawable/mine_icon_arrow" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/about_copyright"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10.0dip"
+                    android:src="@drawable/about_copyright" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

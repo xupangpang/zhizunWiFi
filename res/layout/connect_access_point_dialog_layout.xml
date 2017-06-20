@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="20.0dip"
+    android:paddingLeft="20.0dip"
+    android:paddingRight="20.0dip"
+    android:paddingTop="10.0dip" >
+
+    <TextView
+            android:id="@+id/alertText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5.0dip"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#FFD85B53"
+            android:textSize="14.0dip"
+            android:visibility="gone" />
+    
+    <LinearLayout
+        android:id="@+id/username_panel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15.0dip"
+        android:addStatesFromChildren="true"
+        android:background="@drawable/edit_text_bg"
+        android:paddingBottom="10.0dip"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="10.0dip" >
+
+        <TextView
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="@string/username"
+            android:textColor="#ffbbbbbb"
+            android:textSize="14.0dip" />
+
+        <View
+            android:layout_width="1.0dip"
+            android:layout_height="14.0dip"
+            android:layout_gravity="center_vertical"
+            android:background="#33000000" />
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="12.0dip"
+            android:layout_weight="3.0"
+            android:background="@android:color/transparent"
+            android:singleLine="true"
+            android:textColor="@color/blue"
+            android:textSize="14.0dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/password_panel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:addStatesFromChildren="true"
+        android:background="@drawable/edit_text_bg"
+        android:padding="10.0dip" >
+
+        <TextView
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="@string/password"
+            android:textColor="#ffbbbbbb"
+            android:textSize="14.0dip" />
+
+        <View
+            android:layout_width="1.0dip"
+            android:layout_height="14.0dip"
+            android:layout_gravity="center_vertical"
+            android:background="#33000000" />
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="12.0dip"
+            android:layout_weight="3.0"
+            android:addStatesFromChildren="true" >
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.0"
+                android:background="@android:color/transparent"
+                android:password="true"
+                android:singleLine="true"
+                android:textColor="@color/blue"
+                android:textSize="14.0dip" />
+
+            <CheckBox
+                android:id="@+id/show_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:button="@drawable/password_icon" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_capdl_share"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:paddingTop="15dp">
+
+        <CheckBox
+            android:id="@+id/cb_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:button="@null"
+            android:checked="true"
+            android:drawableLeft="@drawable/guide_ux_cb_bg"
+            android:drawablePadding="5.0dip"
+            android:visibility="visible" />
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分享WiFi "
+            android:textColor="#ff888999"
+            android:textSize="14.0dip"
+            android:layout_marginLeft="5.0dip"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_capdl_try"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        android:background="@drawable/btn_list_cell"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingBottom="15.0dip"
+        android:paddingTop="15.0dip" >
+
+        <TextView
+            android:id="@+id/bt_capdl_try"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:drawableLeft="@drawable/icon_pwd_left"
+            android:drawablePadding="5.0dip"
+            android:text="尝试免密码连接" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_capdl_connect"
+        style="@style/Button.Blue"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        android:text="连 接" />
+
+    <Button
+        android:id="@+id/btn_cancel"
+        style="@style/Button.Grey.Hollow"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        android:text="取 消" />
+
+</LinearLayout>

@@ -1,0 +1,932 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\exploded-aar\ZhizunWIFI\zhizunWIFI_dhroid3\unspecified\jars\libs\commons-codec-1.9.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="4e59f14b69400cefb20624c699e887a7b66094f2">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\commons-codec-1.9_2818fbe92dee1b8ff1706080ed418031d05669b1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.8.1\2a8e0aa38a2e21cb39e2f5a7d6704cbdc941da0\gson-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="02a8e0aa38a2e21cb39e2f5a7d6704cbdc941da0">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\gson-2.8.1_83db0f1a5c1f672e459d878df079f3d0d00fee1d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\exploded-aar\ZhizunWIFI\social_sdk_library_project\unspecified\jars\libs\SocialSDK_sms.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="7ecab06df67c2dde8928f787845c4aca4528c175">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\SocialSDK_sms_f15e0623a780010248bb7ca20b3e9c9c597d9d7c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\Desktop\zhizunwifi\app\libs\umeng_social_api.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="35352ed1ecfb082e85996474c3048332d1374276">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\umeng_social_api_6ad35c3242539d7bd98746b2a9f6a4f74cb483c1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\Desktop\zhizunwifi\app\libs\utdid4all-1.0.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4345fa0a5a7768f2f9c86aaab7db9e2906765193">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\utdid4all-1.0.4_963a61be44663436d00ab9a55cfcc37d52cb4f66.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\libs\baidumapapi_util_v3_7_1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="9ec067777962d6ad4b7d4c0e1aff93e83180d207">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\baidumapapi_util_v3_7_1_a3d18bb53839582469c1f7e9e75fdfb54355be2c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\Desktop\zhizunwifi\app\libs\umeng_social_net.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ae5e7e8f78a0b150398087327eda81f872cdcae2">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\umeng_social_net_3d9172632eeec03918bd4cebddb222af16d3457a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\exploded-aar\ZhizunWIFI\zhizunWIFI_dhroid3\unspecified\jars\libs\httpmime-4.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="3b762f16a072dbe778a2b72531974b1f133cb15b">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\httpmime-4.1.1_651a7778dc57e2e0f728ef42b9fe6df7302ea808.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.8.0\5a11f020cce2d11eb71ba916700600e18c4547e7\okhttp-3.8.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5a11f020cce2d11eb71ba916700600e18c4547e7">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\okhttp-3.8.0_33bf805d1981bef7597a6907c10bb939ca43c5d6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\50b69faf6d8ca2e3afd48db800459c0bc902472d\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="75bfbf7ea42b9c0b6b18070f60fda66932904331">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\classes_e9effdbed9fbe6b39edc97f4755fb9813f3a86db.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="75b1f366ff0bbc78f8b1f7cf0dc82e7c53afef6a">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-25.0.0_52ce74cce5506c38b1a8027469a9f3166556e5a4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\exploded-aar\ZhizunWIFI\social_sdk_library_project\unspecified\jars\libs\SocialSDK_WeiXin_2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="0bb25d0e3e4015045501a5d90a2a72d39bcb000d">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\SocialSDK_WeiXin_2_367d07582e2acaaa63203b686c8481db7b7c7585.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\libs\Bmob_Push_V0.6beta_20150408.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="db21ec99c2c7bf91c67bf80f5c5c49a92dd0562e">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\Bmob_Push_V0.6beta_20150408_637732c8a5db08a06713853dc4b627323e8498c4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.8.0\c4ba5371a29ac9b2ad6129b1d39ea38750043eff\gson-2.8.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c4ba5371a29ac9b2ad6129b1d39ea38750043eff">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\gson-2.8.0_eca52502deb48db964b5e6d39d16c5eaa7bb0998.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\exploded-aar\com.trello\rxlifecycle-android\1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="5db4505b366d1bdf9c7fe858119c119236cc1c5c">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\com.trello-rxlifecycle-android-1.0_e5deed26c23ce81d2f7488572c812d27b95a2675.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.trello\rxlifecycle\1.0\6a38e2cd80f46ecaf6553b2eb5a05eee6d472fdb\rxlifecycle-1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="6a38e2cd80f46ecaf6553b2eb5a05eee6d472fdb">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\rxlifecycle-1.0_312719db61004e01c00ed151ca12bd3fdb2265ba.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\42934becf9b3d5615775a85440e3f9b25c2b3cd2\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d29714cc76b38157e3cbd034c66e1ec808eb4c19">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\classes_da746634c4c06a235895ed6c3f6606a49f66807b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\Desktop\zhizunwifi\app\libs\baidumapapi_search_v3_7_1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="682cacce5564412cda8c29bf0e405c474e773379">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\baidumapapi_search_v3_7_1_f237ca4539fea34b0c33fe3f89afb16a6442ea54.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\Desktop\zhizunwifi\app\libs\umeng_social_shareview.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="073317d66b5c48377b80a0d927bbbf2269a40478">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\umeng_social_shareview_5bf5d7f075520d7b1f3f2eac21e29e2b75587e76.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\exploded-aar\ZhizunWIFI\xUtils_lib\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="f5ec6a721253bb381b3bdb9e756469d6868cd842">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\ZhizunWIFI-xUtils_lib-unspecified_f05a93c329b444e1bea9ba65bcabd06367f55580.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\io.reactivex\rxjava\1.2.2\5b083e2a33225bc1c7b11678b7608e2bead4e417\rxjava-1.2.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="5b083e2a33225bc1c7b11678b7608e2bead4e417">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\rxjava-1.2.2_24f5938200b9fadfb20f460ad8805df417ba3a86.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\libs\baidumapapi_radar_v3_7_1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c8da9b62f066eb66be4186def8d5697329081672">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\baidumapapi_radar_v3_7_1_c3af9ca0d5efebb67a66fe95d2508f51bcba2875.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\Desktop\zhizunwifi\app\libs\baidumapapi_base_v3_7_1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="977a8dfd855077c6bfcfb44adce39927e0397e66">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\baidumapapi_base_v3_7_1_3b571c64050976a1502ebcd67e2557716fe5e160.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.0.0\support-annotations-25.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="a22d2cc94da87b254451fa8ed28afc30b4653773">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\support-annotations-25.0.0_dd93bbd8780fbde23c070b4f61f0458306d705f0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="8bc45ce1f63d1a391fd38b32a201be5a42f9c95d">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-25.0.0_28ced41ecc9c4f9c1ff7d3511229663672344b09.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\23f317106294e36abd125127831302c8d86bbd40\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5e497d60f0cb6ce87c458ac5420a46d0fed49bd0">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\classes_d23798cb148baf7b76b6ee7aec3b81a9dea0324c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ee5faf4dee5b6a4364bf51587871047dde7c703a">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_e18253b9307d1b8eacdd91e7b5dfbafdcc313344.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\exploded-aar\ZhizunWIFI\zhizunWIFI_dhroid3\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="350bbe2999c7d65bb504561e47454531174cca7a">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\ZhizunWIFI-zhizunWIFI_dhroid3-unspecified_ba941f15de8d5834b05d0470d7bc4bc19c4b5de2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\790ff871c1c43fd387fdcd1451ad5a50d4faab7a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="183fcbfcca75b095b63125f5e31ebd8b5f5f3216">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\classes_212ce026e7b74cce7c4f67cff26c1c50007ae984.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.1.0\2de7cd8b95b7021b1d597f049bcb422055119f2c\retrofit-2.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\retrofit-2.1.0_02cdaa5f093e78b272a8b951b62057cb62740b8d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\Desktop\zhizunwifi\app\libs\gradle-wrapper.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e614e3b2edc63a9cc423437dea087c91962254f5">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\gradle-wrapper_e8ae7c270d306891286686c27210315b1cb445eb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\libs\umeng-analytics-v6.0.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="27238b0acdc4e764623a653d5776488783e9ae3f">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\umeng-analytics-v6.0.4_94927eab2286609e64b36862dc7d43e8f4a45338.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\libs\gradle-wrapper.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="e614e3b2edc63a9cc423437dea087c91962254f5">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\gradle-wrapper_7167ad887afe0df613c30f29d44dfd31d3beef7c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\exploded-aar\ZhizunWIFI\social_sdk_library_project\unspecified\jars\libs\SocialSDK_WeiXin_1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="e2a9c788016ea496c76407f409d8d1cf69f43cb3">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\SocialSDK_WeiXin_1_7c34267fa8bebcb50e86c50c68d74a355e3d6329.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\adapter-rxjava\2.3.0\43e4ac24adc40a24c51b2d2a71a2483ef1b0ce9a\adapter-rxjava-2.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="43e4ac24adc40a24c51b2d2a71a2483ef1b0ce9a">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\adapter-rxjava-2.3.0_d5955ab47add8086cb4a2d5a8f22934b604ae638.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\Desktop\zhizunwifi\app\libs\umeng_social_shareboard.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="15bf2ed2c56319fc346f8bd98fbfbeb49e140bf5">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\umeng_social_shareboard_c8047ca39edb5b23b47898b1e531ca0a11c608a0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\adapter-rxjava\2.1.0\693eddc23e87ab13f9cf5001707ce8e7e1d1ff01\adapter-rxjava-2.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="693eddc23e87ab13f9cf5001707ce8e7e1d1ff01">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\adapter-rxjava-2.1.0_a922f2c9139fd2cbbf2500b5aa528f1e500fa2f5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\6865b506774c79b0e403a3dc317b1def50e1ee53\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8bc45ce1f63d1a391fd38b32a201be5a42f9c95d">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\classes_a85c119ab90b4d7cde3e50c263beedf51dbabfce.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\e887c34a834daab13b48af2c181665697ee2241d\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5f49fbc1bda3fa9073a82dd87de3e1ceea24268d">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\classes_020dd15f1dd2de1a8b59c876382e91227b7631df.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\libs\baidumapapi_map_v3_7_1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="29595e6b2f19f7a79cefe7269d1662333feeab45">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\baidumapapi_map_v3_7_1_c9884cc864d24994e0b673102d91c0b323152351.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\exploded-aar\com.github.hotchemi\permissionsdispatcher\2.1.3\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="8f012268b56e56239148960f2697b4ef138b670f">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\com.github.hotchemi-permissionsdispatcher-2.1.3_6299cba36187f080552167b0df3475a4915ddccb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\exploded-aar\ZhizunWIFI\social_sdk_library_project\unspecified\jars\libs\umeng_social_sdk.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="9e9f274b81ef71e50287d05f8f602c5c4487a394">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\umeng_social_sdk_b6260ee1d08c35335e82febb68cc61d1941682ec.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\Desktop\zhizunwifi\zhizunWIFI_dhroid3\build\intermediates\bundles\default\libs\httpmime-4.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3b762f16a072dbe778a2b72531974b1f133cb15b">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\httpmime-4.1.1_b368851dec21b8897b13b3cec2149711ddc6cbf1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\libs\BmobSDK_V3.4.5_1111.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="44e559d18fd5a4826b0a4c0354308213e4f658a2">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\BmobSDK_V3.4.5_1111_c512382eaed9a4bbf307bd15b538643594687781.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\Desktop\zhizunwifi\app\libs\SocialSDK_Sina_Simplify.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2733f75e9b808bfbf54db957b375f21d9eeb4c4d">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\SocialSDK_Sina_Simplify_a9ca340765c84a341e01b7e33312e527c1fb3262.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\libs\baidumapapi_cloud_v3_7_1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="fecf060a9ea56960976400e922d1e5c8cd8b6fd2">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\baidumapapi_cloud_v3_7_1_999a705774a46b933d0158d0334b7517a5a74e41.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.3.0\bcacde6a8ccedcc56c127403d26b76072fe6214d\retrofit-2.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="bcacde6a8ccedcc56c127403d26b76072fe6214d">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\retrofit-2.3.0_098b09b6a11593dc20fc4b42f55a6f8fd8090285.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\Desktop\zhizunwifi\xUtils_lib\build\intermediates\bundles\default\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f5ec6a721253bb381b3bdb9e756469d6868cd842">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\classes_af3b0ba6de47030f64ff4838181d055b7b752441.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="d29714cc76b38157e3cbd034c66e1ec808eb4c19">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-25.0.0_4da157d1af969cd3c51020d0a0027c850cc199d2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="3b61a70884adaf0be3fc06c70c801e3e6df13133">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_d967ec79ec2837417ce3c44c09c77ee2eae89339.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\Desktop\zhizunwifi\app\libs\baidumapapi_cloud_v3_7_1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fecf060a9ea56960976400e922d1e5c8cd8b6fd2">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\baidumapapi_cloud_v3_7_1_b1eb0a205bd85f9c9f12875e482d6808e88843a6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="26674000177e45447a0326a6ad84612761199a13">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-25.0.0_4755652bd00db322cbdee2ba0ee8e6d0754383a5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\Desktop\zhizunwifi\app\libs\zzadSDK_V_1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f0e777f367be7b7609b36275e8a6f6c6b6efd12b">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\zzadSDK_V_1.0.2_4776e5941482d02d2bf59e7247b818a3909824e3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit\adapter-rxjava\2.0.0-beta2\3a233746381a03dbb0f5f3ed10b11c3e72dba499\adapter-rxjava-2.0.0-beta2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="3a233746381a03dbb0f5f3ed10b11c3e72dba499">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\adapter-rxjava-2.0.0-beta2_4231f34f4e6159f3e348d24c550c1b488a7d114e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\converter-gson\2.3.0\9e09011e9767bb76b5e27c9b8223476b93b14631\converter-gson-2.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9e09011e9767bb76b5e27c9b8223476b93b14631">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\converter-gson-2.3.0_553680e635ae731332198bb4f76e9def80b56aa3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp\okhttp\2.5.0\4de2b4ed3445c37ec1720a7d214712e845a24636\okhttp-2.5.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="4de2b4ed3445c37ec1720a7d214712e845a24636">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\okhttp-2.5.0_c5a573687790528960a2cdb5042d396490d51899.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="76fb65a4b41ea42dab8a1310ed772a2420c96b52">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-25.0.0_ff6c5d64f0599fcc2920c3b182849c4828b6fb69.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\exploded-aar\com.trello\rxlifecycle-components\1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="b32c2324baa75a12968b466b74064c49841a0018">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\com.trello-rxlifecycle-components-1.0_5b9fa8355e4c206e6cf8a28a28d1dadbc5034e42.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.3.0\2b802460eea20f8f2ad9c08c74e0f14718e88aa9\okhttp-3.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="2b802460eea20f8f2ad9c08c74e0f14718e88aa9">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\okhttp-3.3.0_01cc990dcf2d17d688f9fc2e7c93ea22339e41ab.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\afd3b51c5560d975c11100351ee45646d71df0c9\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="93c10d68ab5ea070f15782ae6d3a28d1f1d8f45e">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\classes_c865f9258e4f9ba6b6a2f7367e3c86315dd21aba.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\Desktop\zhizunwifi\app\libs\baidumapapi_map_v3_7_1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="29595e6b2f19f7a79cefe7269d1662333feeab45">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\baidumapapi_map_v3_7_1_89a283bc108f4daf34e9f8456754674bd8d016e6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\Desktop\zhizunwifi\app\libs\baidumapapi_util_v3_7_1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9ec067777962d6ad4b7d4c0e1aff93e83180d207">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\baidumapapi_util_v3_7_1_c5fb000a2af31b835d9a53a3689cacddbb4ed969.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\Desktop\zhizunwifi\app\libs\tbs_sdk_thirdapp_v2.4.0.1073_36840_sharewithdownload_withoutGame_obfs_20161011_194834.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fc8e86c61401a7ef1c3a8bf039983c07ebb0e95a">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\tbs_sdk_thirdapp_v2.4.0.1073_36840_sharewithdownload_withoutGame_obfs_20161011_194834_c1f387033e9695d7bd48cb72cc134488576405dc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\exploded-aar\ZhizunWIFI\social_sdk_library_project\unspecified\jars\libs\com.umeng.fb.5.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="f37a0663f57cefcf9f17797e3db000b7fb013041">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\com.umeng.fb.5.3.0_d2b9aa82f25348c5aa0e6a63d5743bd566a0569c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\exploded-aar\ZhizunWIFI\social_sdk_library_project\unspecified\jars\libs\SocialSDK_QQZone_3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c2640dc6923e356d754a749adfc727103392dd4a">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\SocialSDK_QQZone_3_fbd98d58e7732570bec73a44d10445769f4d0374.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\libs\locSDK_6.13.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="2cdb37444b41b42e1ce5a8a27e5d3c22e1c57479">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\locSDK_6.13_d707c0fda157ce8516b291271eb0bf16af81a44f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.13.0\a9283170b7305c8d92d25aff02a6ab7e45d06cbe\okio-1.13.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\okio-1.13.0_f63c7ab08dbed3c34e0fe0b9b1a691240ffa1bb7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="4ccbcda5c72027c7f7c14be9ff8640d9cb0d8da0">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-25.0.0_a8d4260053be305c3eadc7ee411e4f1af7e0f985.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\libs\Baidu_MobAds_SDK.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c175d078e17fb461afa5661d00e9250214805fcf">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\Baidu_MobAds_SDK_a8624140dadc55a9296c9d8c0c7d5e89fc26c84a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.0\support-annotations-25.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="dd84903d2e1af25a6081ef9038ad863cb14ca3a0">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\support-annotations-25.3.0_40eaf80908651eec7dcf5ecb728264d06e78c464.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\Desktop\zhizunwifi\app\libs\baidumapapi_radar_v3_7_1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c8da9b62f066eb66be4186def8d5697329081672">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\baidumapapi_radar_v3_7_1_d311fb05102121589155f2e85b8e3eb008fbc4b5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\exploded-aar\io.reactivex\rxandroid\1.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="d4c4b83de2f6412072d2a29b1b7a5b03edaad5ff">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\io.reactivex-rxandroid-1.1.0_3d64811ca2ddbe755751d2cae968d4a0da5a7565.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\Desktop\zhizunwifi\zhizunWIFI_dhroid3\build\intermediates\bundles\default\libs\commons-codec-1.9.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4e59f14b69400cefb20624c699e887a7b66094f2">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\commons-codec-1.9_3acb9c2655a674891beb22041b711291f132c549.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-25.0.0_f0676fdd83363c20bbd4bdaadfe8d5393c0c2ff3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\io.reactivex\rxjava\1.3.0\af000bec2036a2a9d07197c4b03b8966bfc60b03\rxjava-1.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="af000bec2036a2a9d07197c4b03b8966bfc60b03">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\rxjava-1.3.0_07a75d7443549d05d9106a49b0497bd04cd04ea9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-25.0.0_fd72e0e543ee9518b90806e6463f34fd2e985096.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\exploded-aar\ZhizunWIFI\zhizunWIFI_dhroid3\unspecified\jars\libs\universal-image-loader-1.9.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="be82f62a8dc7d38bcd93df21d547abe6f19601c8">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\universal-image-loader-1.9.2_96bbe7c0814813b2417387cbce3de9ef38cc05b1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.8.0\5ea7af56cc7c567ed9856d99efb30740e9b17ff\okio-1.8.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="05ea7af56cc7c567ed9856d99efb30740e9b17ff">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\okio-1.8.0_06f7f952010e37a20e0067d81e65675288b9e24f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\converter-gson\2.1.0\aa557d71ead91cbf26e0c316a0f593d168303309\converter-gson-2.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\converter-gson-2.1.0_fc6d109c83c05cddded4b5ea732ed5dd7c938086.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\libs\utdid4all-1.0.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="4345fa0a5a7768f2f9c86aaab7db9e2906765193">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\utdid4all-1.0.4_dbd654a90d7db9070d6691729a5395f549f9aca7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="07daa0b6e1d455c82a38422ffe287c18823d339a">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-25.0.0_62eb29ceafa55ade18c225e535a7256bf71b37f2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\Desktop\zhizunwifi\app\libs\SocialSDK_WeChat_Simplify.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="dbad0e3e7ac8062dd9f7ce3e60ab0ddccc44553f">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\SocialSDK_WeChat_Simplify_64f4ed3f4a4b7f80848ff6732f3a50f922b9a14f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\libs\baidumapapi_base_v3_7_1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="977a8dfd855077c6bfcfb44adce39927e0397e66">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\baidumapapi_base_v3_7_1_a2f8a3627bb188e2f3a29557d7ff2aa865c44817.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\libs\baidumapapi_search_v3_7_1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="682cacce5564412cda8c29bf0e405c474e773379">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\baidumapapi_search_v3_7_1_51150d9e9c5b45c172830a6baaad90ef31a43de8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\3a6d3e46667126721cd70e2167634406b12640ee\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="518768f3200963fbfec652f498da2c9d39245234">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\classes_27ecfffb7df58dba221435f92b13b3175a21b448.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="f2e3b9bc1ec25f652e8007ce7774c991e38f6a00">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_95a147750a8414a434888924964fd8cc1db907cf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\Desktop\zhizunwifi\app\libs\umeng_social_tool.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="37e39d974bc2e829a47881f4cf2869aaa4a7a289">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\umeng_social_tool_8ea8c8f586690913af4e09de2564813264734258.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\8372de7df9a8be2476e61f86d1df62d7bf591184\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\classes_6077f5dddd80cac5a772064b21525457bf798684.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit\retrofit\2.0.0-beta2\880d9e0997b2d1bfc98e0d121ced33ee5d04aac4\retrofit-2.0.0-beta2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="880d9e0997b2d1bfc98e0d121ced33ee5d04aac4">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\retrofit-2.0.0-beta2_1f2fc976e28004d347dfde4858a351e8e75388dd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\exploded-aar\ZhizunWIFI\social_sdk_library_project\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="f9abb5eeaa3865d08e01a6b3c1bdbbd4b5b00d39">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\ZhizunWIFI-social_sdk_library_project-unspecified_a7cf392710c498c08a25e925b4865cca1023fd2f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\3.0.1\f7be08ec23c21485b9b5a1cf1654c2ec8c58168d\jsr305-3.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="f7be08ec23c21485b9b5a1cf1654c2ec8c58168d">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\jsr305-3.0.1_b629f06a974d8a52776eaf08b3d7e7de95a0263a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\exploded-aar\ZhizunWIFI\social_sdk_library_project\unspecified\jars\libs\SocialSDK_QQZone_2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="7072bd908b79cdb7b7fe2d550c7755f0f6db4a17">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\SocialSDK_QQZone_2_2e444696fc5aadb220268aed4c14dce826431a89.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\Desktop\zhizunwifi\app\libs\locSDK_6.13.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2cdb37444b41b42e1ce5a8a27e5d3c22e1c57479">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\locSDK_6.13_43d4469bbc8f22fe1d8aefe15d4ce0af8bb0abd0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\Desktop\zhizunwifi\app\libs\SocialSDK_QQ_Simplify.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6613d9480532b6b4d91aafd192350e0b9fcee502">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\SocialSDK_QQ_Simplify_ef7ada008dcb32f36456a9bf07eb15b57ba4b698.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="665d21a8a069c96b4d9e8b434f5096d865b4e261">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_cad957a7d62c6ecb18e2856e2394894181abd2ab.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\Desktop\zhizunwifi\app\libs\umeng_shareboard_widget.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fc25e9f8df09a557374f12f1f2c4b62938af7372">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\umeng_shareboard_widget_3258f0288ccfd94c884f5b7146b4483dbe993427.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.0_fa00d8accb912cda1d8b1cf05006356a9e828820.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\exploded-aar\com.jakewharton.rxbinding\rxbinding\0.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ffc09f4e5bdebe068e5101f587dadc42b60fbfe4">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\com.jakewharton.rxbinding-rxbinding-0.4.0_846720e22ae8f0cc827cfd9971ba3efb5899f930.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\6e23fbf9a49cd789a4915ac7204dfd710e46f752\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\classes_d429fef32ae9c8bb0a16c0fec6f9dd1d4de9de34.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\Desktop\zhizunwifi\app\libs\umeng-analytics-v6.0.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="27238b0acdc4e764623a653d5776488783e9ae3f">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\umeng-analytics-v6.0.4_75ab8615397de16b9ba64d5bb4035b3674964da3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\exploded-aar\ZhizunWIFI\social_sdk_library_project\unspecified\jars\libs\nineoldandroids-2.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="f086e018e187da53a1432c188023c86d1fa3ff73">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\nineoldandroids-2.4.0_1e0574161de92ba0545ddb81e42902aefc94bdce.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\exploded-aar\ZhizunWIFI\social_sdk_library_project\unspecified\jars\libs\SocialSDK_QQZone_1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="418868f1416898ed88da34f10e4d770502a8d6b7">
+        <dex dex="E:\Android\ZZwifi\ZhizunWIFI\app\build\intermediates\pre-dexed\debug\SocialSDK_QQZone_1_57e818eb7ddead42f6be3f6ea146c4e716f491bd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\Desktop\zhizunwifi\zhizunWIFI_dhroid3\build\intermediates\bundles\default\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3ece761338dfc685123a3c0bd0f70125110fbf4f">
+        <dex dex="C:\Users\Administrator\Desktop\zhizunwifi\app\build\intermediates\pre-dexed\debug\classes_90740ddf16a4572d761eba93e0579a387ee9aeed.jar" />
+    </item>
+
+</items>

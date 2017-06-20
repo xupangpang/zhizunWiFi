@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="map_marker_info_window_width">240.0dip</dimen>
+    <dimen name="speed_margin">6.0dip</dimen>
+    <dimen name="common_font_size_c">18.0sp</dimen>
+    <dimen name="common_font_size_d">16.0sp</dimen>
+    <dimen name="common_font_size_e">14.0sp</dimen>
+    <dimen name="common_font_size_f">12.0sp</dimen>
+    <dimen name="common_font_size_g">10.0sp</dimen>
+</resources>

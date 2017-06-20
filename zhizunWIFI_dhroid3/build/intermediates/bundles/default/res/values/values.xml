@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TasksCompletedView"><attr format="dimension" name="radius"/><attr format="string" name="text"/><attr format="dimension" name="strokeWidth"/><attr format="color" name="circleColor"/><attr format="color" name="ringColor"/></declare-styleable>
+</resources>

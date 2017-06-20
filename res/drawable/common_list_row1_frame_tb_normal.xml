@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="@color/common_bg_white" />
+        </shape>
+    </item>
+    <item android:left="@dimen/common_list_row_padding_lr" android:right="@dimen/common_list_row_padding_lr">
+        <shape>
+            <solid android:color="@color/common_list_row_divider" />
+        </shape>
+    </item>
+    <item android:top="@dimen/common_divider_width" android:bottom="@dimen/common_divider_width">
+        <shape>
+            <solid android:color="@color/common_bg_white" />
+        </shape>
+    </item>
+</layer-list>

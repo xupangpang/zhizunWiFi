@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:wifilocating="http://schemas.android.com/apk/res/com.snda.wifilocating">
+    <item android:state_enabled="true" android:drawable="@drawable/arrow_down" />
+    <item android:state_enabled="false" android:drawable="@drawable/arrow_down_disable" />
+</selector>

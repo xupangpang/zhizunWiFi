@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:ptr="http://schemas.android.com/apk/res/com.zhizun.zhizunwifi"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/netspeedLayout"
+    android:paddingTop="@dimen/actionBarSize"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_network_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text=" "
+            android:textSize="29.0sp" />
+        
+        <RelativeLayout
+            android:id="@+id/speedProgressBarlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" >
+
+            <com.zhizun.zhizunwifi.view.RoundProgressBar
+                android:id="@+id/roundProgressBar"
+                ptr:style="FILL"
+                android:layout_width="217dip"
+                android:layout_height="217dip"
+                android:layout_centerHorizontal="true"
+                ptr:roundArcOutColor="#ffD7D7D7"
+                ptr:roundBaseBackground="@color/white"
+                ptr:roundColor="@android:color/white"
+                ptr:roundProgressBackgroundColor="#27000000"
+                ptr:roundProgressColor="#AE000000"
+                ptr:roundScaleColor="#AE000000"
+                ptr:roundScaleTextColor="#ffAAAAAA"
+                ptr:roundTextSize="15.0sp"
+                ptr:roundWidth="8dip"
+                ptr:textIsDisplayable="false" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/roundProgressBar"
+                android:layout_alignLeft="@id/roundProgressBar"
+                android:layout_alignRight="@id/roundProgressBar"
+                android:layout_alignTop="@id/roundProgressBar" >
+
+                <Button
+                    android:id="@+id/startButton"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/btn_tspeed_p"
+                    android:gravity="center"
+                    android:text=""
+                    android:textSize="15.0sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blue_bg" >
+
+        <TextView
+            android:id="@+id/netSpeedDes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:textSize="18.0dip" />
+    </RelativeLayout>
+
+</LinearLayout>

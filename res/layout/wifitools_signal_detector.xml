@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:wk="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffffff" 
+    >
+
+    <RelativeLayout
+        android:id="@+id/signal_detector_ap_name_relayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60.0dip" >
+
+        <ImageView
+            android:id="@+id/tv_ap_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/connect_signalcheck" />
+
+        <TextView
+            android:id="@+id/tv_ap_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5.0dip"
+            android:layout_toRightOf="@+id/tv_ap_icon"
+            android:ellipsize="middle"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="#ff2b2c30"
+            android:textSize="18.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/signal_detector_signalprogressbar_relayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signal_detector_ap_name_relayout"
+        android:layout_centerHorizontal="true"
+        android:gravity="center" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/signal_check_process" />
+
+            <RelativeLayout
+                android:layout_width="300.0dip"
+                android:layout_height="300.0dip"
+                android:layout_centerHorizontal="true" >
+
+                <!-- <com.lantern.wifitools.signaldetector.SignalProgressBar
+                    android:id="@+id/signalprogressbar"
+                    android:layout_width="300.0dip"
+                    android:layout_height="300.0dip"
+                    wk:Inside_Interval="10"
+                    wk:Paint_Color="#ffe4e9ef"
+                    wk:Paint_Width="150"
+                    wk:Show_Bottom="true"
+                    wk:fill="true"
+                    wk:max="100"
+                    wk:roundBgColor="#00000000"
+                    wk:textColor="#ff54c73d"
+                    wk:textSize="20.0dip"
+                    wk:tvIsDisplayable="true" /> -->
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/iv_signal_detector_anim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/signal_check_number" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" >
+
+            <!-- <com.lantern.wifitools.speedtest.SpeedTestPoint
+                android:id="@+id/signalPoint"
+                android:layout_width="300.0dip"
+                android:layout_height="300.0dip" /> -->
+                
+                
+           <!-- <ImageView
+                android:id="@+id/signalPoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/signal_check_pointer" /> -->
+                
+                <com.zhizun.zhizunwifi.view.TestCanvasRotateView 
+				    android:id="@+id/rotateView"
+				    android:layout_width="300dp"
+				    android:layout_height="300dp"
+				    />
+
+            <TextView
+                android:id="@+id/tv_signal_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text=""
+                android:textColor="#ffffffff"
+                android:textSize="24.0sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/iv_signal_tip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signal_detector_signalprogressbar_relayout"
+        android:gravity="center_vertical" >
+
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="2.0px"
+            android:layout_marginLeft="16.0dip"
+            android:layout_marginRight="16.0dip"
+            android:layout_weight="1.0"
+            android:background="#ffdbdbdb" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="提示"
+            android:textColor="#ffcccccc"
+            android:textSize="13.0sp" />
+
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="2.0px"
+            android:layout_marginLeft="16.0dip"
+            android:layout_marginRight="16.0dip"
+            android:layout_weight="1.0"
+            android:background="#ffdbdbdb" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/iv_signal_tip" >
+
+        <TextView
+            android:id="@+id/tv_move_position_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/act_signal_detector_move_position_prompt"
+            android:textColor="#ff2b2c30"
+            android:textSize="18.0sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

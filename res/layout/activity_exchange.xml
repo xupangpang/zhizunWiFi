@@ -1,0 +1,187 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/titleLayout"
+        layout="@layout/actionbar_bg" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" >
+
+                <LinearLayout
+                    android:id="@+id/top_viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp" >
+
+                        <!-- ViewPager是一个控件 -->
+
+                        <android.support.v4.view.ViewPager
+                            android:id="@+id/adv_pager"
+                            android:layout_width="fill_parent"
+                            android:layout_height="180dp"
+                            android:background="@drawable/icon_loading" >
+                        </android.support.v4.view.ViewPager>
+
+                        <LinearLayout
+                            android:id="@+id/viewGroup"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/adv_pager"
+                            android:layout_alignParentLeft="true"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal" >
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/img_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/top_viewPager"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:id="@+id/img_tab1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/virtual_goods" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/img_tab2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/withdrawal" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/img_tab3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/more" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/img_layout"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="0dp" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="0dp"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="虚拟商品"
+                                android:textColor="#999999"
+                                android:textSize="17dp" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="提现充值"
+                                android:textColor="#999999"
+                                android:textSize="17dp" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="惊喜兑换"
+                                android:textColor="#999999"
+                                android:textSize="17dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <!-- <android.support.v4.view.ViewPager -->
+            </RelativeLayout>
+
+            <com.zhizun.mall.MyGridView
+                android:id="@+id/mylistview_page"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/gray"
+                android:divider="@color/gray"
+                android:gravity="center"
+                android:horizontalSpacing="10dp"
+                android:numColumns="2"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="10dp" >
+            </com.zhizun.mall.MyGridView>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

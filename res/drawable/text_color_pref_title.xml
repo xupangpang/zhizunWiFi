@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false" android:state_active="false" android:color="@color/pref_title_disabled" />
+    <item android:state_enabled="true" android:color="@color/pref_title_enabled" />
+</selector>

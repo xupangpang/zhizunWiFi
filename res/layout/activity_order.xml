@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent" 
+    android:background="@color/white"
+    android:orientation="vertical">
+    
+    <include
+        android:id="@+id/titleLayout"
+        layout="@layout/actionbar_bg" />
+    
+  
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="240dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp">
+        
+         <RelativeLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="0dp"
+	        android:layout_weight="1"
+	        >
+	        
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="单价"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"/> 
+                
+                
+	            <TextView 
+	                android:id="@+id/discount_money"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="1元"
+	                android:textColor="@color/gray"
+	                android:textSize="15sp"
+	                android:layout_marginRight="10dp"
+	                android:layout_centerVertical="true"
+	                android:layout_alignParentRight="true"
+	                /> 
+                
+            <View 
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/gray"
+                android:layout_alignParentBottom="true"
+                />
+         </RelativeLayout>
+         <!-- 数量 -->
+         <RelativeLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="0dp"
+	        android:layout_weight="1"
+	        >
+	        
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="数量"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"/> 
+	                
+	            <EditText 
+	                android:id="@+id/et_number"
+	                android:layout_width="50dp"
+	                android:layout_height="wrap_content"
+	                android:textColor="#FF0000"
+	                android:textSize="15sp"
+	                android:inputType="number"
+	                android:layout_marginRight="10dp"
+	                android:layout_centerVertical="true"
+	                android:layout_alignParentRight="true"
+	                android:maxLength="3"
+	                />
+                
+            <View 
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/gray"
+                android:layout_alignParentBottom="true"
+                />
+         </RelativeLayout>
+         
+         <!-- 总价 -->
+         <RelativeLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="0dp"
+	        android:layout_weight="1"
+	        >
+	        
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="总价"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"/> 
+                
+                
+	            <TextView 
+	                android:id="@+id/total_money"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="1元"
+	                android:textColor="@color/gray"
+	                android:textSize="15sp"
+	                android:layout_marginRight="10dp"
+	                android:layout_centerVertical="true"
+	                android:layout_alignParentRight="true"
+	                /> 
+                
+            <View 
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/gray"
+                android:layout_alignParentBottom="true"
+                />
+         </RelativeLayout>
+         
+         
+         <!-- 账户余额 -->
+         <LinearLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="0dp"
+	        android:layout_weight="1"
+	        android:gravity="center_vertical"
+	        android:orientation="horizontal"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp">
+	        
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="账户余额"
+                android:textColor="@color/black"
+                android:textSize="17sp"/> 
+                
+            <LinearLayout 
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:gravity="center_vertical|right"
+		        android:orientation="horizontal"
+		        >
+                
+	            <TextView 
+	                android:id="@+id/account_money"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="1元"
+	                android:textColor="@color/gray"
+	                android:textSize="15sp"
+	                /> 
+                </LinearLayout>
+         </LinearLayout>
+         
+         <View 
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/gray"
+                android:layout_alignParentBottom="true"
+                />
+         
+    <!-- 实物商品收货地址 -->
+    <!-- <LinearLayout
+        android:id="@+id/ll_address"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/position"
+            android:textColor="@color/BLACK"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_no_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="您尚未设置收货地址"
+            android:textColor="@color/BLACK"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/ll_shipping_address"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="收货人："
+                    android:textColor="@color/BLACK"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="李某某"
+                    android:textColor="@color/BLACK"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_tel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="13355558888"
+                    android:textColor="@color/BLACK"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="收货地址："
+                    android:textColor="@color/BLACK"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="海南省海口市龙华区xxx小区"
+                    android:textColor="@color/BLACK"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical|right"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/account_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_arrow_right"
+                />
+        </LinearLayout>
+    </LinearLayout> -->
+         
+         <LinearLayout 
+            android:id="@+id/edt_account_layout"
+	        android:layout_width="fill_parent"
+	        android:layout_height="0dp"
+	        android:layout_weight="1"
+	        android:gravity="center_vertical"
+	        android:orientation="horizontal"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp"
+	        android:visibility="gone">
+	        
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*"
+                android:textColor="#ff0000"
+                android:textSize="17sp"/> 
+                
+                
+	            <com.coohua.view.ClearEditText
+			        android:id="@+id/edt_account"
+			        android:layout_width="fill_parent"
+			        android:layout_height="fill_parent"
+			        android:gravity="center_vertical"
+			        android:orientation="horizontal"
+			        android:layout_marginLeft="10dp"
+			        android:background="@color/white"
+			        
+			        android:drawableRight="@drawable/icon_x"
+			        android:hint="支付宝账号"
+			        android:imeOptions="actionDone"
+			        android:paddingLeft="10dp"
+			        android:paddingRight="10dp"
+			        android:singleLine="true"
+			        android:textColor="@color/text_color_222222"
+			        android:textColorHint="@color/text_color_828282"
+			        android:textSize="15.0sp" />
+         </LinearLayout>
+         
+         <!-- 支付宝绑定身份证号 -->
+         <LinearLayout 
+            android:id="@+id/edt_alipay_id_layout"
+	        android:layout_width="fill_parent"
+	        android:layout_height="0dp"
+	        android:layout_weight="1"
+	        android:gravity="center_vertical"
+	        android:orientation="horizontal"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp"
+	        android:visibility="gone">
+	        
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*"
+                android:textColor="#ff0000"
+                android:textSize="17sp"/> 
+                
+                
+	            <com.coohua.view.ClearEditText
+			        android:id="@+id/edt_alipay_id"
+			        android:layout_width="fill_parent"
+			        android:layout_height="fill_parent"
+			        android:gravity="center_vertical"
+			        android:orientation="horizontal"
+			        android:layout_marginLeft="10dp"
+			        android:background="@color/white"
+			        android:digits="@string/password_digits"
+			        android:drawableRight="@drawable/icon_x"
+			        android:hint="支付宝绑定身份证号码"
+			        android:inputType="number"
+			        android:imeOptions="actionDone"
+			        android:paddingLeft="10dp"
+			        android:paddingRight="10dp"
+			        android:singleLine="true"
+			        android:textColor="@color/text_color_222222"
+			        android:textColorHint="@color/text_color_828282"
+			        android:textSize="15.0sp" />
+         </LinearLayout>
+         
+         <LinearLayout 
+            android:id="@+id/edt_name_layout"
+	        android:layout_width="fill_parent"
+	        android:layout_height="0dp"
+	        android:layout_weight="1"
+	        android:gravity="center_vertical"
+	        android:orientation="horizontal"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp"
+	        android:visibility="gone">
+	        
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*"
+                android:textColor="#ff0000"
+                android:textSize="17sp"/> 
+                
+	            <com.coohua.view.ClearEditText
+			        android:id="@+id/edt_name"
+			        android:layout_width="fill_parent"
+			        android:layout_height="fill_parent"
+			        android:gravity="center_vertical"
+			        android:orientation="horizontal"
+			        android:layout_marginLeft="10dp"
+			        android:background="@color/white"
+			        
+			        android:drawableRight="@drawable/icon_x"
+			        android:hint="支付宝姓名"
+			        android:imeOptions="actionDone"
+			        android:paddingLeft="10dp"
+			        android:paddingRight="10dp"
+			        android:singleLine="true"
+			        android:textColor="@color/text_color_222222"
+			        android:textColorHint="@color/text_color_828282"
+			        android:textSize="15.0sp" />
+         </LinearLayout>
+         
+         <!-- 支付宝绑定手机号 -->
+         <LinearLayout 
+            android:id="@+id/edt_boundNum_layout"
+	        android:layout_width="fill_parent"
+	        android:layout_height="0dp"
+	        android:layout_weight="1"
+	        android:gravity="center_vertical"
+	        android:orientation="horizontal"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp"
+	        android:visibility="gone">
+	        
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*"
+                android:textColor="#ff0000"
+                android:textSize="17sp"/> 
+                
+	            <com.coohua.view.ClearEditText
+			        android:id="@+id/edt_boundNum"
+			        android:layout_width="fill_parent"
+			        android:layout_height="fill_parent"
+			        android:gravity="center_vertical"
+			        android:orientation="horizontal"
+			        android:layout_marginLeft="10dp"
+			        android:background="@color/white"
+			        android:digits="@string/password_digits"
+			        android:drawableRight="@drawable/icon_x"
+			        android:hint="支付宝绑定手机号"
+			        android:inputType="number"
+			        android:imeOptions="actionDone"
+			        android:paddingLeft="10dp"
+			        android:paddingRight="10dp"
+			        android:singleLine="true"
+			        android:textColor="@color/text_color_222222"
+			        android:textColorHint="@color/text_color_828282"
+			        android:textSize="15.0sp" />
+         </LinearLayout>
+         
+         <!-- 充值手机号 -->
+         <LinearLayout 
+            android:id="@+id/edt_RechNum_layout"
+	        android:layout_width="fill_parent"
+	        android:layout_height="0dp"
+	        android:layout_weight="1"
+	        android:gravity="center_vertical"
+	        android:orientation="horizontal"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp"
+	        android:visibility="gone">
+	        
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*"
+                android:textColor="#ff0000"
+                android:textSize="17sp"/> 
+                
+	            <com.coohua.view.ClearEditText
+			        android:id="@+id/edt_RechNum"
+			        android:layout_width="fill_parent"
+			        android:layout_height="fill_parent"
+			        android:gravity="center_vertical"
+			        android:orientation="horizontal"
+			        android:layout_marginLeft="10dp"
+			        android:background="@color/white"
+			        android:digits="@string/password_digits"
+			        android:drawableRight="@drawable/icon_x"
+			        android:hint="充值手机号"
+			        android:inputType="number"
+			        android:imeOptions="actionDone"
+			        android:paddingLeft="10dp"
+			        android:paddingRight="10dp"
+			        android:singleLine="true"
+			        android:textColor="@color/text_color_222222"
+			        android:textColorHint="@color/text_color_828282"
+			        android:textSize="15.0sp" />
+         </LinearLayout>
+         
+         aa
+         <!-- 收货人姓名 -->
+         <LinearLayout 
+            android:id="@+id/edt_shipping_name_layout"
+	        android:layout_width="fill_parent"
+	        android:layout_height="0dp"
+	        android:layout_weight="1"
+	        android:gravity="center_vertical"
+	        android:orientation="horizontal"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp"
+	        android:visibility="gone">
+	        
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*"
+                android:textColor="#ff0000"
+                android:textSize="17sp"/> 
+                
+                
+	            <com.coohua.view.ClearEditText
+			        android:id="@+id/edt_shipping_name"
+			        android:layout_width="fill_parent"
+			        android:layout_height="fill_parent"
+			        android:gravity="center_vertical"
+			        android:orientation="horizontal"
+			        android:layout_marginLeft="10dp"
+			        android:background="@color/white"
+			        
+			        android:drawableRight="@drawable/icon_x"
+			        android:hint="请输入收货人姓名"
+			        android:imeOptions="actionDone"
+			        android:paddingLeft="10dp"
+			        android:paddingRight="10dp"
+			        android:singleLine="true"
+			        android:textColor="@color/text_color_222222"
+			        android:textColorHint="@color/text_color_828282"
+			        android:textSize="15.0sp" />
+         </LinearLayout>
+         
+         <!-- 收货人手机号码 -->
+         <LinearLayout 
+            android:id="@+id/edt_phone_layout"
+	        android:layout_width="fill_parent"
+	        android:layout_height="0dp"
+	        android:layout_weight="1"
+	        android:gravity="center_vertical"
+	        android:orientation="horizontal"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp"
+	        android:visibility="gone">
+	        
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*"
+                android:textColor="#ff0000"
+                android:textSize="17sp"/> 
+                
+                
+	            <com.coohua.view.ClearEditText
+			        android:id="@+id/edt_phone"
+			        android:layout_width="fill_parent"
+			        android:layout_height="fill_parent"
+			        android:gravity="center_vertical"
+			        android:orientation="horizontal"
+			        android:layout_marginLeft="10dp"
+			        android:background="@color/white"
+			        android:digits="@string/password_digits"
+			        android:drawableRight="@drawable/icon_x"
+			        android:hint="请输入收货人手机号码"
+			        android:inputType="number"
+			        android:imeOptions="actionDone"
+			        android:paddingLeft="10dp"
+			        android:paddingRight="10dp"
+			        android:singleLine="true"
+			        android:textColor="@color/text_color_222222"
+			        android:textColorHint="@color/text_color_828282"
+			        android:textSize="15.0sp" />
+         </LinearLayout>
+         
+         <!-- 邮编 -->
+         <LinearLayout 
+            android:id="@+id/edt_post_code_layout"
+	        android:layout_width="fill_parent"
+	        android:layout_height="0dp"
+	        android:layout_weight="1"
+	        android:gravity="center_vertical"
+	        android:orientation="horizontal"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp"
+	        android:visibility="gone">
+	        
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*"
+                android:textColor="#ff0000"
+                android:textSize="17sp"/> 
+                
+	            <com.coohua.view.ClearEditText
+			        android:id="@+id/edt_post_code"
+			        android:layout_width="fill_parent"
+			        android:layout_height="fill_parent"
+			        android:gravity="center_vertical"
+			        android:orientation="horizontal"
+			        android:layout_marginLeft="10dp"
+			        android:background="@color/white"
+			        android:digits="@string/password_digits"
+			        android:drawableRight="@drawable/icon_x"
+			        android:hint="请输入邮编"
+			        
+			        android:imeOptions="actionDone"
+			        android:paddingLeft="10dp"
+			        android:paddingRight="10dp"
+			        android:singleLine="true"
+			        android:textColor="@color/text_color_222222"
+			        android:textColorHint="@color/text_color_828282"
+			        android:textSize="15.0sp" />
+         </LinearLayout>
+         
+         <!-- 收货地址 -->
+         <LinearLayout 
+            android:id="@+id/edt_address_layout"
+	        android:layout_width="fill_parent"
+	        android:layout_height="0dp"
+	        android:layout_weight="1"
+	        android:gravity="center_vertical"
+	        android:orientation="horizontal"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp"
+	        android:visibility="gone">
+	        
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*"
+                android:textColor="#ff0000"
+                android:textSize="17sp"/> 
+                
+	            <com.coohua.view.ClearEditText
+			        android:id="@+id/edt_address"
+			        android:layout_width="fill_parent"
+			        android:layout_height="fill_parent"
+			        android:gravity="center_vertical"
+			        android:orientation="horizontal"
+			        android:layout_marginLeft="10dp"
+			        android:background="@color/white"
+			        android:drawableRight="@drawable/icon_x"
+			        android:hint="请输入收货地址"
+			        
+			        android:imeOptions="actionDone"
+			        android:paddingLeft="10dp"
+			        android:paddingRight="10dp"
+			        android:singleLine="true"
+			        android:textColor="@color/text_color_222222"
+			        android:textColorHint="@color/text_color_828282"
+			        android:textSize="15.0sp" />
+         </LinearLayout>
+    </LinearLayout>
+    
+    
+    <Button 
+        android:id="@+id/btn_commint_order"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#50a2ff"
+        android:layout_marginTop="310dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="提交订单"
+	    android:textColor="@color/white"
+	    android:textSize="15sp"/>
+</RelativeLayout>
